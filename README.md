@@ -50,7 +50,6 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 * 不要打开陌生／随机文件或链接
 * 不要用手机（移动设备）做验证方面的事  
 ```
-
 （待深入翻译……）  
 
 6. 手机上如何做到在线匿名？  
@@ -63,3 +62,12 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
   - 至于仍然希望致力于用安卓手机在线匿名的朋友，建议参考Tor项目的 [Tor-Android尝试]()（但可能只能对远程（第三方）匿名，无法对ISP匿名；但仍不失为有意义的安全加固的安卓系统——毕竟开源的安卓有机会让更多的人低成本地接触到网络。）
   - 只要可能，选择非 `made In China` 的手机，如台湾、韩国、印度制造，并且能选到低端手机的话（在你预算之内），时而更换手机也是极好的。
   
+ 
+======
+
+Copyleft
+This article is first published from @MDrights under the GNU Free Document License.
+https://www.gnu.org/licenses/licenses.html#FDL
+Please keep this part reserved and unchanged.
+
+======
