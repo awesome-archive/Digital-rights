@@ -1,18 +1,18 @@
 ## 在线匿名FAQ - Online Anonymity FAQ
 
-> 前言：在线匿名不但是一门技术，更包含一些使用习惯、“社会学”的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
-本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prismbreak.org](https://prism-break.org/en/), [securityinabox.org](https://securityinabox.org/)，等等。  
+> 前言：在线匿名不但是一门技术，更包含一些使用习惯、非技术的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
+本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prismbreak.org](https://prism-break.org/en/)，[securityinabox.org](https://securityinabox.org/)，等等。  
 
 0. 什么是“在线匿名”？  
 仅仅使用化名绝对不能称为我们说的匿名（anonimity），自己的社交帐号、邮箱名称使用化名是无法对付国家机器的。我们需要用专门的技术来：隐匿自己的真实IP地址、真实的浏览器指纹印记、设备唯一编码（如网卡的MAC地址、SIM卡IMSI码、手机IMEI码）。一台普通的Windows、安卓系统上的软件就能轻松获取这些信息。
 
 1. 我真的需要在线匿名吗？/ 谁需要在线匿名？  
 简单回答：需要。网上言论和访问地址不被追踪是人的基本自由，就好像在物理世界里每个人也都有不被跟踪和监视的自由一样。  
-深入回答：看你的实际需求是什么。由于目前的互联网技术本身没有为匿名而设计，因此在线匿名显得需要额外的技术和时间/学习成本，或许使用上还不大方便、或速度减慢。所以你可以根据你的实际情况酌情使用。请看下一个问题。
+深入回答：看你的实际需求是什么。由于目前的互联网技术本身没有为匿名而设计，因此在线匿名显得需要额外的技术和时间/学习成本，或许使用上还不大方便、或速度减慢。所以你可以根据你的实际情况酌情使用。请看下一个问题。  
 [待拓展……]
 
 2. 清楚了解自己的“受威胁模式”（Threat Modes），明确需求  
-从上一个问题我们可以知道，我们需要具体需求具体安排匿名技术的使用。具体需求具体分析，比如假如你正在躲避抓捕，流浪在某个地方，你需要全套的高度的匿名措施：eg. ss(R)+Tails+TorBrowser+Pidgin/OTR+无需实名的公共网络，或更多前置/后置代理……；如果你认为你的目标是防你所访问的网站等服务的记录和分析，你只需要个Torbrowser或只要代理就够了；如果你担心ISP（及其背后的国家机器）对你的定位那你需要的修改你设备的Mac地址（手机还有IMSI码、IMEI码）。这些都还要配上严谨的使用规范（如不能登录自己的帐号等）。  
+从上一个问题我们可以知道，我们需要具体需求具体安排匿名技术的使用。具体需求具体分析，比如假如你正在躲避抓捕，流浪在某个地方，你需要全套的高度的匿名措施：eg. ss(R)+Tails+TorBrowser+Pidgin/OTR或Tox+无需实名的公共网络，或更多前置/后置代理……；如果你认为你的目标是防你所访问的网站等服务的记录和分析，你只需要个Torbrowser或只要代理就够了；如果你担心ISP（及其背后的国家机器）对你的定位那你需要的修改你设备的Mac地址（手机还有IMSI码、IMEI码）。这些都还要配上严谨的使用规范（如不能登录自己的帐号等）。  
 
 3. 在线匿名的最基础技术是什么？  
 无需多说肯定是著名的 [Tor项目](https://torproject.org)，又称洋葱路由，已经有不少中文的介绍了，见[这里](http://chinadigitaltimes.net/chinese/2016/01/tor-5-0-7-%E4%B8%AD%E6%96%87%E7%89%88%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/)。因此至少配备个Tor浏览器（在墙内需要用前置代理先翻墙，或找个安全的信赖的网桥）才是好的。  
@@ -52,6 +52,7 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 ```
 （待深入翻译……）  
 
+
 6. 手机上如何做到在线匿名？  
 这也是很多朋友的疑问。我的理解（参见 [EFF：手机的问题](https://ssd.eff.org/en/module/problem-mobile-phones)）：
   - 国行/国产安卓手机您就放弃吧；
@@ -66,7 +67,7 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 ======
 
 Copyleft  
-This article is first published from @MDrights under the GNU Free Document License.  
+This article is first published from [MDrights@github](https://github.com/mdrights/) under the GNU Free Document License.  
 https://www.gnu.org/licenses/licenses.html#FDL  
 Please keep this part reserved and unchanged.  
 
