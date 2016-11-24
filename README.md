@@ -3,7 +3,7 @@
 > 前言：在线匿名不但是一门技术，更包含一些使用习惯、“社会学”的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
 本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prismbreak.org](https://prism-break.org/en/), [securityinabox.org](https://securityinabox.org/)，等等。  
 
-0. 什么是“在线匿名”？
+0. 什么是“在线匿名”？  
 仅仅使用化名绝对不能称为我们说的匿名（anonimity），自己的社交帐号、邮箱名称使用化名是无法对付国家机器的。我们需要用专门的技术来：隐匿自己的真实IP地址、真实的浏览器指纹印记、设备唯一编码（如网卡的MAC地址、SIM卡IMSI码、手机IMEI码）。一台普通的Windows、安卓系统上的软件就能轻松获取这些信息。
 
 1. 我真的需要在线匿名吗？/ 谁需要在线匿名？  
@@ -18,7 +18,7 @@
 无需多说肯定是著名的 [Tor项目](https://torproject.org)，又称洋葱路由，已经有不少中文的介绍了，见[这里](http://chinadigitaltimes.net/chinese/2016/01/tor-5-0-7-%E4%B8%AD%E6%96%87%E7%89%88%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/)。因此至少配备个Tor浏览器（在墙内需要用前置代理先翻墙，或找个安全的信赖的网桥）才是好的。  
 当然，配备个Tails Linux系统也是好的，请看下一个问题。
 
-4. Tails在墙内如何把Tor用起来？
+4. Tails在墙内如何把Tor用起来？  
 常听到有人问这个问题。我分享我的做法是，用Raspberry Pi（比较小巧便携）做前置代理（eg ss+resocks全局），当然你也可以用其他设备（电脑、openWRT路由器或安卓手机）。另外的做法是你也可以用网桥，有两种：Tails/Tor提供的网桥（通常一公开出来很容易被墙/封）；其它网桥（建议最好自己自建网桥服务器VPS，用他人的网桥容易有风险，流量泄露的可能性高；当然前置翻墙用的代理（vps）最好也是自建的，且不分享给没有安全措施的设备使用）。  
 Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linux+专业志愿社区审计和加固+Live USB载体；二是对非技术小白有容易上手的操作性（自带中文输入法虽然好像不大好用，具体请看我曾写过一篇[介绍](https://mdrights.github.io/os-observe/)）。
 
@@ -53,7 +53,7 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 （待深入翻译……）  
 
 6. 手机上如何做到在线匿名？  
-这也是很多朋友的疑问。我的理解是（欢迎补充和纠正）：
+这也是很多朋友的疑问。我的理解（参见 [EFF：手机的问题](https://ssd.eff.org/en/module/problem-mobile-phones)）：
   - 国行/国产安卓手机您就放弃吧；
   - 苹果手机，唔，对匿名的需求也是不给力，因为非越狱的iOS系统不让用户进行深度设置（hack）；苹果也会发送用户/账户信息去它的服务器（虽然它征得了用户的同意）；
   - 大部分（90%？）的手机都是墙国生产制造，即使操作系统你深度定制，但硬件固件仍可以由设备制造商控制，喏，前几天不还有[新闻爆出后门](http://www.solidot.org/story?sid=50401)，悄悄发送用户的短信、位置等信息来么？
