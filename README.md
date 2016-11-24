@@ -1,7 +1,7 @@
 ## 在线匿名FAQ - Online Anonymity FAQ
 
 > 前言：在线匿名不但是一门技术，更包含一些使用习惯、“社会学”的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
-本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护]()（*在此向群友表示感谢*）；以及来自[Whonix文档]()、[Tails文档]()；其他的相关资源还有（英文）：EFF的[自我防卫指南]()、[prismbreak.org](prismbreak.org), [securityinabox.org]()，等等。  
+本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](httsp://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prismbreak.org](https://prism-break.org/en/), [securityinabox.org](https://securityinabox.org/)，等等。  
 
 0. 什么是“在线匿名”？
 仅仅使用化名绝对不能称为我们说的匿名（anonimity），自己的社交帐号、邮箱名称使用化名是无法对付国家机器的。我们需要用专门的技术来：隐匿自己的真实IP地址、真实的浏览器指纹印记、设备唯一编码（如网卡的MAC地址、SIM卡IMSI码、手机IMEI码）。一台普通的Windows、安卓系统上的软件就能轻松获取这些信息。
@@ -65,9 +65,9 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
  
 ======
 
-Copyleft
-This article is first published from @MDrights under the GNU Free Document License.
-https://www.gnu.org/licenses/licenses.html#FDL
-Please keep this part reserved and unchanged.
+Copyleft  
+This article is first published from @MDrights under the GNU Free Document License.  
+https://www.gnu.org/licenses/licenses.html#FDL  
+Please keep this part reserved and unchanged.  
 
 ======
