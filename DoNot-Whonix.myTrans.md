@@ -148,12 +148,14 @@ that exit relay come from your machine.
 Source: ^[[2]](#cite_note-2)^
 
 Login into your real life Facebook account and think you are anonymous.[[edit](/w/index.php?title=DoNot&action=edit&section=3 "Edit section: Login into your real life Facebook account and think you are anonymous.")]
+登錄了你的Facebook（或微博/微信等反映你真實社交關係的）賬戶，還以爲你是在匿名（？）
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Don't login into your personal Facebook account. No matter if your real
 name is attached or only a pseudonym. You most likely added your friends
 and they know who the account belongs to. Through your social network
 Facebook can guess who you are.
+不要登錄到你的個人帳號（如臉書，微博等），不管你的帳號是用的實名還是假名。通常你加了一些好友而他們知道這個號是誰的。通過社交帳號別人基本能猜到你是誰。（MDrights補充：現在社交帳號通常都綁定了手機號，更做不到匿名了，用別人的手機號也是徒勞的）
 
 No anonymity solution is magic. Online anonymity software may reliably
 hide your IP/location. But Facebook does not need your IP/location. They
@@ -161,29 +163,39 @@ already know who you are, who your friends are, which private messages
 you send and so on. All those data is at least stored on Facebook's
 server. No kind of software can delete that data. Only Facebook and
 crackers could.
+沒有一種匿名方案是一勞永逸的。在線匿名軟件會可靠地隱匿你的IP/物理位置。但臉書等（社交帳號）並不需要知道你的IP/位置，他們已經知道你是誰，你的朋友是誰，你發了哪條私信，等等。這些數據都至少會存儲在臉書（社交帳號）的服務器上。沒有任何軟件可以刪除這些數據，只有臉書自己和破壞者可以做到。
 
 So if you log into your personal Facebook account you only get location
 privacy. No anonymity.
+所以如果你（用匿名技術）登錄了你的臉書（社交帳號）你得到的只是物理位置的隱匿，不是真正意義的匿名。
 
 Quoted from "To Toggle, or not to Toggle: The End of
 Torbutton"^[[3]](#cite_note-3)^:
+引自：“”切，還是不切：Tor按鈕的終結“”：
+
+> 麥克，如果我在Win7機器上使用開啓了NoScript（關閉JS的插件）的火狐瀏覽器3.6，登錄我的臉書帳號，我還是完全匿名的嗎？謝謝。
 
 > mike, am i completely anonymized if i log onto my facebook account? im
 > using firefox 3.6 with tor and no script on windows 7 machine. thank
 > you.
 
 Never login into accounts you ever used without Tor.[[edit](/w/index.php?title=DoNot&action=edit&section=4 "Edit section: Never login into accounts you ever used without Tor.")]
+千萬別（在匿名狀態時）登錄你平時不用Tor登錄的帳號
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Always assume that each time you visit a website, that they will log the
 IP/location which visited the website, at which time and what you did.
+應該總是預設每次你訪問一個網站時，網站都會記錄你的IP/位置，並且記錄時間，和你所做的事情。
 
 Also assume, that each time you're online your ISP (Internet Service
 Provider) will log your online time, IP/location and perhaps traffic.
+還要把這件事也裝在腦子裏：每次你在線時你的ISP（互聯網服務商）都會記錄你的在線時間、IP/位置甚至流量。
+
 Your ISP could also log to which IPs/locations you connected, how much
 traffic and what you send and retrieved. (Unless it's encrypted, then
 they'll see only garbage.) The following tables should give you an
 simplified overview what those logs could look like.
+你的ISP也會記錄你要連接的IP/位置，有多少流量，以及你發送/接受了什麼。（除非你加密了你的流量，ISP看到的就是一堆垃圾。）下面這個表格能給你個簡單的對ISP記錄的認識。
 
 ISP Log:
 
