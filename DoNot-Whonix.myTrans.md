@@ -198,12 +198,13 @@ simplified overview what those logs could look like.
 你的ISP也會記錄你要連接的IP/位置，有多少流量，以及你發送/接受了什麼。（除非你加密了你的流量，ISP看到的就是一堆垃圾。）下面這個表格能給你個簡單的對ISP記錄的認識。
 
 ISP Log:
+ISP 記錄：
 
   ---------------------------------------------------------------------------
-  Name
-  Time
-  IP/location
-  traffic
+  Name 姓名
+  Time 時間
+  IP/location IP/位置
+  traffic 流量
   ------------------ ------------------ ------------------ ------------------
   John Doe
   16 pm to 17 pm
@@ -214,12 +215,12 @@ ISP Log:
 Extended^[[4]](#cite_note-4)^ ISP Log:
 
   -----------------------------------------------------------------------
-  Name
-  Time
-  IP/location
-  traffic
-  Destination
-  Content
+  Name 姓名
+  Time 時間
+  IP/location IP/位置
+  traffic 流量
+  Destination 目的地
+  Content 內容
   ----------- ----------- ----------- ----------- ----------- -----------
   John Doe    John Doe    John Doe
   16 pm to 17 16 pm to 17 16 pm to 17
@@ -234,13 +235,13 @@ Extended^[[4]](#cite_note-4)^ ISP Log:
   -----------------------------------------------------------------------
 
 Website Log:
-
+網站記錄
   --------------------------------------------------------------------------
-  Name
-  Time
-  IP/location
-  traffic
-  Content
+  Name 姓名
+  Time 時間
+  IP/location IP/位置
+  traffic 流量
+  Content 內容
   -------------- -------------- -------------- -------------- --------------
   -
   16.00 pm to
@@ -254,11 +255,15 @@ Website Log:
 
 You'll see, when websites and ISP keep logs, no one needs Sherlock
 Holmes to conclude.
+你看，當網站和ISP記錄了日誌時，不需要請福爾摩斯來下結論了。
 
 If you mess up for one time, and login with a non-Tor connection/IP,
 which can be tied to you, then the whole account is compromised.
+如果你失手哪怕只一次，用了非Tor的連接/IP來登錄（你的帳號），這個連接/IP又能跟你關聯上，那整個帳號就再也做不到匿名了。
+
 
 Don't login into your bank account, paypal, ebay or other important personal accounts unless...[[edit](/w/index.php?title=DoNot&action=edit&section=5 "Edit section: Don't login into your bank account, paypal, ebay or other important personal accounts unless...")]
+不要登錄你的銀行帳號，paypal（外國的“支付寶”）或其他重要個人帳號，除非……
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Logging into your bank, paypal, ebay or other important personal
@@ -266,74 +271,92 @@ accounts registered on your name where money is involved could risk,
 that your account gets suspended, due to "suspicious activity" by the
 fraud prevention system. This is because crackers sometimes use Tor for
 committing fraud. That's probably not what you want.
+（用Tor等匿名方式登錄你的網銀、支付寶之類的跟你的名字和金錢關聯的個人帳號會有風險，你的帳號可能會被凍結，因爲他們的詐騙預防系統會檢測到這是“可疑活動”。這是因爲破壞者們通常使用Tor來作案。但這或許並不是你希望看到的。
 
 It's not anonymous for reasons already explained. It's pseudonymous and
 offers circumvention (in case access to the site is blocked by your ISP)
 and location privacy. The difference of anonymity and pseudonymity is
 covered in a later chapter on this page.
+上面已經解釋了，這樣做法不算匿名。這是“假名”，只能讓你繞過封鎖，做到物理地點的隱藏。匿名和假名的區別在本頁的後面章節會介紹到。
 
 In many cases you will be able to contact the support and to get your
 account unblocked again or on request, even the fraud protection policy
 gets relaxed for your account.
+很多時候你將聯繫客服，來解鎖你的帳號。
 
 Whonix developer adrelanos is not against using Tor for circumvention
 and/or location privacy, you just should know the risk of your account
 getting (temporarily) suspended and the other things mentioned on this
 page and the other warnings from the Whonix documentation. So if you
 know what you are doing, feel free.
+Whonix開發者 Adrelanos 並不反對用Tor來繞過封鎖和/或做地點隱藏，但你需要知道當你的帳號被（暫時）凍結或發生其他上面提到的事情/警告的時候你會遇到的風險。所以如果你清醒知道你在做什麼，就做吧。
 
 Don't alternate Tor with open WiFi.[[edit](/w/index.php?title=DoNot&action=edit&section=6 "Edit section: Don't alternate Tor with open WiFi.")]
+別用Tor取代公共Wifi
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 You may think open WiFi is faster and equally safe as Tor since the
 IP/location cannot be tied to your real name, right?
+你會想公共 Wifi 會比較快且與Tor是同等安全的因爲IP/位置信息沒有與你的大名掛鉤，是吧？
 
 It's better to use an open WiFi *AND* Tor, but not an open WiFi *OR*
 Tor.
+最好是 *同時* 使用公共Wifi和Tor，而不是公共 Wifi *或* Tor。
 
 The approximate location of any IP address can be tied down to a city,
 region or even a street. Even if you are away, you still gave away your
 city or approximate location since most people don't switch continents.
+任意IP地址的地理位置可以精確到一個城市、區甚至到街道。儘管你在外地，你仍然暴露出了你的城市或大致位置，因爲大多數人並沒有離開自己的大陸。
 
 You don't know who is running the open WiFi router or their policies.
 They could be keeping logs of your MAC address and tie it with the
 activity you are sending in the clear through them.
+你並不知道誰在運營着當前的公共Wifi路由器，也不知道他們的規則。他們的日誌可能記錄你的MAC地址並與你的明文網上活動相關聯。
 
 While this doesn't break your anonymity, the circle of suspect has
 decreased from the entire world, a continent, or the country to a
 region. This strongly hurts your anonymity. Keep as much information as
 possible to yourself.
+你的匿名性可能還沒被破壞，然而，嫌疑你的範圍會越來越小，從整個地球，大洲，到國家再到地區。這樣還是會損害你的匿名性。你要儘可能地留住足夠多的信息。
 
 Prevent Tor over Tor scenarios.[[edit](/w/index.php?title=DoNot&action=edit&section=7 "Edit section: Prevent Tor over Tor scenarios.")]
+不要在Tor中用Tor
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 **Whonix specific.**
+**Whonix特有**
 
 When using a transparent proxy (Whonix includes one), it is possible to
 start a Tor session from the client as well as from the transparent
 proxy, creating a "Tor over Tor" scenario.
+當使用透明代理（Whonix裏面有）時，既有可能會從客戶端啓動一個Tor實例，也有可能從透明代理裏啓動Tor實例，這樣（後者）就造成了”在Tor裏再用Tor“的局面。
 
 This happens when installing Tor inside Whonix-Workstation or when using
 the Tor Browser Bundle without configuring it to use a SocksPort instead
 of the TransPort. (Covered in the [Tor
 Browser](/wiki/Tor_Browser "Tor Browser") article.)
+這種情況也可能發生在：在Whonix-工作站裏安裝Tor，或Tor瀏覽器裏沒有設置它走SocksPort而不應是TransPort。（詳見[TorBrowser](/wiki/Tor_Browser "Tor Browser")這篇文章。）
 
 Doing so produces undefined and potentially unsafe behavior. In theory,
 however, you can get six hops instead of three, but it is not guaranteed
 that you'll get three different hops - you could end up with the same
 hops, maybe in reverse or mixed order. It is not clear if this is safe.
 It has never been discussed.
+這樣做能讓一些不確定且潛在不安全的事情發生。但是，理論上，你能得到六跳（而非原來的三跳），但保證不了你得到的是三個（？）不同的節點——你可能遇到最後一跳跟之前的跳是同一臺機器，或者可能（後面的跳）是（前面的跳）的倒序，又可能是（有限的幾個節點之間）的來回跳。目前還不清楚這是不是安全。還沒人討論過這個。
 
 You can choose an entry/exit point ^[[5]](#cite_note-5)^, but you get
 the best security that Tor can provide when you leave the route
 selection to Tor; overriding the entry / exit relays can mess up your
 anonymity in ways we don't understand. Therefore Tor over Tor usage is
 highly discouraged.
+你可以選擇一個入口/出口節點，但最安全的做法是讓Tor自己來爲你選擇路線；人爲選定入口/出口節點會以某種我們不知道的方式搞砸你的匿名性。所以“在Tor裏用Tor”的用法是高度不鼓勵的。
 
 License of "Prevent Tor over Tor scenarios.":
+“不要在Tor裏用Tor的情境”的發佈協議
 ^[[6]](#cite_note-adrelicense-6)^
 
 Don't send sensitive data without end-to-end encryption.[[edit](/w/index.php?title=DoNot&action=edit&section=8 "Edit section: Don't send sensitive data without end-to-end encryption.")]
+不要在沒有端對端加密的情況下發送敏感數據。
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 As already explained on the [Warning](/wiki/Warning "Warning") page, Tor

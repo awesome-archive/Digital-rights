@@ -1,6 +1,6 @@
 ## 在线匿名FAQ - Online Anonymity FAQ
 
-**更新日期：2016-11-29**  
+**更新日期：2016-12-17**  
 
 > 前言：在线匿名不但是一门技术，更包含一些使用习惯、非技术的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
 本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prism-break.org](https://prism-break.org/en/)，[securityinabox.org](https://securityinabox.org/)，等等。  
@@ -24,20 +24,55 @@
 一般我们认为，在墙国这样的形势（手机、网络通通实名）下，想（在ISP层面）匿名是很难的（当然你可以说你去找别人的手机/WIFI去用，但……你真的忍心去让朋友/陌生人替你去背你的锅么？另一方面，长时间使用另一个人的帐号上网，也会被关联到你自己，如果是朋友的话，关联可能性更高；如果是同时携带匿名的移动设备和非匿名的移动设备，这也会被分析你的物理移动轨迹而让匿名的设备成为徒劳）。  
 所以，对大多数人来说，一个对策是把你的物理机器的信息与在网络远端留下信息做成不一样的。  
 
-4. 在线匿名的最基础技术是什么？  
-无需多说肯定是著名的 [Tor项目](https://torproject.org)，又称洋葱路由，已经有不少中文的介绍了，见[这里](http://chinadigitaltimes.net/chinese/2016/01/tor-5-0-7-%E4%B8%AD%E6%96%87%E7%89%88%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/)。因此至少配备个Tor浏览器（在墙内需要用前置代理先翻墙，或找个安全的信赖的网桥）才是好的。  
-当然，配备个[Tails Linux](https://tails.boum.org/)系统也是好的。为什么？请看下一个问题。
+4. 在线匿名的基础技术有哪些？  
+无需多说肯定是著名的 [Tor项目](https://torproject.org)，又称洋葱路由，它的主要功效是隐藏（伪装）你的真实IP地址（即显示出来的是个别的IP）。已经有不少中文的介绍了，见[这里](http://chinadigitaltimes.net/chinese/2016/01/tor-5-0-7-%E4%B8%AD%E6%96%87%E7%89%88%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/)。Tor本身可以在命令行里运行，但更多的用户是使用Tor浏览器（在墙内需要用前置代理先翻墙，或找个安全的信赖的网桥）才是好的。  
+当然，配备个[Tails Linux](https://tails.boum.org/)系统（所有流量走Tor的系统）也是好的。为什么？请看下一个问题。
+
+除了Tor外，还有一些别的匿名技术，如Freenet，JonDonym，但它们都不够Tor成熟和实用，暂且不表。此外，隐匿了自己机器的IP地址，不等于就做到匿名了，请看第7个问题。
 
 5. 为什么要用Tails？  
-Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linux+专业志愿社区审计和加固+Live USB载体。自由开源的代码为免去恶意代码提供了很大可能性；Live USB的形式可以做到所有修改不写入系统，重启恢复原来状态；它在多方面经过安全调校，包括可以设置MAC地址伪装，浏览器UA伪装，当然还有：所有流量走Tor。  
+Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linux+专业志愿社区审计和加固+Live USB载体。自由开源的代码为免去恶意代码提供了很大可能性；Live USB的形式可以做到所有修改不写入系统，重启恢复原来状态。更重要的是，它在多方面为广大非技术用户做了一站式隐私安全处理，包括可以设置MAC地址伪装，浏览器UA伪装，当然还有：所有流量走Tor。  
 二是对非技术小白有容易上手的操作性（自带中文输入法虽然好像不大好用，具体请看我曾写过一篇[介绍](https://mdrights.github.io/os-observe/posts/2015/11/Tails-%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B.html)）。
 
-5. Tails在墙内如何把Tor用起来？  
+6. Tails在墙内如何把Tor用起来？  
 常听到有人问这个问题。我分享我的做法是，用Raspberry Pi（比较小巧便携）做前置代理（eg ss+resocks全局），当然你也可以用其他设备（电脑、openWRT路由器或安卓手机）。另外的做法是你也可以用网桥，有两种：Tails/Tor提供的网桥（通常一公开出来很容易被墙/封）；其它网桥（建议最好自己自建网桥服务器VPS，用他人的网桥容易有风险，流量泄露的可能性高；当然前置翻墙用的代理（vps）最好也是自建的，且不分享给没有安全措施的设备使用）。对了，第三个方法是把Tails放进虚拟机里（如 Virtualbox），如果Host机不是VPN等全局代理的话，仍需要开http proxy让整个虚拟机走代理。但这有个风险就是如果Host机没做好安全措施的话，直接降低了Tails的安全性（_所以更加复杂而不推荐_)。
  
 Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linux+专业志愿社区审计和加固+Live USB载体；二是对非技术小白有容易上手的操作性（自带中文输入法虽然好像不大好用，具体请看我曾写过一篇[介绍](https://mdrights.github.io/os-observe/posts/2015/11/Tails-%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B.html)）。
 
-6. 那，在线匿名需要做到那些非技术性的措施？  
+7. 在线匿名（或匿名上网）我只需要 Tor 就够了吗？
+不够。只伪装IP地址顶多可以做到：不让人知道你的当下物理地点，但很难不让人发现来自这台机器的流量/网络身份是你的。因为确定你的身份，除了用物理位置外，还有很多东西可以帮助确定/定位到某个特定的人（那个人特点越多越容易～）。EFF有过一个[研究](https://panopticlick.eff.org/)，从数学的角度来解释讲只要知道少至几个（如6个）属性/特点，就能定位世界上任何一个人。而当你用你的机器在网络浏览，留下的特质性信息还是蛮多的。
+
+网卡MAC地址，浏览器User-Agent，就是两个应该伪装的地方。[EFF的网站](https://panopticlick.eff.org/)上可以看到你的浏览器的 User-Agent 跟多少其他访客的是一模一样的，你就理解了。
+
+8. MAC地址伪装，浏览器UA伪装   
+（本人略知一些方法，但要么不方便，要么效果不好，如果你有什么好的方法/工具，欢迎告诉我（issue/PR) :)。
+
+### MAC地址伪装方法
+on Linux 命令行：
+- $ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串（注意有效的MAC字串的首两位数必须是偶数）
+- # ip link set dev interface down                         # 先把网卡关闭
+- # ip link set dev interface address XX:XX:XX:XX:XX:XX  # X就是你刚才上面生成的随机字串
+- # ip link set dev interface up
+
+on macOS 命令行：
+- $ sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -z
+- $ sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//')
+- $ networksetup -detectnewhardware
+或，
+- $ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串
+- $ sudo ifconfig eth0 down hw ether XX:XX:XX:XX:XX:XX && ifconfig eth0 up
+
+on Android：
+（待补充……我又没用Android）
+
+在自由的Linux上，还有不少方法，如用 macchanger，ArchWiki[收集的方法](https://wiki.archlinux.org/index.php/MAC_Address_Spoofing)也会是你的必读。
+
+### 浏览器UA伪装：
+请参考这篇[文章](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) （英文）（略复杂）；
+再就是火狐浏览器插件[Switcher](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/) ；[Chrome插件](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg)（效果不好且可能有隐私隐患——理论上是插件都能看到/过滤所有浏览器上的内容）
+
+
+9. 那，在线匿名需要做到那些非技术性的措施？  
 这篇[Whonix wiki文章](https://www.whonix.org/wiki/DoNot)做了详细的介绍，匿名时*不要*做以下事情：
 
 ```
@@ -65,7 +100,7 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 * 不要打开陌生／随机文件或链接
 * 不要用手机（移动设备）做验证方面的事  
 ```
-（待深入翻译……）  
+（全文翻译正在本repo进行……）  
 
 
 7. 手机上如何做到在线匿名？  
