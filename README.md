@@ -41,14 +41,15 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 不够。只伪装IP地址顶多可以做到：不让人知道你的当下物理地点，但很难不让人发现来自这台机器的流量/网络身份是你的。因为确定你的身份，除了用物理位置外，还有很多东西可以帮助确定/定位到某个特定的人（那个人特点越多越容易～）。EFF有过一个[研究](https://panopticlick.eff.org/)，从数学的角度来解释讲只要知道少至几个（如6个）属性/特点，就能定位世界上任何一个人。而当你用你的机器在网络浏览，留下的特质性信息还是蛮多的。
 网卡MAC地址，浏览器User-Agent，就是两个应该伪装的地方。[EFF的网站](https://panopticlick.eff.org/)上可以看到你的浏览器的 User-Agent 跟多少其他访客的是一模一样的，你就理解了。
 
-8. MAC地址伪装，浏览器UA伪装   
+1. MAC地址伪装，浏览器UA伪装   
 （本人略知一些方法，但要么不方便，要么效果不好，如果你有什么好的方法/工具，欢迎告诉我（issue/PR) :)。
-MAC地址伪装方法
-- on Linux 命令行：
-`$ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串（注意有效的MAC字串的首两位数必须是偶数）`
-`# ip link set dev interface down                         # 先把网卡关闭`
-`# ip link set dev interface address XX:XX:XX:XX:XX:XX  # X就是你刚才上面生成的随机字串`
-`# ip link set dev interface up`
+
+- MAC地址伪装方法  
+- on Linux 命令行：  
+`$ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串（注意有效的MAC字串的首两位数必须是偶数）`  
+`# ip link set dev interface down                         # 先把网卡关闭`  
+`# ip link set dev interface address XX:XX:XX:XX:XX:XX  # X就是你刚才上面生成的随机字串`  
+`# ip link set dev interface up`  
 
 - on macOS 命令行：
 ```
@@ -62,7 +63,7 @@ $ sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport 
 - $ sudo ifconfig eth0 down hw ether XX:XX:XX:XX:XX:XX && ifconfig eth0 up
 ```
 
-on Android：
+- on Android：
 （欢迎补充……我没用Android）
 
 在自由的Linux上，还有不少方法，如用 macchanger，ArchWiki[收集的方法](https://wiki.archlinux.org/index.php/MAC_Address_Spoofing)也会是你的必读。
@@ -72,7 +73,7 @@ on Android：
 再就是火狐浏览器插件[Switcher](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/) ；[Chrome插件](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg)（效果不好且可能有隐私隐患——理论上是插件都能看到/过滤所有浏览器上的内容）
 
 
-9. 那，在线匿名需要做到那些非技术性的措施？  
+### 那，在线匿名需要做到那些非技术性的措施？  
 这篇[Whonix wiki文章](https://www.whonix.org/wiki/DoNot)做了详细的介绍，匿名时*不要*做以下事情：
 
 ```
@@ -103,11 +104,12 @@ on Android：
 （全文翻译正在本repo进行……）  
 
 
-7. 手机上如何做到在线匿名？  
+### 手机上如何做到在线匿名？  
+
 这也是很多朋友的疑问。  
-简单回答：带移动模块的移动设备的（ISP层面）的隐匿性是非常差的。
-参见 [EFF：手机的问题](https://ssd.eff.org/en/module/problem-mobile-phones)）：
-深入回答：  
+**简单回答**：带移动模块的移动设备的（ISP层面）的隐匿性是非常差的。  
+参见 [EFF：手机的问题](https://ssd.eff.org/en/module/problem-mobile-phones)）：  
+**深入回答**：  
   - 国行/国产安卓手机您就放弃吧；
   - 苹果手机，唔，对匿名的需求也是不给力，因为非越狱的iOS系统不让用户进行深度设置（hack）；苹果也会发送用户/账户信息去它的服务器（虽然它征得了用户的同意）；
   - 大部分（90%？）的手机都是墙国生产制造，即使操作系统你深度定制，但硬件固件仍可以由设备制造商控制，喏，前几天不还有[新闻爆出后门](http://www.solidot.org/story?sid=50401)，悄悄发送用户的短信、位置等信息来么？
