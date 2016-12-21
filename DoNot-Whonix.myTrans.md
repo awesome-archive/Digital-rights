@@ -414,27 +414,31 @@ collected by Anonymous:
 
 If it's a must to disclose identifying data about yourself, treat it as
 "sensitive data" in the point above.
-如果要在网上跟人透露能标识出自己的
+如果一定要在网上跟人透露能标识出自己的信息，请按照以上提到的“敏感数据”来处理。
 
-License: From the [JonDonym
-documentation](https://anonymous-proxy-servers.net/en/help/anonymous-irc.html)
+License: From the [JonDonym documentation](https://anonymous-proxy-servers.net/en/help/anonymous-irc.html)
 ([Permission](https://anonymous-proxy-servers.net/forum/viewtopic.php?p=31220#p31220)).
+本段授权协议来自：JonDonym文档
 
 Do use bridges if you think Tor usage is dangerous/suspicious in your country.[[edit](/w/index.php?title=DoNot&action=edit&section=10 "Edit section: Do use bridges if you think Tor usage is dangerous/suspicious in your country.")]
+如果你觉得在你的国家用Tor是危险/容易受到怀疑的，请使用网桥。
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Quoted from the [Bridges](/wiki/Bridges "Bridges") page: "*Bridges are
 important tools that work in many cases but they are **not an absolute
 protection** against the technical progress that an adversary could do
 to identify Tor users.*"
+引自[网桥的wiki]()页：网桥是很重要的工具，但他们**并不提供绝对的保护**，随着技术的进步恶意攻击者是可以（借网桥）识别/定位到Tor用户的。
 
 Don't maintain long term identities[[edit](/w/index.php?title=DoNot&action=edit&section=11 "Edit section: Don't maintain long term identities")]
+不要长期使用（维护）帐号（网络身份）
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 The longer you use the same pseudonym, the higher the probability that
 you make mistakes that reveal your identity - which then allows an
 adversary to go back and link all your activities. As a precaution
 regularly create new identities and stop using old ones.
+一个帐号（假名）你使用得越久，就越容易失误而暴露你的身份 —— 让恶意攻击者得逞并关联了你所有的活动。为了以防万一有必要定期创建新身份，停止用旧的。
 
 Don't use different online identities at the same time.[[edit](/w/index.php?title=DoNot&action=edit&section=12 "Edit section: Don't use different online identities at the same time.")]
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -442,31 +446,38 @@ Don't use different online identities at the same time.[[edit](/w/index.php?titl
 They easily correlate. [Whonix doesn't magically separate your different
 contextual
 identities](/wiki/Warning#Whonix_doesn.27t_magically_separate_your_different_contextual_identities "Warning").
-
+他们（不同的身份/帐号）很容易被互相关联。[Whonix并不神奇地分隔你的不同网络身份/帐号]()。
 Also read the points below.
+也请看看以下的要点。
 
 Don't log into Twitter, Facebook, Google, etc. longer than necessary.[[edit](/w/index.php?title=DoNot&action=edit&section=13 "Edit section: Don't log into Twitter, Facebook, Google, etc. longer than necessary.")]
+没事不要登录推特、脸书、谷歌等（别太久）。
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Restrict the time your are logged in accounts for Twitter, Facebook,
 Google and any other account based services (web forum etc.) to the time
 you are using them. After you are done with reading, posting and so on,
-log out. At least log out, shut down Tor Browser, change your Tor
+log out. 
+你需要限制你的时间在推特、脸书、谷歌和其他基于帐号的服务（如论坛等）上。结束阅读和发帖等动作后就尽快登出。
+
+At least log out, shut down Tor Browser, change your Tor
 circuit using a [Tor Controller](/wiki/Tor_Controller "Tor Controller"),
 wait a few seconds until the circuit changed, restart Tor Browser. For
 better security follow the [Recommendation to use multiple VM
 Snapshots](/wiki/Security_Guide#Recommendation_to_use_multiple_VM_Snapshots "Security Guide")
-and/or to [use multiple
-Whonix-Workstations](/wiki/Multiple_Whonix-Workstations "Multiple Whonix-Workstations").
+and/or to [use multiple Whonix-Workstations](/wiki/Multiple_Whonix-Workstations "Multiple Whonix-Workstations").
+至少做到登出，关闭Tor浏览器，用[Tor控制器]()改变你的Tor线路，等待几秒钟直到线路改变完成，重启Tor浏览器。为了更安全，可以按照 [推荐使用多个虚拟机快照]()，和/或 [使用多个Whonix-工作站]()。
 
 This is because many websites include one or more of the many
 integration buttons, such as "I like" and "twitter this" and Google
 analytics, adsense etc. Those buttons tell the originating service that
 you visited that website because you were still logged into their
 service.
+这是因为许多网站里有一个或多个整合按钮，如“赞”、““发推（转发微博）”还有“谷歌分析”、adsense（谷歌广告）等等。这些按钮告诉它背后的网站你访问了那个网站，因为你仍然还在他们网站的登录状态（没登出）。
 
 Also note the chapter "Don't use different online identities at the same
 time." above.
+同时也要注意上面这章节：“不要同时使用不同的网络身份”。
 
 Do not mix Modes of Anonymity![[edit](/w/index.php?title=DoNot&action=edit&section=14 "Edit section: Do not mix Modes of Anonymity!")]
 --------------------------------------------------------------------------------------------------------------------------------------
