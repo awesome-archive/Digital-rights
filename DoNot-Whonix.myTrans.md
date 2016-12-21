@@ -364,42 +364,57 @@ exit relays can eavesdrop on communications and other Man-in-the-middle
 attacks can happen. The only way to get sensitive data from the sender
 to the recipient while withholding it from third parties, is using
 end-to-end encryption.
+正如我们已在[警告]()页面解释过的，Tor出口节点可以窥视（流经它的流量）并可以做其他“中间人”攻击。让敏感数据不被第三方干扰地从发送者流到接收者的唯一方法就是使用端对端加密。
 
 Don't disclose identifying data about yourself.[[edit](/w/index.php?title=DoNot&action=edit&section=9 "Edit section: Don't disclose identifying data about yourself.")]
+不要透露任何关于你自己的个人信息
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 De-anonymization is not only possible with connections/IP addresses but
 by social threats too. Some recommendations to avoid anonymization
 collected by Anonymous:
+要做到去匿名化不但要做到IP/位置上的处理，还要对付社会层面的威胁。这里有些建议可以帮助你防止被陌生人去匿名化：
 
 -   Do not include personal information in your nickname
+-  你的昵称中不要包含个人信息
 -   Do not discuss personal information, where you are from...
     discussions about something inane like the weather can give an
     accurate idea where you are located, over time.
+-  不要讨论个人信息，如你从哪里来……讨论一些空洞的东西比如天气，时间久了的话，还是可以让人知道你的位置信息。
 -   Do not mention your gender, tattoos, piercings or physical
     capacities.
+-  不要提及你的性别、纹身、耳洞或身体特征。
 -   Do not mention your profession, hobbies or involvement in activist
     groups.
+-  不要提及你的专业、爱好或在一些社会运动组织里的工作。
 -   Do not use special characters on keyboard, which are existent only
     in your language.
+-  不要使用你的键盘上的一些特别的字符/字母，这种字符/字母只会存在于你的语言里。
 -   Do not post information to the regular internet while you are
     anonymous. Do not use Twitter and Facebook. This is easy to
     correlate.
+- 不要在使用了匿名技术的时候再在普通网络里发信息了。别用推特和脸书，它们很容易被关联。
 -   Do not post links to Facebook images. The image name contains a
     personal ID.
+- 不要往脸书图像那儿发链接了。图像名称包含了个人ID。
 -   Do not connect to same destination at the same time. Try to
     alternate.
+- 不要在同一时间连接同一目标服务器/网站。尝试一些别的（类似服务）。
 -   IRC, other chats, forum, mailing list, etc. are public, keep that in
     mind.
+- IRC（聊天室）、其他聊天工具、论坛、邮件列表等等，都是公开的，要留意。
 -   Do not discuss anything about yourself whatsoever even when securely
     and anonymously connecting to a group of strangers. You don't know
     who is on the other end or if they have been forced to work against
     you. It takes one informant to destroy a group.
+- 即使是安全地和匿名地连接到某陌生人群组，也不要谈论任何关于自己的事情。你不知道网络另一头的人会是谁，也许有人专门来针对你呢。只要有一个线人就能坏了整个群组。
 -   Heroes only exist in comic books keep that in mind! There are only
     young heroes and dead heroes.
+- 英雄永远只存在于漫画书里，记住！从来就只有年轻的英雄和死去的英雄。
 
 If it's a must to disclose identifying data about yourself, treat it as
 "sensitive data" in the point above.
+如果要在网上跟人透露能标识出自己的
 
 License: From the [JonDonym
 documentation](https://anonymous-proxy-servers.net/en/help/anonymous-irc.html)
