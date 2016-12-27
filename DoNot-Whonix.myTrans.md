@@ -487,7 +487,7 @@ Let us begin with an overview of the different Modes of Anonymity:
 让我们来看看什么是不同的匿名模式：
 
 ### mode(1): user anonymous; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=15 "Edit section: mode(1): user anonymous; any recipient")]
-### 你是匿名的，你的接受者是任意普通用户
+### 模式1：你是匿名的，你的接受者是任意普通用户
 
 -   Scenario: post anonymously a message in a message board/mailing
 - 场景：在消息版（论坛）或邮件列表或网页评论区 匿名发布消息
@@ -502,30 +502,44 @@ Let us begin with an overview of the different Modes of Anonymity:
 - 你的地理位置仍旧隐秘。
 
 ### mode(2): user knows recipient; both use Tor[[edit](/w/index.php?title=DoNot&action=edit&section=16 "Edit section: mode(2): user knows recipient; both use Tor")]
-### 模式2：
+### 模式2：你认识接受者，双方都用Tor
 
 -   Scenario: both sender and recipient know each other and both use
     Tor.
+- 场景：发送者和接受者互相认识，并都使用Tor。
+
 -   They can communicate with each other without any third party being
     wise to their activity or even to the knowledge that they are
     communicating with each other.
+- 他们可以在没有第三方看到他们的活动，甚至不知道他们之间在通信的情况下互相联络。
+
 -   You are NOT anonymous.
+- 你不是匿名的。
 -   Your real IP/location stays hidden.
+- 你的真实IP是隐藏的
 -   Location privacy: your location remains secret.
+- 你的地理位置仍旧隐秘。
 
 ### mode(3): user with no anonymity using Tor; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=17 "Edit section: mode(3): user with no anonymity using Tor; any recipient")]
+### 模式3：你用着Tor但没有匿名；面对任意的接受者
 
 -   Scenario: login with your real name into any services, such as
+- 场景：用真实身份登录了任意一种服务，如邮箱、推特、脸书等……
     webmail, Twitter, Facebook, etc...
 -   You are obviously NOT anonymous. As soon as you log into an account
     where you entered your real name the website knows your identity.
     Tor can not make you anonymous in these situations.
+- 很明显你没在匿名。只要你一登录，那些网站就知道了你的身份。Tor是无法在这种情况下保证你的匿名性的。
 -   Your real IP/location stays hidden.
+- 你的IP是隐匿的。
 -   Location privacy. Your location remains secret.
+- 你的地理位置是隐秘的
 
 ### mode(4): user with no anonymity; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=18 "Edit section: mode(4): user with no anonymity; any recipient")]
+### 模式4：你没有匿名，面对任意接受者
 
 -   Scenario: normal browsing without Tor.
+- 场景：没用Tor的常规接受者。
 -   You are NOT anonymous.
 -   Your real IP/location gets revealed.
 -   Your location gets revealed.
@@ -639,40 +653,53 @@ different desktops to prevent confusing one browser for another.
 如果你真的不想听从这个建议，那至少使用两个不同的桌面（电脑）来防止混淆（不同功能）的浏览器。
 
 Do not connect to any server anonymously and non-anonymously at the same time![[edit](/w/index.php?title=DoNot&action=edit&section=23 "Edit section: Do not connect to any server anonymously and non-anonymously at the same time!")]
+不要同时用匿名地和非匿名的方式连接任意一台服务器
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 It's highly recommended that you do not connect to any remote server in
 this manner. That is, do not create a Tor link and a non-Tor link to the
-same remote server at the same time. In the event your internet
+same remote server at the same time. 
+高度建议你不要用这种方式连接任意一台服务器。也就是，不要同时用Tor连接和非Tor连接同一台服务器。
+
+In the event your internet
 connection breaks down (and it will eventually), all your connections
 will break at the same time and it won't be hard for an adversary to put
 the pieces together and determine what public IP/location belongs to
-what Tor IP/connection, potentially identifying you directly. Another
+what Tor IP/connection, potentially identifying you directly. 
+如果你遇到网络连接中断的情况（说不准就能遇到），你的所有连接都会在同一时刻断掉，这样一个恶意攻击者就能轻易地把同时消失的公共IP和Tor IP 关联起来，进而直接确定你的身份。
+
+Another
 attack a webserver could do is increasing or decreasing the speed of the
 either non-Tor or Tor link and then see if there is a correlation of
 either connection getting faster or slower, thereby concluding which
 non-Tor link belongs to which Tor link.
+- 另一种攻击网站的方式是增加或降低某个连接Tor 或 非Tor的连接速度，然后看看有没有其他连接也几乎同时加快或减慢，进而可以知道是哪个 非Tor连接跟那个Tor连接是一起的（来自同一台设备）。
 
 License of "Do not connect to any server anonymously and non-anonymously
 at the same time!": ^[[6]](#cite_note-adrelicense-6)^
+本段的[许可协议]()
 
 Do not confuse Anonymity with Pseudonymity.[[edit](/w/index.php?title=DoNot&action=edit&section=24 "Edit section: Do not confuse Anonymity with Pseudonymity.")]
+不要把匿名和假名混为一谈
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This chapter explains the difference between anonymity and pseudonymity.
 Word definitions are always a difficult topic because a majority of
 people has to agree with it.
+这一段讲解匿名和假名的区别。对名词的定义通常是个困难的课题，因为必须让大多数人都认同才行。
 
 An anonymous connection is defined as a connection to a destination
 server, where the destination server has no means to find out the origin
 (IP/location) of that connection nor to associate and an identifier
 ^[[7]](#cite_note-identifier-7)^ to it.
+一个匿名的连接是指被连接的目的服务器没有办法/途径找出这个连接的始发地的IP/位置，也没法靠某个标识物把这个始发地的身份找出来[7]()。
 
 A pseudonymous connection is defined as a connection to a destination
 server, where the destination server has no means to find out the origin
 (IP/location) of a connection, but can associate it with an identifier
 ^[[7]](#cite_note-identifier-7)^.
+一个“假名”连接是指被连接的目的服务器无法找出这个连接的始发地的IP/位置，但能知道/关联到这个连接另一端的身份（是谁）[7]()
 
 In an ideal world, the Tor network, Tor Browser (and the underlying
 operating system, hardware, physical security, etc.) is perfect. For
