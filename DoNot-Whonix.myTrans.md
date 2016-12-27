@@ -480,111 +480,159 @@ time." above.
 同时也要注意上面这章节：“不要同时使用不同的网络身份”。
 
 Do not mix Modes of Anonymity![[edit](/w/index.php?title=DoNot&action=edit&section=14 "Edit section: Do not mix Modes of Anonymity!")]
+不要混着用不同的“匿名模式”
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Let us begin with an overview of the different Modes of Anonymity:
+让我们来看看什么是不同的匿名模式：
 
 ### mode(1): user anonymous; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=15 "Edit section: mode(1): user anonymous; any recipient")]
+### 模式1：你是匿名的，你的接受者是任意普通用户
 
 -   Scenario: post anonymously a message in a message board/mailing
+- 场景：在消息版（论坛）或邮件列表或网页评论区 匿名发布消息
     list/comment field
 -   Scenario: whistleblower and such
+- 场景：爆料/告密之类的
 -   You are anonymous.
+- 你是匿名的
 -   Your real IP/location stays hidden.
+- 你的真实IP是隐藏的
 -   Location privacy: your location remains secret.
+- 你的地理位置仍旧隐秘。
 
 ### mode(2): user knows recipient; both use Tor[[edit](/w/index.php?title=DoNot&action=edit&section=16 "Edit section: mode(2): user knows recipient; both use Tor")]
+### 模式2：
 
 -   Scenario: both sender and recipient know each other and both use
     Tor.
+- 场景：通讯双方（发送者和接受者）互相认识对方并都使用Tor。
+
 -   They can communicate with each other without any third party being
     wise to their activity or even to the knowledge that they are
     communicating with each other.
+- 他们可以这样通讯：第三方无法知道他们通讯内容甚至不知道他们在通讯。
+
 -   You are NOT anonymous.
+- 你这样不算匿名。
+
 -   Your real IP/location stays hidden.
+- 你的真实IP/位置保持隐匿。
 -   Location privacy: your location remains secret.
+- 你的地理位置也是隐匿的。
 
 ### mode(3): user with no anonymity using Tor; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=17 "Edit section: mode(3): user with no anonymity using Tor; any recipient")]
+### 模式3：你用了Tor但没有匿名；面对任意接受者。
 
 -   Scenario: login with your real name into any services, such as
     webmail, Twitter, Facebook, etc...
+- 场景：用了你的真名/常用帐号登录了任何服务，比如邮箱、推特、脸书等……
+
 -   You are obviously NOT anonymous. As soon as you log into an account
     where you entered your real name the website knows your identity.
     Tor can not make you anonymous in these situations.
+- 你明显是没在匿名。只要你登录了平时用真名/真IP登录的网站，Tor也不能让你在这种情况保持隐匿。
+
 -   Your real IP/location stays hidden.
 -   Location privacy. Your location remains secret.
+- 你的真实IP保持隐匿。
+- 你的地址位置也是隐匿的。
 
 ### mode(4): user with no anonymity; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=18 "Edit section: mode(4): user with no anonymity; any recipient")]
+### 模式4：你没有匿名；面对任意接受者
 
 -   Scenario: normal browsing without Tor.
+- 场景：没有用Tor的常规上网。
 -   You are NOT anonymous.
+- 你没匿名。
 -   Your real IP/location gets revealed.
 -   Your location gets revealed.
+- 你的真实IP就是外显的。
+- 你的地理位置也是外显的。
 
 ### Conclusion[[edit](/w/index.php?title=DoNot&action=edit&section=19 "Edit section: Conclusion")]
+### 结论
 
 It's not wise to combine mode(1) and mode(2). For example, if you have
 an IM or email account and use that via mode(1), you are advised not to
 use the same account for mode(2). We have explained previously why this
 is an issue.
+把模式1和模式2混着用是不明智的。举例说，如果你有一个即时通讯工具（IM）或邮件帐号并在模式1下使用，你最好再在模式2中用同一个帐号。刚才我们已经解释过了为什么这是个问题。
 
 **It's also not wise to mix two or more modes inside the same Tor
 session**, as they could share the same exit relay (identity
 correlation).
+**在同一段Tor中也最好不混用两个或以上的模式，因为他们可能会共用同一个出口节点（身份关联）**
 
 It's also possible that other combinations of modes are dangerous and
 could lead to the leakage of personal information or your physical
 location.
+- 其他几个模式的混合也是比较危险的，可能导致个人身份信息或地理位置的泄漏。
 
 ### License[[edit](/w/index.php?title=DoNot&action=edit&section=20 "Edit section: License")]
+### 协议
 
 License of "Do not mix Modes of Anonymity!":
 ^[[6]](#cite_note-adrelicense-6)^
+[本段]()许可协议
 
 Don't change settings if you don't know their consequences.[[edit](/w/index.php?title=DoNot&action=edit&section=21 "Edit section: Don't change settings if you don't know their consequences.")]
+如果你不知道一些设置的结果的话就不要去改动它。
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changing user interface settings for applications, which do not connect
 to the internet, mostly safe. For example, checking a box "don't show
 this tip of the day anymore" or "hide this menu bar" will have no effect
 on anonymity.
+修改没有联网的应用程序的用户界面设置，大多数是安全的。举例，勾选“不再显示每日提示”，或“隐藏这个菜单栏” 都不会影响你的匿名性。
 
 Look into the Whonix documentation, if changing the settings you are
 interested in, is documented or recommended against; try to live with
 the defaults.
+看看Whonix文档，如果某项你想修改的设置，文档上说不推荐修改，那就尝试用着默认的设置吧。
 
 Changing settings for applications, which connect to the internet, even
 user interface settings, has to be thoroughly reviewed. For example
 removing a menu bar or using Full Screen in Tor Browser is recommended
 against. The latter is known to modify the screen size, which is bad for
 the web fingerprint.
+修改那些联网的应用的设置，尽管修改得只是用户界面，都需要谨慎操作并检测。例如，不推荐把Tor浏览器去除菜单栏或使用全屏模式。修改了的话别人会知道了你的屏幕尺寸，你的上网指纹因此会更明显。
 
 You should only modify network settings with great care if you know
 their consequences. For example, you should stay away from the advice
 related to "Firefox Tuning". If you believe the settings are suboptimal,
 the changes should be proposed upstream, so they get changed for all Tor
 Browser users with the next release.
+你必须在你知道某种修改的结果并非常小心的情况下修改网络设置。例如，你应该不去管那些关于“火狐调优”的建议。如果你相信某些设置是次优的，那这些设置应该被提交到上游，所以（上游开发者）可以在下个Tor浏览器发布的时候应用这些设置。
 
 Do not use clearnet and Tor at the same time.[[edit](/w/index.php?title=DoNot&action=edit&section=22 "Edit section: Do not use clearnet and Tor at the same time.")]
+不要在同一时间使用明网（普通的网络）和Tor。
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Using your non-Tor browser and Tor Browser at the same time, risks that
 you at some point confuse one for the other and deanonymize yourself.
+同时用非Tor浏览器和Tor浏览器，有可能让你有时犯糊涂把两个浏览器混淆了，进而让你失去匿名。
 
 Using clearnet and Tor at the same time also risks that you connect to a
 server anonymously and non-anonymously at the same time, which is
 recommended against. The reason for this is explained in the point
-below. You never know when you visit the same page anonymously and
+below. 
+同时使用明网和Tor连接同一网站/服务器，也有风险。下面来解释原因。
+
+You never know when you visit the same page anonymously and
 non-anonymously at the same time, because you only see the url you're
 visiting, not how many resources are fetched in background. Many
 different websites are hosted in the same cloud. Services such as google
 analytics are on the majority of all websites and therefore see a lot
 anonymous and non-anonymous connections.
+当你同时用匿名和非匿名的方式访问同一个网页时，你不会知道有多少资源是在你不知情的情况下获取的，因为你通常只看到一个网址而已。许多不同的网站用同一个云端来放他们的网页。比如谷歌的流量分析服务就部署在很多主流网站上，因此他们能看到大量匿名和非匿名的连接。
 
 If you really want not to follow this recommendation, use at least two
 different desktops to prevent confusing one browser for another.
+如果你真的不想听从这个建议，那至少使用两个不同的桌面（电脑）来防止混淆（不同功能）的浏览器。
 
 Do not connect to any server anonymously and non-anonymously at the same time![[edit](/w/index.php?title=DoNot&action=edit&section=23 "Edit section: Do not connect to any server anonymously and non-anonymously at the same time!")]
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 It's highly recommended that you do not connect to any remote server in
