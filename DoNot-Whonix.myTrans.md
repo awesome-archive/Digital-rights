@@ -487,7 +487,7 @@ Let us begin with an overview of the different Modes of Anonymity:
 让我们来看看什么是不同的匿名模式：
 
 ### mode(1): user anonymous; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=15 "Edit section: mode(1): user anonymous; any recipient")]
-### 模式1：你是匿名的，你的接受者是任意普通用户
+### 你是匿名的，你的接受者是任意普通用户
 
 -   Scenario: post anonymously a message in a message board/mailing
 - 场景：在消息版（论坛）或邮件列表或网页评论区 匿名发布消息
@@ -506,44 +506,51 @@ Let us begin with an overview of the different Modes of Anonymity:
 
 -   Scenario: both sender and recipient know each other and both use
     Tor.
-- 场景：通讯双方（发送者和接受者）互相认识对方并都使用Tor。
-
 -   They can communicate with each other without any third party being
     wise to their activity or even to the knowledge that they are
     communicating with each other.
-- 他们可以这样通讯：第三方无法知道他们通讯内容甚至不知道他们在通讯。
-
 -   You are NOT anonymous.
-- 你这样不算匿名。
-
 -   Your real IP/location stays hidden.
-- 你的真实IP/位置保持隐匿。
 -   Location privacy: your location remains secret.
-- 你的地理位置也是隐匿的。
 
 ### mode(3): user with no anonymity using Tor; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=17 "Edit section: mode(3): user with no anonymity using Tor; any recipient")]
-### 模式3：你用了Tor但没有匿名；面对任意接受者。
 
 -   Scenario: login with your real name into any services, such as
     webmail, Twitter, Facebook, etc...
-- 场景：用了你的真名/常用帐号登录了任何服务，比如邮箱、推特、脸书等……
-
 -   You are obviously NOT anonymous. As soon as you log into an account
     where you entered your real name the website knows your identity.
     Tor can not make you anonymous in these situations.
-- 你明显是没在匿名。只要你登录了平时用真名/真IP登录的网站，Tor也不能让你在这种情况保持隐匿。
-
 -   Your real IP/location stays hidden.
 -   Location privacy. Your location remains secret.
-- 你的真实IP保持隐匿。
-- 你的地址位置也是隐匿的。
 
 ### mode(4): user with no anonymity; any recipient[[edit](/w/index.php?title=DoNot&action=edit&section=18 "Edit section: mode(4): user with no anonymity; any recipient")]
-### 模式4：你没有匿名；面对任意接受者
 
 -   Scenario: normal browsing without Tor.
-- 场景：没有用Tor的常规上网。
 -   You are NOT anonymous.
+-   Your real IP/location gets revealed.
+-   Your location gets revealed.
+
+### Conclusion[[edit](/w/index.php?title=DoNot&action=edit&section=19 "Edit section: Conclusion")]
+
+It's not wise to combine mode(1) and mode(2). For example, if you have
+an IM or email account and use that via mode(1), you are advised not to
+use the same account for mode(2). We have explained previously why this
+is an issue.
+
+**It's also not wise to mix two or more modes inside the same Tor
+session**, as they could share the same exit relay (identity
+correlation).
+
+It's also possible that other combinations of modes are dangerous and
+could lead to the leakage of personal information or your physical
+location.
+
+### License[[edit](/w/index.php?title=DoNot&action=edit&section=20 "Edit section: License")]
+
+License of "Do not mix Modes of Anonymity!":
+^[[6]](#cite_note-adrelicense-6)^
+
+Don't change settings if you don't know their consequences.[[edit](/w/index.php?title=DoNot&action=edit&section=21 "Edit section: Don't change settings if you don't know their consequences.")]
 - 你没匿名。
 -   Your real IP/location gets revealed.
 -   Your location gets revealed.
@@ -846,49 +853,3 @@ Random News:
 Bored? Want to chat with other Whonix users? Join us in
 [IRC](http://irc://irc.oftc.net/whonix) chat
 ([Webchat](https://webirc.oftc.net:8443/?channels=Whonix)).
-
-* * * * *
-
-[Impressum](/wiki/Impressum "Impressum") |
-[Datenschutz](/wiki/Datenschutz "Datenschutz") |
-[Haftungsausschluss](/wiki/Disclaimer "Disclaimer")\
-
-[https](https://www.whonix.org/wiki/DoNot) |
-([forcing](/wiki/Forcing_.onion_on_Whonix.org "Forcing .onion on Whonix.org"))
-[onion](http://kkkkkkkkkk63ava6.onion/wiki/DoNot)\
- Share:
-[Twitter](https://twitter.com/intent/tweet?url=https://www.whonix.org/wiki/DoNot&text=&via=Whonix)
-|
-[Facebook](https://facebook.com/sharer.php?u=https://www.whonix.org/wiki/DoNot)
-|
-[Google+](https://plus.google.com/share?url=https://www.whonix.org/wiki/DoNot)
-This is a wiki. Want to improve this page? Help welcome, volunteer
-contributions are happily considered! See [Conditions for Contributions
-to
-Whonix](https://github.com/Whonix/Whonix/blob/master/CONTRIBUTING.md),
-then [Edit](/w/index.php?title=DoNot&action=edit)! IP addresses are
-scrubbed, but editing over Tor is recommended. Edits are held for
-moderation. Whonix ([](https://plus.google.com/108150429836421683225)g+)
-is a [licensee](http://www.openinventionnetwork.com/licensees.php) of
-the Open Invention Network. Unless otherwise noted above, content of
-this page is [copyrighted](/wiki/Whonix:Copyrights "Whonix:Copyrights")
-and licensed under the same Free (as in speech)
-[license](https://github.com/Whonix/Whonix/blob/master/debian/copyright)
-as Whonix itself.
-
-Retrieved from
-"<https://www.whonix.org/w/index.php?title=DoNot&oldid=26614>"
-
-[Category](/wiki/Special:Categories "Special:Categories"):
-
--   [Documentation](/wiki/Category:Documentation "Category:Documentation")
-
--   [Impressum](/wiki/Impressum "Impressum")
--   [Datenschutz](/wiki/Datenschutz "Datenschutz")
--   [Haftungsausschluss](/wiki/Haftungsausschluss "Haftungsausschluss")
--   [Donate](/wiki/Donate "Donate")
--   [Investors](/wiki/Investors "Investors")
--   [Mobile
-    view](https://www.whonix.org/w/index.php?title=DoNot&mobileaction=toggle_view_mobile)
--   [Log in](/w/index.php?title=Special:UserLogin&returnto=DoNot)
-
