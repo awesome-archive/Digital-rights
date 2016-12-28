@@ -541,28 +541,36 @@ Let us begin with an overview of the different Modes of Anonymity:
 -   Scenario: normal browsing without Tor.
 - 场景：没用Tor的常规接受者。
 -   You are NOT anonymous.
+- 你不是匿名的。
 -   Your real IP/location gets revealed.
+- 你的真实IP暴露了。
 -   Your location gets revealed.
+- 你的地理位置也暴露了。
 
 ### Conclusion[[edit](/w/index.php?title=DoNot&action=edit&section=19 "Edit section: Conclusion")]
+### 结论
 
 It's not wise to combine mode(1) and mode(2). For example, if you have
 an IM or email account and use that via mode(1), you are advised not to
 use the same account for mode(2). We have explained previously why this
 is an issue.
+把模式1和模式2混合用是不明智的。例如，如果你的即时通讯帐号或电邮帐号在模式1, 你最好不要在模式2下用同样的帐号。我们已在前面解释过了。
 
 **It's also not wise to mix two or more modes inside the same Tor
 session**, as they could share the same exit relay (identity
 correlation).
+而且最好**不要在同一个Tor会话中混着用两个或以上的模式**，他们可能会共用一个出口节点（造成身份关联）。
 
 It's also possible that other combinations of modes are dangerous and
 could lead to the leakage of personal information or your physical
 location.
+别的混合模式都是危险的，可能造成个人身份信息或地理位置的泄漏。
 
 ### License[[edit](/w/index.php?title=DoNot&action=edit&section=20 "Edit section: License")]
 
 License of "Do not mix Modes of Anonymity!":
 ^[[6]](#cite_note-adrelicense-6)^
+本段的[许可协议]()
 
 Don't change settings if you don't know their consequences.[[edit](/w/index.php?title=DoNot&action=edit&section=21 "Edit section: Don't change settings if you don't know their consequences.")]
 - 你没匿名。
@@ -706,30 +714,39 @@ operating system, hardware, physical security, etc.) is perfect. For
 example the user could fetch a news website and neither the news website
 nor the website's ISP has any idea if that user has ever contacted the
 news website before. ^[[8]](#cite_note-8)^
+在理想的情况下，Tor网络、Tor浏览器（以及其下层的操作系统、硬件、物理安全层面等）是没问题的。举例说，用户访问一个新闻网站后，不管新闻网站还是网站的ISP都无法获知那个用户之前有无访问过这个网站。[8]()
 
 The opposite of this, when using software incorrectly, for example using
 Firefox instead of the Tor-safe browser Tor Browser, the original
 (IP/location) of a connection is still hidden, but an identifier (for
-example Cookies) can be used to make that connection pseudonymous. The
-destination website could log for example "user with id 111222333444
+example Cookies) can be used to make that connection pseudonymous. 
+反过来说，当不正确地使用软件的话，比如用火狐浏览器而不是Tor浏览器，真实IP/位置虽然还是得到隐匿，但仍然有标识物（能显示你身份的特征，比如Cookies）能被用来识别出用户的身份（成为“假名”）。
+
+The destination website could log for example "user with id 111222333444
 viewed video title a at time b on date c, video title d at time e at
 date f.". These information can be used for profiling. Over time these
 profiles become more and more comprehensive, which reduces anonymity,
 i.e. in worst case it could lead to de-anonymization.
+你所访问的目的网站会记录这样的信息，比如“id为111222333444的用户在c日期b时间看了标题为a的视频，在f日期e时间看了标题为d的视频”。这些信息可被用来形成“身份挡”。久而久之这些归档就会越来越丰富，降低了用户的匿名性。最坏的情况是这可能直接把你去匿名化（认出你是谁）。
 
 As soon as someone logs into a website (for example into a forum or
 e-mail address) with a username the connection is by definition no
 longer anonymous, but pseudonymous. The origin of the connection
 (IP/location) is still hidden, but the connection can be associated with
 an identifier ^[[7]](#cite_note-identifier-7)^, i.e. in this case, an
-account name. Identifiers can be used to keep a log of various things.
+account name.
+只要有人用一个已经是不再匿名（只是假名）的用户名/帐号 登录进一个网站（比如一个论坛或邮箱），那么真实IP/位置仍然是隐匿的，但这个连接就会一些标识物关联上了[7]()，比如，在这情况下，用户名就是一个（标识物）。
+
+ Identifiers can be used to keep a log of various things.
 When a user wrote what, date and time of login and logout, what a user
 wrote, to whom the user wrote, IP address (useless, if it's a Tor exit
 relay), browser fingerprint etc.
+标识物可以被用来记录很多事情。一个用户什么时候写了什么，登录登出的时间日期，写了东西给谁、IP多少（除非那是个Tor出口节点）、浏览器“指印”等等。
 
 Maxim Kammerer, developer of Liberté Linux ^[[9]](#cite_note-9)^, has a
 interesting different opinion. ^[[10]](#cite_note-10)^ I don't want to
 withhold from you:
+Maxim Kammerer, Liberté Linux ^[[9]](#cite_note-9)^ 的开发者，有个有意思的不同观点。[10]() 我想还是给你们看看：
 
 > I have not seen a compelling argument for anonymity, as opposed to
 > pseudonymity. Enlarging anonymity sets is something that Tor
@@ -741,7 +758,10 @@ withhold from you:
 > equally does not mean much, because there are many ways to uncover
 > more client details (e.g., via Javascript oddities).
 
+  我没看见有关于匿名的很刚需的观点（需求），相比假名而言。扩大匿名的作用其实是Tor开发者们为了发表更多的论文和募集更多的筹款。大多数用户只需要假名就够了，也就是地理位置隐匿就行。用一个单独的不会莫名其妙地揭露用户地理位置的浏览器即可，只要用户不用它做不须假名的活动就行。用一个好的浏览器头信息对匿名检测者来说也不是什么难题，因为能揭露用户详细信息的方式太多了（比如，通过一些“奇怪的”Javascript脚本）。
+
 Don't be the first one to spread your own link.[[edit](/w/index.php?title=DoNot&action=edit&section=25 "Edit section: Don't be the first one to spread your own link.")]
+不要做第一个传播你自己的链接的人
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You created an anonymous blog or hidden service? Great. You have a
@@ -750,8 +770,10 @@ similar? Great. Do not be tempted to be one of the first ones to
 advertise your new anonymous project! The more you separate identities,
 the better. Of course, at some point you may or even must be "naturally"
 aware of it, but be very careful at this point.
+你创建了一个匿名博客或暗网服务？很好。你有个推特帐号且有着众多粉丝，运行着一个明网的新闻网页或类似的什么？很好。不要诱惑去做那个第一个广而告知你的新匿名项目的人！你越分隔你的不同身份越好。当然，在某种程度上你可能或应该“自然地”想到这个了，只是要特别留意一下。
 
 Don't open random files or links.[[edit](/w/index.php?title=DoNot&action=edit&section=26 "Edit section: Don't open random files or links.")]
+不要打开随机的（来源不明的）文件或链接
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 Someone sent you an pdf by mail or gave you a link to a pdf? That
@@ -760,13 +782,16 @@ prepared to infect your system. Don't open it with the default tool you
 were expected use with by the creator. For example, don't open a pdf
 with a pdf viewer. If the content is public anyway, try using a free
 online pdf viewer.
+有人通过邮件发给你了一个PDF文件，或给你一个指向某PDF的链接？那个发送者/邮箱/帐号/密钥可能已被攻破，那个PDF可以被用来感染你的系统。不要用发送者期待的默认工具/方式打开它。比如，不要用PDF viewer打开。如果其内容本身可以公开（无所谓），尝试用一个免费的在线PDF阅读器。
 
 Don't do (mobile) phone verification.[[edit](/w/index.php?title=DoNot&action=edit&section=27 "Edit section: Don't do (mobile) phone verification.")]
+不要用（移动）电话做验证
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Websites such as Google, Facebook and others will ask for a (mobile)
 phone number if you login over Tor. Unless you are really clever or have
 an alternative, you shouldn't do it.
+一些网站如谷歌、脸书和其他网站，会在你用Tor登录时要求手机号码。除非你真的很聪明或有更好的替代办法，你别这么做（登录时提供手机号）
 
 Reason: The number you give away will be logged. The SIM card is most
 likely registered on your name. And even if not, receiving an SMS gives
@@ -776,10 +801,14 @@ itself. Each time the phone logs into the mobile network, the provider
 will log the SIM card serial number ^[[11]](#cite_note-11)^ AND the
 phone serial number ^[[12]](#cite_note-12)^. If you bought the SIM card
 anonymously, but not the phone, it's not anonymous, because these two
-serials will get linked. If you really want to do mobile verification,
+serials will get linked. 
+理由：你提供的号码会被记录。那种SIM卡基本都是用你的名字注册的。如果没有，接受短信也随时暴露你的地理位置。尽管你匿名地购买了SIM卡并且在远离你的住所的地方开通，仍然会有风险：手机本身。当每次手机登录进移动网络，运营商会记录SIM卡序列号^[[11]](#cite_note-11)^，**同时**，记录手机序列号^[[12]](#cite_note-12)^。如果你匿名地购买了手机卡，但没匿名买手机，那就不是匿名，因为这两个序列号会被关联。
+
+If you really want to do mobile verification,
 you need a spot far away from your home, a fresh phone, and a fresh SIM
 card. Afterwards, you must turn off the phone, and burn both the phone
 and the SIM card right after doing it.
+如果你确实想用手机做验证，你需要找个远离你家的地方，一个全新手机和一个全新SIM卡。完事后，你必须关掉手机，把手机和卡都烧掉。
 
 You could try to find an online service receiving SMS for you. That
 would work and would be anonymous. The problem is, that it most likely
@@ -787,6 +816,8 @@ won't work for Google and Facebook, because they actively blacklist such
 numbers for verification. Or you could try to find someone else
 receiving the SMS for you, but that would only shift the risk from you
 to the other person.
+你可以尝试找个在线接受短信的服务，可以帮你做到匿名。问题是，通常这对谷歌和脸书行不通，因为他们主动地封掉了这些（在线）号码用于验证。或者你可以试试找别的人来帮你接受短信，但这样又会把风险转嫁到他人身上。
+
 
 Why this page?[[edit](/w/index.php?title=DoNot&action=edit&section=28 "Edit section: Why this page?")]
 ------------------------------------------------------------------------------------------------------
