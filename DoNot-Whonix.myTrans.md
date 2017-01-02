@@ -64,55 +64,78 @@ Contents
     -   [1.2 Login into your real life Facebook account and think you
         are
         anonymous.](#Login_into_your_real_life_Facebook_account_and_think_you_are_anonymous.)
+    -   [1.2 登录你的反映真实社会关系的（实名）社交帐号，并觉得自己在隐匿]
     -   [1.3 Never login into accounts you ever used without
         Tor.](#Never_login_into_accounts_you_ever_used_without_Tor.)
+    -   [1.3  坚决不要登录你之前不用tor登陆的帐号]
     -   [1.4 Don't login into your bank account, paypal, ebay or other
         important personal accounts
         unless...](#Don.27t_login_into_your_bank_account.2C_paypal.2C_ebay_or_other_important_personal_accounts_unless...)
+    -   [1.4 不要登录你的银行帐号、淘宝或其他重要个人帐号，除非……]
     -   [1.5 Don't alternate Tor with open
         WiFi.](#Don.27t_alternate_Tor_with_open_WiFi.)
+    -   [1.5 不要以为公共WIFI 有Tor一样的功效]
     -   [1.6 Prevent Tor over Tor
         scenarios.](#Prevent_Tor_over_Tor_scenarios.)
+    -   [1.6 防止 Tor中带Tor这样的情况]
     -   [1.7 Don't send sensitive data without end-to-end
         encryption.](#Don.27t_send_sensitive_data_without_end-to-end_encryption.)
+    -   [1.7 没有端对端加密就不要传送敏感信息]
     -   [1.8 Don't disclose identifying data about
         yourself.](#Don.27t_disclose_identifying_data_about_yourself.)
+    -   [1.8 不要透露关于你自己的身份信息]
     -   [1.9 Do use bridges if you think Tor usage is
         dangerous/suspicious in your
         country.](#Do_use_bridges_if_you_think_Tor_usage_is_dangerous.2Fsuspicious_in_your_country.)
+    -   [1.9 如果你覺得在你的國家使用Tor是危險/受到懷疑的，請用網橋]
     -   [1.10 Don't maintain long term
         identities](#Don.27t_maintain_long_term_identities)
+    -   [1.10 不要使用/維護長期的網絡身份]
     -   [1.11 Don't use different online identities at the same
         time.](#Don.27t_use_different_online_identities_at_the_same_time.)
+    -   [1.11 不要同一时间使用不同的网络身份]
     -   [1.12 Don't log into Twitter, Facebook, Google, etc. longer than
         necessary.](#Don.27t_log_into_Twitter.2C_Facebook.2C_Google.2C_etc._longer_than_necessary.)
+    -   [1.12 无事少登推特、非死不可、谷歌等]
     -   [1.13 Do not mix Modes of
         Anonymity!](#Do_not_mix_Modes_of_Anonymity.21)
+    -   [1.13 不要把不同匿名模式混着用：]
         -   [1.13.1 mode(1): user anonymous; any
             recipient](#mode.281.29:_user_anonymous.3B_any_recipient)
+        -   模式1: 自己匿名，任意接受者（公开）；
         -   [1.13.2 mode(2): user knows recipient; both use
             Tor](#mode.282.29:_user_knows_recipient.3B_both_use_Tor)
+        -   模式2: 自己知道接受者是谁，双方都用Tor；
         -   [1.13.3 mode(3): user with no anonymity using Tor; any
             recipient](#mode.283.29:_user_with_no_anonymity_using_Tor.3B_any_recipient)
+        -   模式3: 自己用Tor但是不匿名，任意接受者（公开）
         -   [1.13.4 mode(4): user with no anonymity; any
             recipient](#mode.284.29:_user_with_no_anonymity.3B_any_recipient)
+        -   模式4: 自己不匿名，任意接受者（公开）
         -   [1.13.5 Conclusion](#Conclusion)
         -   [1.13.6 License](#License)
     -   [1.14 Don't change settings if you don't know their
         consequences.](#Don.27t_change_settings_if_you_don.27t_know_their_consequences.)
+    -   [1.14 如果你不清楚后果就不要修改设置]
     -   [1.15 Do not use clearnet and Tor at the same
         time.](#Do_not_use_clearnet_and_Tor_at_the_same_time.)
+    -   [1.15 不要把明网和Tor一起混着用]
     -   [1.16 Do not connect to any server anonymously and
         non-anonymously at the same
         time!](#Do_not_connect_to_any_server_anonymously_and_non-anonymously_at_the_same_time.21)
+    -   [1.16 不要同时用匿名和非匿名技术连接同一个服务器／网站]
     -   [1.17 Do not confuse Anonymity with
         Pseudonymity.](#Do_not_confuse_Anonymity_with_Pseudonymity.)
+    -   不要将匿名和 “假名”混为一谈
     -   [1.18 Don't be the first one to spread your own
         link.](#Don.27t_be_the_first_one_to_spread_your_own_link.)
+    -   [1.18 不要让自己成为第一个传播自己（网站）链接的人]
     -   [1.19 Don't open random files or
         links.](#Don.27t_open_random_files_or_links.)
+    -   [1.19 不要打开陌生／随机文件或链接]
     -   [1.20 Don't do (mobile) phone
         verification.](#Don.27t_do_.28mobile.29_phone_verification.)
+    -   [1.20 不要用手机（移动设备）做验证]
     -   [1.21 Why this page?](#Why_this_page.3F)
     -   [1.22 Footnotes](#Footnotes)
     -   [1.23 Attribution](#Attribution)
