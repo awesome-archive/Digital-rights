@@ -1,5 +1,7 @@
 [意译]
 
+source: https://www.eff.org/deeplinks/2017/01/google-launches-key-transparency-while-tradeoff-whatsapp-called-backdoor
+
 ## Google Launches Key Transparency While a Trade-Off in WhatsApp Is Called a Backdoor
 ## 当Whatsapp的一个权宜之计被当成“后门”时，谷歌推出「密钥透明性」功能
 
