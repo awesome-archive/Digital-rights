@@ -2,6 +2,8 @@
 ## EFF's 2017 Wishlist
 ## EFF的2017願望清單
 
+source: https://www.eff.org/deeplinks/2016/12/2017-wishlist
+
 For the last five years, EFF has greeted the holiday season by publishing a list of things we'd like to see happen in the coming year. Sometimes these are actions we'd like to see taken by companies, and sometimes our wishes are aimed at governments, but we also include actions everyday people can take to advance our digital civil liberties. This year has seen a few victories, including the fact that more and more websites are using HTTPS by default and using Let's Encrypt (and our Certbot client for it), but there's always more to do. In 2017, we're narrowing our focus to technology companies and challenging them to step up and protect their users in what's likely to be a difficult year.
 
 過去的五年，EFF都通過發佈一份我們希望在新的一年會發生的事情清單來歡度我們的假日。有時候這些是我們希望一些公司需要採取的行动，有时我们的目标指向政府，但我们也会囊括一些日常百姓都可以采取的提升我们公民自由的行动。今年我们看到些许胜利，包括越来越多的网站默认采用了 HTTPS，并使用 Let's Encrypt（还有我们的 Certbot 客户端）。但还是有很多需要去做。在2017年这个可能是更艰难的一年，我们将把我们的焦点缩窄在科技企业身上，鞭策他们更进一步保护他们的用户。
