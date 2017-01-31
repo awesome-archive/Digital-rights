@@ -1,15 +1,17 @@
 *在这个时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并反抗网络/信息封锁……*
 
+> 技术有门槛，但逻辑是没有门槛的。
+
 <hr>
 
-- 在线匿名FAQ [原创/总结]
+- 在线匿名FAQ [原创]
 
-- [译介] Whonix 文档（关于匿名的技术和策略）
+- Whonix 文档（关于匿名的技术和策略）[译介]
 
-- [翻译] EFF's Deeplinks: 网络上的数字权利
+- EFF's Deeplinks: 网络上的数字权利  [译介]
 
 - 关于隐私/匿名的资源
 
 <br />
 <hr>
-__(部分成品会发布在博客上：https://mdrights.github.io/os-observe )__
+__（部分成品会发布在博客上：https://mdrights.github.io/os-observe__
