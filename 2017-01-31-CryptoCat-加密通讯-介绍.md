@@ -100,7 +100,7 @@ Given our threat model, Cryptocat aims to accomplish the following security goal
 - 不可区分性：如果 Alice从两条一样大小的消息中随机选择一条发给 Bob，那么攻击者无法确定发出去的是哪一条。
 
 - Forward secrecy: If Alice sends a message to Bob and Alice's key state at the time of this message is subsequently compromised, all previous messages retain their Secrecy property.
-- 过往私密：如果 ALice 发了一条消息给 Bob，但接下来 Alice的密钥不安全了（比如被被盗被公开等），那他俩以前的消息将成为他俩永远的秘密（外人无法解密）。
+- 前向保密：如果 ALice 发了一条消息给 Bob，但接下来 Alice的密钥不安全了（比如被被盗被公开等），那他俩以前的消息将成为他俩永远的秘密（外人无法解密）。
 
 - Future secrecy: If Alice sends a first message to Bob, receives a reply from Bob, and then sends a second message to Bob, Alice's second message remains secret even if her key state for the first message is compromised.
 - 未来私密：如果 Alice给 Bob发了第一条消息，并得到 Bob一条回复，然后 Alice再发第二条消息给 Bob，那么如果 Alice发第一条消息时的密钥变不安全了的话，她的第二条（及以后）消息仍然可以保持私密。
