@@ -1,4 +1,4 @@
-*在这个时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并反抗网络/信息封锁……*
+*在这个时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并捍卫网络/信息自由……*
 
 > 技术有门槛，但逻辑是没有门槛的。
 
@@ -16,19 +16,17 @@
 <br /> 
 ## 「數字權利」相关群組／頻道
 
-旨在：探索安全的群聯／半開放信息流通平台；尋找更多的可能性。只要一天還有網絡，我們就能串聯。>歡迎到這裡聯繫我～
 
-優勢：群組會話（更有可能）比單對單更高的匿名性。
-
-- **Telegram**:
+- **Telegram**: 「不推荐」
  - [Tor 匿蹤隱私保護群組](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)
  - [數字權利群組](https://telegram.me/digital_rights)
 
-- **IRC 頻道**（也是群, 但謹記必須搭配 Tor 否則完全暴露自己 IP :）：
+- **IRC 頻道**：
  - #DigitalRightsCN
  - (加入姿势： IRC 客戶端中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个>频道」，加入上边的频道名即可 )
+ - （謹記必須搭配 Tor 否則完全暴露自己 IP :）
 
-- **Riot 房間**（ https://riot.im ） （與 IRC 頻道同步）
+- **Riot 房間**（ https://riot.im ） （與 IRC 頻道同步） **「推荐」**
  - #digitalrightscn:matrix.org
  - (加入姿势：Riot客户端中，在 Room Directory 搜索 #digitalrightscn 即进入。）
 
