@@ -1,11 +1,13 @@
-*在这个“大數據”和實名制的时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并捍卫网络隱私/信息自由……*
+*——在这个“大數據”和實名制的时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并捍卫网络隱私/信息自由……*
+
+**Anti-1984，抵抗国家机器对公民的监控**
 
 > 技术有门槛，但逻辑是没有门槛的。
 
 <hr>
 ## 这里有：
 
-- 在线匿名FAQ [原创]
+- [在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
 - EFF/Tor/Tails 等博客的翻譯
 
@@ -16,12 +18,9 @@
 *（欢迎参与协作）*
 
 <br /> 
+<hr>
+
 ## 「數字權利」相关群組／頻道
-
-
-- **Telegram**: 「不推荐」
- - [Tor 匿蹤隱私保護群組](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)
- - [數字權利群組](https://telegram.me/digital_rights)
 
 - **IRC 頻道**：
  - #DigitalRightsCN
@@ -32,12 +31,14 @@
  - #digitalrightscn:matrix.org
  - (加入姿势：Riot客户端中，在 Room Directory 搜索 #digitalrightscn 即进入。）
 
-- **Tox 群**（ https://tox.chat ）**（已暫時棄坑）**
- - 官方Groupbot 中的第三組：【 Tor and 數字權利 】
- - （加入方法：1. 先加 Groupbot （加一次即可）ID: 56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5 。2. 輸入 info 看到群組列表。輸入 invite 3 即進入。）
+- **InternetFreedomFestival.org** 的 [Localization lab（中文）](https://community.internetfreedomfestival.org/community/channels/localization-zh-hans) 频道（或via Mattermost客户端）
+
+- **Telegram**: 「不推荐」
+ - [Tor 匿蹤隱私保護群組](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)
+ - [數字權利群組](https://telegram.me/digital_rights)
 
 
 <br />
 <hr>
-__（部分成品会发布在博客上：https://mdrights.github.io/os-observe__
+__（部分成品会发布在博客上：https://mdrights.github.io/os-observe ) __
 

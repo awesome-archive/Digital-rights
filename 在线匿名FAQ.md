@@ -1,6 +1,6 @@
 ## 在线匿名FAQ - Online Anonymity FAQ
 
-**更新日期：2016-12-27**  
+**更新日期：2017-06-25**  
 
 > 前言：在线匿名不但是一门技术，更包含一些使用习惯、非技术的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
 本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prism-break.org](https://prism-break.org/en/)，[securityinabox.org](https://securityinabox.org/)，等等。  
@@ -39,39 +39,19 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 
 ### 在线匿名我只需要Tor就够了吗？
 不够。只伪装IP地址顶多可以做到：不让人知道你的当下物理地点，但很难不让人发现来自这台机器的流量/网络身份是你的。因为确定你的身份，除了用物理位置外，还有很多东西可以帮助确定/定位到某个特定的人（那个人特点越多越容易～）。EFF有过一个[研究](https://panopticlick.eff.org/)，从数学的角度来解释讲只要知道少至几个（如6个）属性/特点，就能定位世界上任何一个人。而当你用你的机器在网络浏览，留下的特质性信息还是蛮多的。
-网卡MAC地址，浏览器User-Agent，就是两个应该伪装的地方。[EFF的网站](https://panopticlick.eff.org/)上可以看到你的浏览器的 User-Agent 跟多少其他访客的是一模一样的，你就理解了。
 
-- MAC地址伪装，浏览器UA伪装   
-（本人略知一些方法，但要么不方便，要么效果不好，如果你有什么好的方法/工具，欢迎告诉我（issue/PR) :)。
+**网卡MAC地址，浏览器User-Agent**，就是两个应该伪装的地方。[EFF的网站](https://panopticlick.eff.org/)上可以看到你的浏览器的 User-Agent 跟多少其他访客的是一模一样的，你就理解了。
 
-- MAC地址伪装方法  
-- on Linux 命令行：  
-`$ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串（注意有效的MAC字串的首两位数必须是偶数）`  
-`# ip link set dev interface down                         # 先把网卡关闭`  
-`# ip link set dev interface address XX:XX:XX:XX:XX:XX  # X就是你刚才上面生成的随机字串`  
-`# ip link set dev interface up`  
+- MAC地址伪装（随机化）方法：
+    - [tmac](https://technitium.com/tmac) for Win; For MacOS....暂用命令行吧（？）参见 [这些方法](https://github.com/mdrights/Digital-rights/blob/master/2017-06-25-MAC-%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96%E6%96%B0%E7%A0%94%E7%A9%B6.md#%E9%9A%8F%E6%9C%BA%E5%8C%96mac%E5%9C%B0%E5%9D%80%E7%9A%84%E5%B7%A5%E5%85%B7) （最佳实践：用 Linux） 
+    - 然鹅，MAC地址的随机化并不都是那么有效，特别是移动设备（安卓设备更加感人），请阅读 [这篇翻译/解读](https://github.com/mdrights/Digital-rights/blob/master/2017-06-25-MAC-%E5%9C%B0%E5%9D%80%E9%9A%8F%E6%9C%BA%E5%8C%96%E6%96%B0%E7%A0%94%E7%A9%B6.md)。
+    - 所以，[Whonix wiki](https://www.whonix.org/wiki/Computer_Security_Education#Introduction_2) 教我们一个不是办法的办法：在不能/不会给自己电脑做MAC地址随机化的情况下，准备多个USB式无线网卡（30~50RMB够了），在不同的场所用不同的网卡。注意：在同一个场所用同一个网卡就可以了，而且在自己家/办公室里联网也不需要搞MAC地址伪装了（因为老大哥早就知道在这里上网的是你了嘿）。
 
-- on macOS 命令行：
-```
-$ sudo /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport -z
-- $ sudo ifconfig en0 ether $(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//')
-- $ networksetup -detectnewhardware
-```
-或，
-```
-- $ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/./0/2; s/.$//'     # 生成随机MAC格式的字串
-- $ sudo ifconfig eth0 down hw ether XX:XX:XX:XX:XX:XX && ifconfig eth0 up
-```
+- 浏览器UA伪装方法：
+火狐浏览器插件[Switcher](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/) ；    
+[Chrome插件](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg)
 
-- on Android：
-（欢迎补充……我没用Android）
-
-在自由的Linux上，还有不少方法，如用 macchanger，ArchWiki[收集的方法](https://wiki.archlinux.org/index.php/MAC_Address_Spoofing)也会是你的必读。
-
-- 浏览器UA伪装：
-请参考这篇[文章](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) （英文）（略复杂）；
-再就是火狐浏览器插件[Switcher](https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/) ；[Chrome插件](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg)（效果不好且可能有隐私隐患——理论上是插件都能看到/过滤所有浏览器上的内容）
-
+(如果你不想安装这些外部的插件（因为有一定隐患），那也有方法，请参考 [这篇文章](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/)（略复杂）。
 
 ### 那，在线匿名需要做到那些非技术性的措施？  
 这篇[Whonix wiki文章](https://www.whonix.org/wiki/DoNot)做了详细的介绍，匿名时*不要*做以下事情：
