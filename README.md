@@ -9,6 +9,8 @@
 
 - [在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
+- 定製的隱私加強的Live（GNU/Linux）操作系統鏡像：[Refracta](https://mdrights.github.io/os-observe/posts/2017/07/Refracta-live-torrent.html)
+
 - EFF/Tor/Tails 等博客的翻譯
 
 - Whonix 文档（关于匿名的技术和策略）[译介]
