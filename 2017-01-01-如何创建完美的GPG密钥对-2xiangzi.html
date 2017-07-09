@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr'>
+<head>
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/static/v1/widgets/304508860-css_bundle_v2.css' />
+<meta content='width=1100' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='https://2xiangzi.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="二翔子的博客 - Atom" href="https://2xiangzi.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="二翔子的博客 - RSS" href="https://2xiangzi.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="二翔子的博客 - Atom" href="https://www.blogger.com/feeds/7959751325273089682/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="二翔子的博客 - Atom" href="https://2xiangzi.blogspot.com/feeds/6125275056611834563/comments/default" />
+<!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/4291804643-ieretrofit.js"></script>
+<![endif]-->
+<link href='https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png' rel='image_src'/>
+<meta content='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html' property='og:url'/>
+<meta content='如何创建完美的GPG密钥对' property='og:title'/>
+<meta content='如何创建完美的GPG密钥对  文章目录   写在前面 使用副签名密钥的好处及原理 创建完美的GPG密钥对 简单回顾 使用日常密钥对 意外发生后的应对措施 推荐阅读  GnuPG 是一款非常优秀加密软件，它在我们的数字生活中扮演了极其重要的角色。越来越多的同学都开始尝试用它进行日常...' property='og:description'/>
+<meta content='https://lh4.googleusercontent.com/proxy/FXEC7hgbzVKCfmzvQJ_8hjllfBZAoxQfwUs5k9esS1vUmvKfDBzBm2p5rzo-YM26_HiFSdbkX5fbpPRpe91R5kDgaAIW6JbFHOo=w1200-h630-p-k-no-nu' property='og:image'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>二翔子的博客: 如何创建完美的GPG密钥对</title>
+<link href="https://fonts.googleapis.com/css?kit=s-BiyweUPV0v-yRb-cjciPesZW2xOQ-xsNqO47m55DA" rel="stylesheet" type="text/css"><style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Simple
+Designer: Blogger
+URL:      www.blogger.com
+----------------------------------------------- */
+
+/* Content
+----------------------------------------------- */
+body {
+font: normal normal 12px Droid Sans;
+color: #222222;
+background: #f3f3f3 none repeat scroll top left;
+padding: 0 40px 40px 40px;
+}
+html body .region-inner {
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+h2 {
+font-size: 22px;
+}
+a:link {
+text-decoration:none;
+color: #0065ff;
+}
+a:visited {
+text-decoration:none;
+color: #ff9900;
+}
+a:hover {
+text-decoration:underline;
+color: #00b2ff;
+}
+.body-fauxcolumn-outer .fauxcolumn-inner {
+background: transparent url(https://resources.blogblog.com/blogblog/data/1kt/simple/body_gradient_tile_light.png) repeat scroll top left;
+_background-image: none;
+}
+.body-fauxcolumn-outer .cap-top {
+position: absolute;
+z-index: 1;
+height: 400px;
+width: 100%;
+}
+.body-fauxcolumn-outer .cap-top .cap-left {
+width: 100%;
+background: transparent url(https://resources.blogblog.com/blogblog/data/1kt/simple/gradients_light.png) repeat-x scroll top left;
+_background-image: none;
+}
+.content-outer {
+-moz-box-shadow: 0 0 40px rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 10px #333333;
+box-shadow: 0 0 40px rgba(0, 0, 0, .15);
+margin-bottom: 1px;
+}
+.content-inner {
+padding: 10px 10px;
+}
+.content-inner {
+background-color: #f3f3f3;
+}
+/* Header
+----------------------------------------------- */
+.header-outer {
+background: #eeeeee url(//www.blogblog.com/1kt/simple/gradients_light.png) repeat-x scroll 0 -400px;
+_background-image: none;
+}
+.Header h1 {
+font: italic bold 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #ff9900;
+text-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
+}
+.Header h1 a {
+color: #ff9900;
+}
+.Header .description {
+font-size: 140%;
+color: #7fd8ff;
+}
+.header-inner .Header .titlewrapper {
+padding: 22px 30px;
+}
+.header-inner .Header .descriptionwrapper {
+padding: 0 30px;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner .section:first-child {
+border-top: 0 solid #cc6611;
+}
+.tabs-inner .section:first-child ul {
+margin-top: -0;
+border-top: 0 solid #cc6611;
+border-left: 0 solid #cc6611;
+border-right: 0 solid #cc6611;
+}
+.tabs-inner .widget ul {
+background: #f5f5f5 url(https://resources.blogblog.com/blogblog/data/1kt/simple/gradients_light.png) repeat-x scroll 0 -800px;
+_background-image: none;
+border-bottom: 1px solid #cc6611;
+margin-top: 0;
+margin-left: -30px;
+margin-right: -30px;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+padding: .6em 1em;
+font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #999999;
+border-left: 1px solid #f3f3f3;
+border-right: 1px solid #cc6611;
+}
+.tabs-inner .widget li:first-child a {
+border-left: none;
+}
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+color: #000000;
+background-color: #eeeeee;
+text-decoration: none;
+}
+/* Columns
+----------------------------------------------- */
+.main-outer {
+border-top: 0 solid #cc6611;
+}
+.fauxcolumn-left-outer .fauxcolumn-inner {
+border-right: 1px solid #cc6611;
+}
+.fauxcolumn-right-outer .fauxcolumn-inner {
+border-left: 1px solid #cc6611;
+}
+/* Headings
+----------------------------------------------- */
+div.widget > h2,
+div.widget h2.title {
+margin: 0 0 1em 0;
+font: italic bold 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #000000;
+}
+/* Widgets
+----------------------------------------------- */
+.widget .zippy {
+color: #999999;
+text-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+}
+.widget .popular-posts ul {
+list-style: none;
+}
+/* Posts
+----------------------------------------------- */
+h2.date-header {
+font: normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+.date-header span {
+background-color: transparent;
+color: #222222;
+padding: inherit;
+letter-spacing: inherit;
+margin: inherit;
+}
+.main-inner {
+padding-top: 30px;
+padding-bottom: 30px;
+}
+.main-inner .column-center-inner {
+padding: 0 15px;
+}
+.main-inner .column-center-inner .section {
+margin: 0 15px;
+}
+.post {
+margin: 0 0 25px 0;
+}
+h3.post-title, .comments h4 {
+font: normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+margin: .75em 0 0;
+}
+.post-body {
+font-size: 110%;
+line-height: 1.4;
+position: relative;
+}
+.post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
+.BlogList .item-thumbnail img {
+padding: 2px;
+background: #ffffff;
+border: 1px solid #eeeeee;
+-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+.post-body img, .post-body .tr-caption-container {
+padding: 5px;
+}
+.post-body .tr-caption-container {
+color: #222222;
+}
+.post-body .tr-caption-container img {
+padding: 0;
+background: transparent;
+border: none;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+}
+.post-header {
+margin: 0 0 1.5em;
+line-height: 1.6;
+font-size: 90%;
+}
+.post-footer {
+margin: 20px -2px 0;
+padding: 5px 10px;
+color: #666666;
+background-color: #f9f9f9;
+border-bottom: 1px solid #eeeeee;
+line-height: 1.6;
+font-size: 90%;
+}
+#comments .comment-author {
+padding-top: 1.5em;
+border-top: 1px solid #cc6611;
+background-position: 0 1.5em;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+#comments .avatar-image-container img {
+border: 1px solid #eeeeee;
+}
+/* Comments
+----------------------------------------------- */
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #999999;
+border-bottom: 1px solid #999999;
+}
+.comments .comment-thread.inline-thread {
+background-color: #f9f9f9;
+}
+.comments .continue {
+border-top: 2px solid #999999;
+}
+/* Accents
+---------------------------------------------- */
+.section-columns td.columns-cell {
+border-left: 1px solid #cc6611;
+}
+.blog-pager {
+background: transparent none no-repeat scroll top center;
+}
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+background-color: #f3f3f3;
+padding: 5px;
+}
+.footer-outer {
+border-top: 0 dashed #bbbbbb;
+}
+/* Mobile
+----------------------------------------------- */
+body.mobile  {
+background-size: auto;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+.mobile .body-fauxcolumn-outer .cap-top {
+background-size: 100% auto;
+}
+.mobile .content-outer {
+-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+}
+.mobile .tabs-inner .widget ul {
+margin-left: 0;
+margin-right: 0;
+}
+.mobile .post {
+margin: 0;
+}
+.mobile .main-inner .column-center-inner .section {
+margin: 0;
+}
+.mobile .date-header span {
+padding: 0.1em 10px;
+margin: 0 -10px;
+}
+.mobile h3.post-title {
+margin: 0;
+}
+.mobile .blog-pager {
+background: transparent none no-repeat scroll top center;
+}
+.mobile .footer-outer {
+border-top: none;
+}
+.mobile .main-inner, .mobile .footer-inner {
+background-color: #f3f3f3;
+}
+.mobile-index-contents {
+color: #222222;
+}
+.mobile-link-button {
+background-color: #0065ff;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #ffffff;
+}
+.mobile .tabs-inner .section:first-child {
+border-top: none;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background-color: #eeeeee;
+color: #000000;
+border-top: 1px solid #cc6611;
+border-bottom: 1px solid #cc6611;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #cc6611;
+}
+/* RESET
+=============================================================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+}
+/* BODY
+=============================================================================*/
+body {
+font-family: Noto Sans, TW-Kai, BiauKai, Microsoft JhengHei, Helvetica, arial, freesans, clean;
+font-size: 14px;
+line-height: 1.6;
+color: #333;
+background-color: #fff;
+padding: 20px;
+max-width: 960px;
+margin: 0 auto;
+}
+body>*:first-child {
+margin-top: 0 !important;
+}
+body>*:last-child {
+margin-bottom: 0 !important;
+}
+/* BLOCKS
+=============================================================================*/
+p, blockquote, ul, ol, dl, table, pre {
+margin: 15px 0;
+}
+/* HEADERS
+=============================================================================*/
+h1, h2, h3, h4, h5, h6 {
+margin: 20px 0 10px;
+padding: 0;
+font-weight: bold;
+-webkit-font-smoothing: antialiased;
+}
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+font-size: inherit;
+}
+h1 {
+font-size: 28px;
+color: #000;
+}
+h2 {
+font-size: 24px;
+border-bottom: 1px solid #ccc;
+color: #000;
+}
+h3 {
+font-size: 18px;
+}
+h4 {
+font-size: 16px;
+}
+h5 {
+font-size: 14px;
+}
+h6 {
+color: #777;
+font-size: 14px;
+}
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+margin-top: 0;
+padding-top: 0;
+}
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+margin-top: 0;
+padding-top: 0;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+margin-top: 10px;
+}
+/* LINKS
+=============================================================================*/
+a {
+color: #4183C4;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+/* LISTS
+=============================================================================*/
+ul, ol {
+padding-left: 30px;
+}
+ul li > :first-child,
+ol li > :first-child,
+ul li ul:first-of-type,
+ol li ol:first-of-type,
+ul li ol:first-of-type,
+ol li ul:first-of-type {
+margin-top: 0px;
+}
+ul ul, ul ol, ol ol, ol ul {
+margin-bottom: 0;
+}
+dl {
+padding: 0;
+}
+dl dt {
+font-size: 14px;
+font-weight: bold;
+font-style: italic;
+padding: 0;
+margin: 15px 0 5px;
+}
+dl dt:first-child {
+padding: 0;
+}
+dl dt>:first-child {
+margin-top: 0px;
+}
+dl dt>:last-child {
+margin-bottom: 0px;
+}
+dl dd {
+margin: 0 0 15px;
+padding: 0 15px;
+}
+dl dd>:first-child {
+margin-top: 0px;
+}
+dl dd>:last-child {
+margin-bottom: 0px;
+}
+/* CODE
+=============================================================================*/
+pre, code, tt {
+font-size: 12px;
+font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+code, tt {
+margin: 0 0px;
+padding: 0px 0px;
+white-space: nowrap;
+border: 1px solid #eaeaea;
+background-color: #f8f8f8;
+border-radius: 3px;
+}
+pre>code {
+margin: 0;
+padding: 0;
+white-space: pre;
+border: none;
+background: transparent;
+}
+pre {
+background-color: #f8f8f8;
+border: 1px solid #ccc;
+font-size: 13px;
+line-height: 19px;
+overflow: auto;
+padding: 6px 10px;
+border-radius: 3px;
+}
+pre code, pre tt {
+background-color: transparent;
+border: none;
+}
+kbd {
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+-moz-border-right-colors: none;
+-moz-border-top-colors: none;
+background-color: #DDDDDD;
+background-image: linear-gradient(#F1F1F1, #DDDDDD);
+background-repeat: repeat-x;
+border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+border-image: none;
+border-radius: 2px 2px 2px 2px;
+border-style: solid;
+border-width: 1px;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height: 10px;
+padding: 1px 4px;
+}
+/* QUOTES
+=============================================================================*/
+blockquote {
+border-left: 4px solid #DDD;
+padding: 0 15px;
+color: #777;
+}
+blockquote>:first-child {
+margin-top: 0px;
+}
+blockquote>:last-child {
+margin-bottom: 0px;
+}
+/* HORIZONTAL RULES
+=============================================================================*/
+hr {
+clear: both;
+margin: 15px 0;
+height: 0px;
+overflow: hidden;
+border: none;
+background: transparent;
+border-bottom: 4px solid #ddd;
+padding: 0;
+}
+/* TABLES
+=============================================================================*/
+table th {
+font-weight: bold;
+}
+table th, table td {
+border: 1px solid #ccc;
+padding: 6px 13px;
+}
+table tr {
+border-top: 1px solid #ccc;
+background-color: #fff;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+/* IMAGES
+=============================================================================*/
+img {
+max-width: 100%
+}
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body {
+min-width: 960px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 960px;
+max-width: 960px;
+_width: 960px;
+}
+.main-inner .columns {
+padding-left: 0px;
+padding-right: 260px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 0px;
+right: 260px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("0px") -
+parseInt("260px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 0px;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 260px;
+}
+.main-inner .column-left-outer {
+width: 0px;
+right: 100%;
+margin-left: -0px;
+}
+.main-inner .column-right-outer {
+width: 260px;
+margin-right: -260px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+body#layout div.add_widget {
+padding: 8px;
+}
+body#layout div.add_widget a {
+margin-left: 32px;
+}
+--></style>
+<script type='text/javascript'>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-65616273-1', 'auto', 'blogger');
+        ga('blogger.send', 'pageview');
+      </script>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=7959751325273089682&amp;zx=b70e370b-b007-4c98-bf19-74132a753ee2' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=7959751325273089682&amp;zx=b70e370b-b007-4c98-bf19-74132a753ee2' rel='stylesheet'/></noscript>
+</head>
+<body class='loading variant-bold'>
+<div class='navbar no-items section' id='navbar' name='Navbar'>
+</div>
+<div class='body-fauxcolumns'>
+<div class='fauxcolumn-outer body-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content'>
+<div class='content-fauxcolumns'>
+<div class='fauxcolumn-outer content-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content-outer'>
+<div class='content-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left content-fauxborder-left'>
+<div class='fauxborder-right content-fauxborder-right'></div>
+<div class='content-inner'>
+<header>
+<div class='header-outer'>
+<div class='header-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left header-fauxborder-left'>
+<div class='fauxborder-right header-fauxborder-right'></div>
+<div class='region-inner header-inner'>
+<div class='header section' id='header' name='标题'><div class='widget Header' data-version='1' id='Header1'>
+<div id='header-inner'>
+<div class='titlewrapper'>
+<h1 class='title'>
+<a href='https://2xiangzi.blogspot.com/'>
+二翔子的博客
+</a>
+</h1>
+</div>
+<div class='descriptionwrapper'>
+<p class='description'><span>
+</span></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<div class='header-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</header>
+<div class='tabs-outer'>
+<div class='tabs-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left tabs-fauxborder-left'>
+<div class='fauxborder-right tabs-fauxborder-right'></div>
+<div class='region-inner tabs-inner'>
+<div class='tabs no-items section' id='crosscol' name='跨列'></div>
+<div class='tabs no-items section' id='crosscol-overflow' name='Cross-Column 2'></div>
+</div>
+</div>
+<div class='tabs-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='main-outer'>
+<div class='main-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left main-fauxborder-left'>
+<div class='fauxborder-right main-fauxborder-right'></div>
+<div class='region-inner main-inner'>
+<div class='columns fauxcolumns'>
+<div class='fauxcolumn-outer fauxcolumn-center-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-left-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-right-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class='columns-inner'>
+<div class='column-center-outer'>
+<div class='column-center-inner'>
+<div class='main section' id='main' name='总机'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+<h2 class='date-header'><span>2016年9月6日星期二</span></h2>
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<meta content='https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png' itemprop='image_url'/>
+<meta content='7959751325273089682' itemprop='blogId'/>
+<meta content='6125275056611834563' itemprop='postId'/>
+<a name='6125275056611834563'></a>
+<h3 class='post-title entry-title' itemprop='name'>
+如何创建完美的GPG密钥对
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-6125275056611834563' itemprop='description articleBody'>
+<h1 id="如何创建完美的gpg密钥对"><a name="如何创建完美的gpg密钥对" href="#如何创建完美的gpg密钥对"></a>如何创建完美的GPG密钥对</h1>
+<h3 id="文章目录"><a name="文章目录" href="#文章目录"></a>文章目录</h3>
+<ol>
+<li><a href="#1">写在前面</a></li><li><a href="#2">使用副签名密钥的好处及原理</a></li><li><a href="#3">创建完美的GPG密钥对</a></li><li><a href="#4">简单回顾</a></li><li><a href="#5">使用日常密钥对</a></li><li><a href="#6">意外发生后的应对措施</a></li><li><a href="#7">推荐阅读</a></li></ol>
+<p><a href="https://www.gnupg.org/">GnuPG</a>是一款非常优秀加密软件&#65292;它在我们的数字生活中扮演了极其重要的角色&#12290;越来越多的同学都开始尝试用它进行日常的签名&#12289;验证&#12289;加密和解密等工作&#12290;虽然与其相关的中文教程已经有很多&#65292;但一篇详细介绍如何更好的使用它的教程却没有被二翔子找到&#12290;于是乎&#65292;二翔子就参考了数篇与其相关的优秀英文资源&#65288;具体资源第七节<em>推荐阅读</em>有列出&#65289;&#65292;写出这篇博文&#65292;希望大家都能够用加密技术保护好自己的隐私及生命&#12290;<br><a name='more'></a></p>
+<h1 id="1.-写在前面"><a name="1.-写在前面" href="#1.-写在前面"></a><span id="1">1. 写在前面 </span></h1>
+<p>开始正文之前&#65292;有几点想和大家说明&#65306;</p>
+<ol>
+<li>此篇博文并非是关于对非对称加密算法或GnuPG基本操作的教程&#65288;相关教程已在<em>推荐阅读</em>中列出&#65289;&#65307;</li><li>虽然本文的操作会涉及到命令行&#65292;但跟着二翔子会手把手的将每一步写的尽量清楚&#65292;因此同学们不要有畏难心理&#65307;</li><li>文中生成的GPG密钥只做演示之用&#65292;不是二翔子日常所用的<a href="https://2xiangzi.blogspot.com/p/blog-page.html">GPG密钥</a>&#65307;</li><li>由于二翔子的知识和能力有限&#65292;如果文中有没说清楚的地方&#65292;希望大家能在评论区指出&#65292;以帮助二翔子将博文写得更好&#12290;</li></ol>
+<h1 id="2.-使用副签名密钥的好处及原理"><a name="2.-使用副签名密钥的好处及原理" href="#2.-使用副签名密钥的好处及原理"></a><span id="2">2. 使用副签名密钥的好处及原理</span></h1>
+<p>想象有一天&#65292;你的私钥被远程地或物理地盗取了&#12290;拿到你私钥的人&#65292;不仅可以将别人发给你的加密信息解密&#65292;而且可以用你的签名密钥&#65288;即私钥&#65289;冒充你本人发信息&#12290;此时你的唯一选择就是撤回你的全部密钥&#65288;包括<em>主密钥</em>&#65289;&#65292;但如此做法会使得你<em>主签名密钥</em>长期积累到的其他人的认证&#65288;参加<a href="https://www.gnupg.org/gph/en/manual/x547.html">Web Of Trust机制</a>&#65289;一起作废&#12290;</p>
+<p>这个问题实际上可以通过使用<em>副密钥&#65288;subkeys&#65289;</em>取代<em>主密钥</em>进行日常操作来缓解&#12290;其背后的原理如下&#65306;</p>
+<ol>
+<li>生成一个常规的GPG密钥对&#65292;该密钥对包含一个用来签名和解密的私钥和一个用来加密要发给你的信息的公钥&#65307;</li><li>使用GPG添加一个副的私钥到你的密钥对中&#65292;此时我们有了三个密钥&#65307;</li><li>这三个密钥密钥组成的密钥串被称作<em>主密钥</em>&#65292;其应该被保存在一个非常安全的地方&#65307;</li><li>将在第一步中生成的那个私钥移除出密钥串&#65292;只剩下新添加的那个私钥和原来的公钥&#65307;</li><li>把此时的留下的两个密钥称作<em>日常密钥</em>&#65292;其被留在你的电脑上进行日常的签名&#12289;加密&#12289;解密等工作&#65307;</li></ol>
+<p>此后&#65292;即使你的&#8220;日常密钥&#8221;丢失或被盗&#65292;你的<em>主密钥</em>仍然安全&#12290;你可以用<em>主密钥</em>撤回已经丢失或被盗的&#8220;日常密钥&#8221;&#12290;虽然这不能阻止已经获得你<em>日常密钥</em>的人查看你过往的加密信息&#65292;但起码<em>主签名密钥</em>长期积累到的其他人的认证保住了&#12290;</p>
+<h1 id="3.-创建完美的gpg密钥对"><a name="3.-创建完美的gpg密钥对" href="#3.-创建完美的gpg密钥对"></a><span id="3">3. 创建完美的GPG密钥对</span></h1>
+<p>现在二翔子就手把手的带着大家创建完美的GPG密钥对&#12290;此处二翔子使用的GnuPG软件版本是1.4.18&#65292;操作系统为debian 8&#12290;因为每个人使用的GnuPG版本和操作系统可能会有差异&#65292;所以如果你发现有与二翔子的操作过程或命令有出入&#65292;希望可以在评论区告知二翔子&#65292;二翔子这里现行告谢了&#65306;&#65289;</p>
+<h2 id="3.1-创建初始密钥对"><a name="3.1-创建初始密钥对" href="#3.1-创建初始密钥对"></a>3.1 创建初始密钥对</h2>
+<p><code>user@temp:~$</code> <strong>gpg - -gen-key</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: directory `/home/user/.gnupg&#39; created
+gpg: new configuration file `/home/user/.gnupg/gpg.conf&#39; created
+gpg: WARNING: options in `/home/user/.gnupg/gpg.conf&#39; are not yet active during this run
+gpg: keyring `/home/user/.gnupg/secring.gpg&#39; created
+gpg: keyring `/home/user/.gnupg/pubring.gpg&#39; created
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+</code></pre><p><code>Your selection?</code> <strong>1</strong></p>
+<pre><code>RSA keys may be between 1024 and 4096 bits long.
+</code></pre><p>这里询问你所要创建的密钥对的长度&#12290;密钥对的长度越长&#65292;加密的强度越大&#12290;随着硬件和软件技术的发展&#65292;计算机的性能越来越强&#65292;同时也意味着破解加密的难度越来越小&#12290;今天不能被破解的加密&#65292;不意味着将来不可以&#12290;因此二翔子在此强烈建议大家都使用GnuPG所提供的最长长度(当前为4096位)的密钥&#12290;</p>
+<p><code>What keysize do you want? (2048)</code> <strong>4096</strong></p>
+<pre><code>Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+</code></pre><p>这里询问你要把这个密钥对设置为多久后过期&#12290;将密钥设置一定的有效期是一种有效的保护措施&#65306;即使你的私钥丢失&#65292;或者忘记了passphrase&#65292;只要等到过期时间&#65292;别人就都会知道你不再用这个密钥啦&#12290;密钥过期后基本有两种选择&#65306;一种是选择重新创建一个新的密钥&#65292;并且&#65288;如果可能的话&#65289;保留旧有密钥以解密原来的电子邮件等&#65307;另一种是选择向后延长密钥的过期时间&#12290;这里二翔子选择 &#8220;<strong>1y</strong>&#8221;&#65292;意味着密钥将在创建后的一年后过期&#12290;</p>
+<p><code>Key is valid for? (0)</code> <strong>1y</strong></p>
+<pre><code>Key expires at Tue 05 Sep 2017 00:00:39 PM UTC
+</code></pre><p><code>Is this correct? (y/N)</code> <strong>y</strong></p>
+<pre><code>You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    &quot;Heinrich Heine (Der Dichter) &lt;heinrichh@duesseldorf.de&gt;&quot;
+</code></pre><p>由于Real name这一项不能以数字开头&#65292;所以二翔子只好把 &#8220;2&#8221;该写成汉语拼音的 &#8220;er&#8221;&#12290;</p>
+<p><code>Real name:</code> <strong>erxiangzi</strong><br><code>Email address:</code> <strong>2xiangzi-blog@riseup.net</strong><br><code>Comment:</code></p>
+<pre><code>You selected this USER-ID:
+    &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+</code></pre><p><code>Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit?</code> <strong>o</strong></p>
+<pre><code>You need a Passphrase to protect your secret key.
+</code></pre><p>此处需要你设置一个密码&#65288;Passphrase&#65289;&#65292;设置好以后&#65292;每一次使用GPG私钥都会要求你输入密码&#65292;起到一定的保护作用&#12290;顺便说一句&#65292;这种保护其实并不十分有效&#65292;现在有一种比较高级的玩法叫<a href="https://www.qubes-os.org/doc/split-gpg/">Split GPG</a>,感兴趣的同学不妨了解一下&#12290;</p>
+<p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+....+++++
+....+++++
+gpg: /home/user/.gnupg/trustdb.gpg: trustdb created
+gpg: key AB7BB174 marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2017-09-05
+pub   4096R/AB7BB174 2016-09-05 [expires: 2017-09-05]
+      Key fingerprint = 9FAF 11FB 58E3 1E5F 4A4D  DF31 4FF8 F994 AB7B B174
+uid                  erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+sub   4096R/AB64DCD1 2016-09-05 [expires: 2017-09-05]
+</code></pre><h2 id="3.2-添加图片"><a name="3.2-添加图片" href="#3.2-添加图片"></a>3.2 添加图片</h2>
+<p>创建好初始的密钥对后&#65292;你还可以在其中附上一个JPGE格式的图片&#12290;但要知道&#65292;你可能会将你的公钥散布到很多地方&#65292;加入图片后会使公钥的体积增大&#65292;造成一些不便&#12290;二翔子在此不做推荐&#65292;不想加入图片的同学请在看完下一自然段后&#65292;略过此小结&#12290;</p>
+<p>此处同学们看到输入的指令中有&#8220;<strong>AB7BB174</strong>&#8221;字样&#65292;这是你刚才生成的短GPG公钥ID&#65292;每个人短GPG公钥ID,除非<a href="https://ixquick-proxy.com/do/spg/proxy2?ep=4b78704d457a4d444f77736e475131614957425a6346735356525a584b6e39505551354e416d4a47417a784e574356656153674455574238414439785257395658516738546a736a644177754277515457306b3343424d314544456649326f424143393144475578416d52365958466651794a55436b4a564d6b38395158317055776376536a464e474642574a31454952676f725241596144316f4c4e67516349695579624456654f523134517a5150474263734479304a49556c43495673414531454e586e4566556e4d4c58425a774a6b4556425552524c30685750525a2b456a637255306f4f5430417443567351586842524b55396255536b42586d4e53636d39574a4634584447316766774e534b51317353416873645856655856706a51456c305341685564546c6d4958355156316f58465641734368465855464d57416b3963476934545743554d426855684a5734565a6c494851473855425763434d686f4258533964617855444b4555545a524a774e78462f4155743646514241426c6f6a516e5949476770585154525546306376413239444d4159584648673d&amp;epile=4q6n41784r6n45784q5467784r3138304r5335725n586o3q&amp;edata=6f7ceee3262ee9dbe1e5a5ca6886e230&amp;ek=536r4n784r56382o586q5641645751705355593654544r3063335532586o49344r477872633138325n45786q6657427054476o7864434n4q4n58704859465n6r6544463561456p505358684249585n365033523653313936516q56516344354r553246474s564637554441794q6952354o30346p4r796s68526n394s65314n474n4842595n45493565534969567n4276497952494o327331617n556o5257463955455n61536p6771535731465n566p37614764655930343056535n6o56475n6s5n79563965304n656430464r6553513255545n694o7n632o51794579556q4n516655564q646r68495044524365794931625659695143742o596q30315n314267536o6o6n5144396n6256425554574533537n6p5n4o54395n516o3174625468566369684r4o6n4667523170535230316o4r44776p63585n65656r346o62574577646n7868563370436132705956794675635373684o795569637973784r694q6o51576s384s557476574359785369456p565352475533644p4r334n434n5456774r7n3541636o51784o32746864413q3q&amp;ekdata=aec108a2ec825c28046f33db7f0efe09">蓄意碰撞</a>,否则几乎不可能一样&#65292;你可以在上一小结最后的输出结果中找到你自己的&#12290;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -edit-key AB7BB174</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+</code></pre><p><code>gpg&gt;</code> <strong>addphoto</strong></p>
+<pre><code>Pick an image to use for your photo ID.  The image must be a JPEG file.
+Remember that the image is stored within your public key.  If you use a
+very large picture, your key will become very large as well!
+Keeping the image close to 240x288 is a good size to use.
+</code></pre><p><code>Enter JPEG filename for photo ID:</code> <strong>/home/user/me.jpg</strong></p>
+<p><code>is this photo correct (y/N/q)?</code> <strong>y</strong></p>
+<pre><code>You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>save</strong></p>
+<h2 id="3.3-增强hash偏好"><a name="3.3-增强hash偏好" href="#3.3-增强hash偏好"></a>3.3 增强Hash偏好</h2>
+<p>现在我们让刚生成的密钥对偏好强Hash算法&#12290;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -edit-key AB7BB174</strong> </p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP</strong></p>
+<pre><code>Set preference list to:
+     Cipher: AES256, AES192, AES, CAST5, 3DES
+     Digest: SHA512, SHA384, SHA256, SHA224, SHA1
+     Compression: ZLIB, BZIP2, ZIP, Uncompressed
+     Features: MDC, Keyserver no-modify
+</code></pre><p><code>Really update the preferences? (y/N)</code> <strong>y</strong></p>
+<pre><code>You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>save</strong></p>
+<h2 id="3.4-添加一个新的签名副钥&#65288;signing-subkey&#65289;"><a name="3.4-添加一个新的签名副钥&#65288;signing-subkey&#65289;" href="#3.4-添加一个新的签名副钥&#65288;signing-subkey&#65289;"></a>3.4 添加一个新的签名副钥&#65288;signing subkey&#65289;</h2>
+<p><code>user@temp:~$</code> <strong>gpg - -edit-key AB7BB174</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>addkey</strong></p>
+<pre><code>Key is protected.
+
+You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+</code></pre><p><code>Your selection?</code> <strong>4</strong></p>
+<pre><code>RSA keys may be between 1024 and 4096 bits long.
+</code></pre><p><code>What keysize do you want? (2048)</code> <strong>4096</strong></p>
+<pre><code>Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+</code></pre><p><code>Key is valid for? (0)</code> <strong>1y</strong></p>
+<pre><code>Key expires at Tue 05 Sep 2017 00:10:17 PM UTC
+</code></pre><p><code>Is this correct? (y/N)</code> <strong>y</strong><br><code>Really create? (y/N)</code> <strong>y</strong></p>
+<pre><code>We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+......+++++
++++++
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>save</strong></p>
+<h2 id="3.5-创建一个撤销证书&#65288;revocation-certificate&#65289;"><a name="3.5-创建一个撤销证书&#65288;revocation-certificate&#65289;" href="#3.5-创建一个撤销证书&#65288;revocation-certificate&#65289;"></a>3.5 创建一个撤销证书&#65288;revocation certificate&#65289;</h2>
+<p>现在咱们来创建一个<em>撤销证书</em>&#12290;一旦你的<em>主密钥对</em>丢失或被盗&#65292;这个证书是你告诉外界&#8220;请忽略掉我丢失的密钥&#8221;的唯一方法&#12290;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -output revocation.cert - -gen-revoke AB7BB174</strong></p>
+<pre><code>sec  4096R/AB7BB174 2016-09-05 erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+</code></pre><p><code>Create a revocation certificate for this key? (y/N)</code> <strong>y</strong></p>
+<pre><code>Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+(Probably you want to select 1 here)
+</code></pre><p><code>Your decision?</code> <strong>0</strong></p>
+<pre><code>Enter an optional description; end it with an empty line:
+</code></pre><p><code>&gt;</code> </p>
+<pre><code>Reason for revocation: No reason specified
+(No description given)
+</code></pre><p><code>Is this okay? (y/N)</code> <strong>y</strong></p>
+<pre><code>You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>ASCII armored output forced.
+Revocation certificate created.
+
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
+</code></pre><h2 id="3.6-导出主密钥对及撤销证书"><a name="3.6-导出主密钥对及撤销证书" href="#3.6-导出主密钥对及撤销证书"></a>3.6 导出主密钥对及撤销证书</h2>
+<p>创建私钥备份&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -export-secret-keys - -armor AB7BB174 &gt; erxiangzi_gpg_private.key</strong></p>
+<p>创建公钥备份&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -export - -armor AB7BB174 &gt; erxiangzi_gpg_public.key</strong></p>
+<p>将<em>私钥</em>&#12289;<em>公钥</em>及<em>撤销证书</em>打包&#65306;&#65288;Windows操作系统的操作与此不同&#65289;</p>
+<p><code>user@temp:~$</code> <strong>tar -cf gpg_master_keys.tar erxiangzi_gpg*.key revocation.cert</strong></p>
+<p>理论上讲&#65292;当你打包后&#65292;除了特殊情况&#65288;如密钥丢失需要撤回或者需要将他人的密钥签名&#65289;&#65292;你不会再用到这个打包文件了&#12290;介于这个打包文件非常重要&#65292;二翔子建议将其转移到一个强加密的移动介质&#65288;如U盘或CD&#65289;当中&#65292;再把这个移动介质藏好&#12290;选择移动介质来存储&#65292;一方面是因为其隐藏性好&#65288;比如你可以将刻好的CD丢进一箱子的盗版碟中&#65289;&#65307;另一方面也是为了防止如果存储 在笔记本电脑上&#65292;密钥会随着笔记本的丢失或被盗一同消失&#12290;</p>
+<p>完成上述步骤后别忘了把刚才导出的<em>私钥</em>&#12289;<em>公钥</em>及<em>撤销证书</em>都擦除&#65288;注意&#65306;不仅仅是删除&#65289;掉&#65306;</p>
+<p><code>user@temp:~$</code> <strong>shred -u erxiangzi*.key revocation.cert</strong></p>
+<h2 id="3.7-将主密钥对替换为日常使用的密钥对"><a name="3.7-将主密钥对替换为日常使用的密钥对" href="#3.7-将主密钥对替换为日常使用的密钥对"></a>3.7 将主密钥对替换为日常使用的密钥对</h2>
+<p>这个日常使用的密钥对&#65288;以下简称<em>日常密钥对</em>&#65289;之中不应该包含你的<em>主签名密钥</em>&#12290;<em>日常密钥对</em>可以暴露在不受信任的环境&#65288;如你的手机&#12289;联网的虚拟机&#65289;之中&#12290;</p>
+<h3 id="3.7.1-导出主&#12289;副两个签名密钥"><a name="3.7.1-导出主&#12289;副两个签名密钥" href="#3.7.1-导出主&#12289;副两个签名密钥"></a>3.7.1 导出主&#12289;副两个签名密钥</h3>
+<p>将主&#12289;副两个签名密钥导出到一个叫做subkeys的临时文件中&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -export-secret-subkeys AB7BB174 &gt; subkeys</strong></p>
+<p>需要注意: 如果你当初没有设置密码&#65288;Passphrase&#65289;(这种情况在Split-GPG用户中很常见)&#65292;由于GnuPG软件的设计&#65292;你的私钥不会被导出&#12290;这就需要你临时设置一个密码&#65292;等到导出完成&#65292;再将密码设置回空值&#12290;具体步骤如下&#65288;没有遇到此问题的同学请直接跳过&#65289;&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -edit-key AB7BB174</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>passwd</strong></p>
+<pre><code>Secret parts of primary key are not available.
+
+You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB64DCD1, created 2016-09-05
+</code></pre><p>&lt;在此输入原密码(Passphrase)&gt;</p>
+<pre><code>Enter the new passphrase for this secret key.
+</code></pre><p>&lt;在此输入新密码(Passphrase)&gt;</p>
+<p><code>Do you really want to do this? (y/N)</code> <strong>y</strong></p>
+<p><code>gpg&gt;</code> <strong>save</strong></p>
+<h3 id="3.7.2-删除主签名密钥"><a name="3.7.2-删除主签名密钥" href="#3.7.2-删除主签名密钥"></a>3.7.2 删除主签名密钥</h3>
+<p>因为之前已经将<em>主签名密钥</em>打包备份到安全的移动介质中&#65292;你现在可以大胆的将其从密钥串中删除掉&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -delete-secret-keys AB7BB174</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+
+sec  4096R/AB7BB174 2016-09-05 erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+</code></pre><p><code>Delete this key from the keyring? (y/N)</code> <strong>y</strong><br><code>This is a secret key! - really delete? (y/N)</code> <strong>y</strong></p>
+<h3 id="3.7.3-导入副签名密钥"><a name="3.7.3-导入副签名密钥" href="#3.7.3-导入副签名密钥"></a>3.7.3 导入副签名密钥</h3>
+<p>因为刚才已经将<em>主签名密钥</em>删除掉了&#65292;所以现在只有<em>副签名密钥</em>被导入回电脑&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -import subkeys</strong></p>
+<pre><code>gpg: key AB7BB174: secret key imported
+gpg: key AB7BB174: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot; 1 new signature
+gpg: Total number processed: 1
+gpg:         new signatures: 1
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+</code></pre><p><code>user@temp:~$</code> <strong>gpg - -list-secret-keys</strong></p>
+<pre><code>/home/user/.gnupg/secring.gpg
+-----------------------------
+sec#  4096R/AB7BB174 2016-09-05 [expires: 2017-09-05]
+uid                  erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+ssb   4096R/AB64DCD1 2016-09-05
+ssb   4096R/0D65E7C7 2016-09-05
+</code></pre><p>这里我们注意到&#65292;sec后面多了一个&#8220;#&#8221;&#65292;这表示<em>主签名密钥</em>已经不在密钥串中了&#12290;</p>
+<h3 id="3.7.4-擦除subkeys文件"><a name="3.7.4-擦除subkeys文件" href="#3.7.4-擦除subkeys文件"></a>3.7.4 擦除subkeys文件</h3>
+<p><code>user@temp:~$</code> <strong>shred - -remove subkeys</strong></p>
+<h1 id="4.-简单回顾"><a name="4.-简单回顾" href="#4.-简单回顾"></a><span id="4">4. 简单回顾</span></h1>
+<p>到了这里&#65292;你很可能会问&#65306;我们刚才都干了啥&#65311;</p>
+<ol>
+<li>首先咱们使用能够利用的最强设置生成了一个密钥对&#65307;</li><li>然后咱们向这个密钥对中加入了一个副签名密钥&#65292;使之成为一个密钥串&#65307;</li><li>接着咱们导出了密钥串并将其与撤销证书一起打包并存储在了安全的移动介质上&#12290;那个打包文件就是<em>主密钥对</em>&#65307;</li><li>最后咱们将<em>主签名密钥</em>从本机的密钥串中删掉了&#65292;此时的密钥串被称之为<em>日常密钥对</em>&#12290;</li></ol>
+<h1 id="5.-使用日常密钥对"><a name="5.-使用日常密钥对" href="#5.-使用日常密钥对"></a><span id="5">5. 使用日常密钥对</span></h1>
+<p>现在你可以用这个<em>日常密钥对</em>进行加密&#12289;解密&#12289;签名了&#12290;</p>
+<p>但如果你要认证他人的密钥&#65292;或者撤回这个<em>日常密钥对</em>&#65292;则需要用到<em>主密钥对</em>了&#12290;</p>
+<h1 id="6.-意外发生后的应对措施"><a name="6.-意外发生后的应对措施" href="#6.-意外发生后的应对措施"></a><span id="6">6. 意外发生后的应对措施</span></h1>
+<p>一旦日常密钥对丢失或被盗&#65292;由于事先做足了准备工作&#65292;我们不必将整个密钥串全部撤回&#65292;这意味着长期积累在<em>主签名密钥</em>上的<a href="https://www.gnupg.org/gph/en/manual/x547.html">Web Of Trust签名</a>被保住了&#12290;</p>
+<h2 id="6.1-导入主密钥"><a name="6.1-导入主密钥" href="#6.1-导入主密钥"></a>6.1 导入主密钥</h2>
+<p>首先我们要找到事先藏好的移动介质&#65292;将<em>主密钥对</em>压缩包解压缩&#65306;</p>
+<p><code>[user@temp ~]$</code> <strong>tar xvf gpg_master_keys.tar</strong></p>
+<pre><code>erxiangzi_gpg_private.key
+erxiangzi_gpg_public.key
+revocation.cert
+</code></pre><p>然后导入主密钥&#65306;</p>
+<p><code>[user@temp ~]$</code> <strong>gpg - -import alice_gpg_p*.key</strong></p>
+<pre><code>gpg: directory `/home/user/.gnupg&#39; created
+gpg: new configuration file `/home/user/.gnupg/gpg.conf&#39; created
+gpg: WARNING: options in `/home/user/.gnupg/gpg.conf&#39; are not yet active during this run
+gpg: keyring `/home/user/.gnupg/secring.gpg&#39; created
+gpg: keyring `/home/user/.gnupg/pubring.gpg&#39; created
+gpg: key AB7BB174: secret key imported
+gpg: /home/user/.gnupg/trustdb.gpg: trustdb created
+gpg: key AB7BB174: public key &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot; imported
+gpg: key AB7BB174: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot; 1 new signature
+gpg: Total number processed: 2
+gpg:               imported: 1  (RSA: 1)
+gpg:         new signatures: 1
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+</code></pre><p>验证一下我们的导入结果&#65306;</p>
+<p><code>user@temp:~$</code> <strong>gpg - -edit-key AB7BB174</strong></p>
+<pre><code>gpg (GnuPG) 1.4.18; Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><ul>
+<li>可以看到最重要的主密钥显示&#65306;SC&#65288;&#8220;sign&#8221;&amp;&#8220;certify&#8221;&#65292;代表可以签名和认证其它密钥&#65289;</li><li>第一个副密钥显示&#65306;E&#65288;&#8220;encrypt&#8221;&#65292;加密&#65289;</li><li>第二个副密钥显示&#65306;S&#65288;&#8220;sign&#8221;&#65292;签名&#65289;</li></ul>
+<h2 id="6.2-撤回被盗取或丢失的副密钥"><a name="6.2-撤回被盗取或丢失的副密钥" href="#6.2-撤回被盗取或丢失的副密钥"></a>6.2 撤回被盗取或丢失的副密钥</h2>
+<p><code>gpg&gt;</code> <strong>list</strong></p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>key 1</strong></p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub*  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>key 2</strong></p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+sub*  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+sub*  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>revkey</strong></p>
+<p><code>Do you really want to revoke the selected subkeys? (y/N)</code> <strong>y</strong></p>
+<pre><code>Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+</code></pre><p><code>Your decision?</code> <strong>1</strong></p>
+<pre><code>Enter an optional description; end it with an empty line:
+</code></pre><p><code>&gt;</code></p>
+<pre><code>Reason for revocation: Key has been compromised
+(No description given)
+</code></pre><p><code>Is this okay? (y/N)</code> <strong>y</strong></p>
+<pre><code>You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created: 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>You need a passphrase to unlock the secret key for
+user: &quot;erxiangzi &lt;2xiangzi-blog@riseup.net&gt;&quot;
+4096-bit RSA key, ID AB7BB174, created: 2016-09-05
+</code></pre><p>&lt;在此输入密码(Passphrase)&gt;</p>
+<pre><code>pub  4096R/AB7BB174  created: 2016-09-05  expires: 2017-09-05  usage: SC  
+                     trust: ultimate      validity: ultimate
+This key was revoked on 2016-09-05 by RSA key AB7BB174 erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+sub  4096R/AB64DCD1  created: 2016-09-05  expires: 2017-09-05  usage: E   
+This key was revoked on 2016-09-05 by RSA key AB7BB174 erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+sub  4096R/0D65E7C7  created: 2016-09-05  expires: 2017-09-05  usage: S   
+[ultimate] (1). erxiangzi &lt;2xiangzi-blog@riseup.net&gt;
+[ unknown] (2)  [jpeg image of size 5032]
+</code></pre><p><code>gpg&gt;</code> <strong>save</strong></p>
+<h2 id="6.3-告知外界你撤回密钥的消息"><a name="6.3-告知外界你撤回密钥的消息" href="#6.3-告知外界你撤回密钥的消息"></a>6.3 告知外界你撤回密钥的消息</h2>
+<h3 id="6.3.1-导出被撤回的密钥到-ascii-文件"><a name="6.3.1-导出被撤回的密钥到-ascii-文件" href="#6.3.1-导出被撤回的密钥到-ascii-文件"></a>6.3.1 导出被撤回的密钥到 ASCII 文件</h3>
+<p><code>[user@temp ~]$</code> <strong>gpg - -export -a &gt; revoked_keys.asc</strong></p>
+<p>之后将 ASCII文件中的内容贴到互联网上&#12290;二翔子此次<a href="https://2xiangzi.blogspot.nl/2016/09/change-gpg-public-key-1.html">撤回密钥</a>就是用了这种方法&#12290;</p>
+<h3 id="6.3.2-使用key-server"><a name="6.3.2-使用key-server" href="#6.3.2-使用key-server"></a>6.3.2 使用key server</h3>
+<p>如果你之前将自己的公钥上传到了某个key server上&#65288;此处以<em>sks.keyservers.net</em>为例&#65289;&#65292;那么你需要使用如下命令告知服务器你撤回了密钥&#65306;<br><code>[user@temp ~]$</code> <strong>gpg - -keyserver sks.keyservers.net - -send-keys AB7BB174</strong></p>
+<pre><code>gpg: sending key AB7BB174 to hkp server sks.keyservers.net
+</code></pre><p><code>&#65339;user@temp ~]$</code> <strong>gpg - -keyserver sks.keyservers.net - -send-keys AB7BB174</strong></p>
+<pre><code>gpg: sending key AB7BB174 to hkp server sks.keyservers.net
+</code></pre><h1 id="7.-推荐阅读"><a name="7.-推荐阅读" href="#7.-推荐阅读"></a><span id="7">7. 推荐阅读</span></h1>
+<ol>
+<li><a href="https://apapadop.wordpress.com/2013/08/21/using-gnupg-with-qubesos/">Using GnuPG with QubesOS</a></li><li><a href="https://alexcabal.com/creating-the-perfect-gpg-keypair/">Creating the perfect GPG keypair</a></li><li><a href="https://ixquick-proxy.com/do/spg/proxy2?ep=4b5630564d45412f4b796834444463554f556b5a52426c62426d31525357516e5146352f4467565a6368514e4e77457961546f7143575a5344313554556d6f345230345643554534455673344755783051537779424367624367734a4b77785665414e314967383059573553467838315755343946414a514a674d63496c7367496a746a465834484f5630585568314c45524d7858687357456d786d574567494a56684c63424e714c79307846475a544342384f4d58314d636c774444417769516b672f424268655a513461654155344b6e78334969454d4a6c305a5252354d424270485868415742783930547a644b637745694e776f774b4373734543734e466b7064425377685730555256556f6b576b56334342565a644146415a414e756447776e563346554c46384a5132736441427844485563305645307a53306b424e51524f4e3135784e796f3257584a475a6c7856477a3151553146534331456a43686833446745465a67556259464530496d736a555852564b6c7866524435494445314d54454e6f557842675442634d4d31686249685671436730555677346144454e794452464d656e705253475a3142473133447746586331314d&amp;epile=4q6n41784r6n41354q4459774q6p387n4r7935725n586o3q&amp;edata=73039fc10a735e13ebd307c8e0d88c5f&amp;ek=536q4239566q5n5852316p465n454r6753546s386431682o4r43743065794n514r796p5266584534&amp;ekdata=afb5c5f92853fe94eeb19c12bf43da89">RSA算法原理&#65288;一&#65289;</a></li><li><a href="https://ixquick-proxy.com/do/spg/proxy2?ep=4b5630564d45412f4b796834444463554f556b5a52426c62426d31525357516e5146352f4467565a6368514e4e77457961546f7143575a5344313554556d6f345230345643554534455673344755783051537779424367624367734a4b77785665414e314967383059573553467838315755343946414a514a674d63496c7367496a746a465834484f5630585568314c45524d7858687357456d786d574567494a56684c63424e714c79307846475a544342384f4d58314d636c774444417769516b672f424268655a513461654155344b6e78334969454d4a6c305a5252354d424270485868415742783530547a644b637745694e776f774b4373734543734e466b7064425377685146776256556f6b576b56334342565a644146415967426a6457353856334e5366566c5a4557394e427830564742466c4252686b546b49505a6c464d595646784e796f3257584a475a6c7856477a3151553146534331456a4368683344674546596c41635977493049573538566e70514b77355a4657425056306757544551304242347947454261596c5a6249685671436730555677346144454e794452464e656d705253475a3142473133447746586331314d&amp;epile=4q6n41784r6n41354q4459774q6p387n4r7935725n586o3q&amp;edata=2b2ff8ec727de04a98daa1f1c8a1ccd2&amp;ek=536q4239566q5n5852316p465n454r6753546s386431682o4r43743065794n514r796p5266584534&amp;ekdata=15928467ece72dbc79b7ae7ddba653e0">RSA算法原理&#65288;二&#65289;</a></li><li><a href="https://ixquick-proxy.com/do/spg/proxy2?ep=4831685459417458466973424e694164446c454f6345346461515143555256554869514d635130474d684d61566e596e6633736f513055724f6c454d595159505146424547696b4559313844593155735158565759327863494564636142513966564e4746323545437945504d6e5a494e41745850516f6f4832386344784e514157513341445577616d52744c78566d4d774259415434384f78597a6643454346306f464f56494c5046314d436c39554447685a644645634d68634c464342494f53594453524d43596b63494b675952526b4146466a4a6163464d504d6c6f64466964414e7a306546686b4863425a644f6c6f4c55567854586e56724a51496f5931557342444952644367434177384b4c456c564c41674f4142706c535859614f52566341466462566e63676148314c5644454b5055466566534646554578434479635859674665666c594c53694651596e6b4e556b594c4c45564e4b6c396245457758516e49594e46454e64674e4d4154554a4b58526651414d6563477376486c517359586c624e6a78424e48302f59315175566e596966446f655730414f4c6b56504c51554245556b57485863664d46554c6356396152794e535969774d556856646442524d615145525652555358545a5a63773166&amp;epile=4q6n41784r6n45784q4459774r6p38794q6935725n586o3q&amp;edata=fdc6f99debc3d6406056cd5fc69341de&amp;ek=666n4275526q64716330566q576o6p755n6r647454535n375432646n4n53676n65305971&amp;ekdata=1b4f0bc9ad832dfe93e726b8ad204693">GPG(pgp)加解密中文完整教程</a></li><li><a href="https://wiki.debian.org/Subkeys?action=show&amp;redirect=subkeys">Using OpenPGP subkeys in Debian development</a></li></ol>
+<p><hr /></p>
+<h1><strong>版权声明</strong></h1>
+
+<p><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" style="border-width:0" /></a><br />本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议</a>进行许可&#12290;</p>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+发帖者
+<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+<meta content='https://plus.google.com/105144493669632558142' itemprop='url'/>
+<a class='g-profile' href='https://plus.google.com/105144493669632558142' rel='author' title='author profile'>
+<span itemprop='name'>二翔子</span>
+</a>
+</span>
+</span>
+<span class='post-timestamp'>
+时间&#65306;
+<meta content='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html' itemprop='url'/>
+<a class='timestamp-link' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html' rel='bookmark' title='permanent link'><abbr class='published' itemprop='datePublished' title='2016-09-06T00:00:00+08:00'>上午12:00</abbr></a>
+</span>
+<span class='reaction-buttons'>
+</span>
+<span class='post-comment-link'>
+</span>
+<span class='post-backlinks post-comment-link'>
+</span>
+<span class='post-icons'>
+<span class='item-control blog-admin pid-309686794'>
+<a href='https://www.blogger.com/post-edit.g?blogID=7959751325273089682&postID=6125275056611834563&from=pencil' title='修改帖子'>
+<img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+<div class='post-share-buttons goog-inline-block'>
+<a class='goog-inline-block share-button sb-email' href='https://www.blogger.com/share-post.g?blogID=7959751325273089682&postID=6125275056611834563&target=email' target='_blank' title='通过电子邮件发送'><span class='share-button-link-text'>通过电子邮件发送</span></a><a class='goog-inline-block share-button sb-blog' href='https://www.blogger.com/share-post.g?blogID=7959751325273089682&postID=6125275056611834563&target=blog' onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target='_blank' title='BlogThis!'><span class='share-button-link-text'>BlogThis!</span></a><a class='goog-inline-block share-button sb-twitter' href='https://www.blogger.com/share-post.g?blogID=7959751325273089682&postID=6125275056611834563&target=twitter' target='_blank' title='共享给 Twitter'><span class='share-button-link-text'>共享给 Twitter</span></a><a class='goog-inline-block share-button sb-facebook' href='https://www.blogger.com/share-post.g?blogID=7959751325273089682&postID=6125275056611834563&target=facebook' onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target='_blank' title='共享给 Facebook'><span class='share-button-link-text'>共享给 Facebook</span></a><a class='goog-inline-block share-button sb-pinterest' href='https://www.blogger.com/share-post.g?blogID=7959751325273089682&postID=6125275056611834563&target=pinterest' target='_blank' title='分享到Pinterest'><span class='share-button-link-text'>分享到Pinterest</span></a><div class='goog-inline-block google-plus-share-container'><g:plusone source='blogger:blog:plusone' href='http://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html' size='medium' width='300' annotation='inline'/></div>
+</div>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-labels'>
+标签&#65306;
+<a href='https://2xiangzi.blogspot.com/search/label/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90' rel='tag'>软件推荐</a>,
+<a href='https://2xiangzi.blogspot.com/search/label/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8' rel='tag'>信息安全</a>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-3'>
+<span class='post-location'>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>14 条评论:</h4>
+<div class='comments-content'>
+<script async='async' src='//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js' type='text/javascript'></script>
+<script type='text/javascript'>
+    (function() {
+      var items = [{'id': '6735851377019932590', 'body': '前排支持', 'timestamp': '1473132702554', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1473132702554#c6735851377019932590', 'author': {'name': 'Docomo', 'avatarUrl': '//img1.blogblog.com/img/blank.gif', 'profileUrl': ''}, 'displayTime': '2016年9月6日 上午11:31', 'deleteclass': 'item-control blog-admin pid-2128498893'}, {'id': '1126147904393820455', 'body': '后排围观&#12290;', 'timestamp': '1473185567853', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1473185567853#c1126147904393820455', 'author': {'name': '音業', 'avatarUrl': '//lh4.googleusercontent.com/-h4-x9kzvjA8/AAAAAAAAAAI/AAAAAAAAAaQ/dHsS60shUXI/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/13678458541060375922'}, 'displayTime': '2016年9月7日 上午2:12', 'deleteclass': 'item-control blog-admin pid-1990112671'}, {'id': '6476805768337859221', 'body': '\x3cspan class\x3d\x27deleted-comment\x27\x3e此评论已被作者删除&#12290;\x3c/span\x3e', 'timestamp': '1473185581580', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1473185581580#c6476805768337859221', 'author': {'name': '音業', 'avatarUrl': '//lh4.googleusercontent.com/-h4-x9kzvjA8/AAAAAAAAAAI/AAAAAAAAAaQ/dHsS60shUXI/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/13678458541060375922'}, 'displayTime': '2016年9月7日 上午2:13', 'deleteclass': 'item-control blog-admin '}, {'id': '1689234924288216675', 'body': '虚拟号的教程写不写&#65311;这非常重要&#65292;现在国内外网站注册都要手机号了&#65292;即使不用国内网站&#65292;谷歌&#65292;微软邮箱动不动就要人手机号&#12290;保存缓存有时候都没用&#12290;', 'timestamp': '1473297572508', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1473297572508#c1689234924288216675', 'author': {'name': 'fserw', 'avatarUrl': '//img1.blogblog.com/img/blank.gif', 'profileUrl': ''}, 'displayTime': '2016年9月8日 上午9:19', 'deleteclass': 'item-control blog-admin pid-1653377336'}, {'id': '6916078198639079383', 'body': '虚拟号网站是很多&#65292;但很多号都被屏蔽掉&#65292;不能用了&#65292;博主能不能找到能用的&#65292;免费的方法&#65311;\x3cbr /\x3e还有你这个网站字体大小怎么变了&#65292;看着不舒服最好换回来', 'timestamp': '1473297696263', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1473297696263#c6916078198639079383', 'author': {'name': 'fserw', 'avatarUrl': '//img1.blogblog.com/img/blank.gif', 'profileUrl': ''}, 'displayTime': '2016年9月8日 上午9:21', 'deleteclass': 'item-control blog-admin pid-1653377336'}, {'id': '975584522863334472', 'body': '终于看到教程了&#65292;为你的辛勤劳动和奉献精神点赞&#12290;', 'timestamp': '1475118676452', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1475118676452#c975584522863334472', 'author': {'name': '匿名', 'avatarUrl': '//img1.blogblog.com/img/blank.gif', 'profileUrl': ''}, 'displayTime': '2016年9月29日 上午11:11', 'deleteclass': 'item-control blog-admin pid-1991422011'}, {'id': '2602988839801790330', 'body': '后排围观&#12290;', 'timestamp': '1477707782635', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1477707782635#c2602988839801790330', 'author': {'name': 'ヨイツの賢狼ホロ', 'avatarUrl': '//lh5.googleusercontent.com/-7o3heqRbo_Q/AAAAAAAAAAI/AAAAAAAAADE/70KBucF4aq4/s35-c/photo.jpg', 'profileUrl': 'https://www.blogger.com/profile/08993242292265159106'}, 'displayTime': '2016年10月29日 上午10:23', 'deleteclass': 'item-control blog-admin pid-543271033'}, {'id': '1903446732654066013', 'parentId': '6735851377019932590', 'body': 'To Docomo\x3cbr /\x3e多谢支持:)', 'timestamp': '1479317446762', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317446762#c1903446732654066013', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:30', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '4316449813143262318', 'parentId': '1126147904393820455', 'body': 'To 音業\x3cbr /\x3e多谢音業支持:)', 'timestamp': '1479317469321', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317469321#c4316449813143262318', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:31', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '8725670731880197154', 'parentId': '1689234924288216675', 'body': 'To fserw\x3cbr /\x3e多谢你的提醒&#65306;)在手机实名制加几乎所有网络服务都需要电话号码的时代&#65292;虚拟号确实对在线匿名有很大帮助&#12290;一旦二翔子找到合适的方法&#65292;就会写博文告诉大家&#12290;', 'timestamp': '1479317493424', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317493424#c8725670731880197154', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:31', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '2896844889228525399', 'parentId': '6916078198639079383', 'body': 'To fserw\x3cbr /\x3e虽然时隔很久才回复&#65292;但你发表评论的当天&#65292;二翔子就对网站字体进行了调整&#65292;不知你觉得现在的界面如何&#65311;', 'timestamp': '1479317517957', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317517957#c2896844889228525399', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:31', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '1367313987093532647', 'parentId': '975584522863334472', 'body': 'To 匿名\x3cbr /\x3e谢谢你的鼓励&#65292;二翔子会继续努力&#65292;写出更多&#12289;更好的博文献给大家:)', 'timestamp': '1479317541371', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317541371#c1367313987093532647', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:32', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '3694519688763194401', 'parentId': '2602988839801790330', 'body': 'To ヨイツの賢狼ホロ\x3cbr /\x3e多谢ヨイツの賢狼ホロ的支持:)', 'timestamp': '1479317580456', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1479317580456#c3694519688763194401', 'author': {'name': '二翔子', 'avatarUrl': '//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA\x3ds35', 'profileUrl': 'https://www.blogger.com/profile/14852933540775977859'}, 'displayTime': '2016年11月17日 上午1:33', 'deleteclass': 'item-control blog-admin pid-309686794'}, {'id': '758496189339826064', 'parentId': '1689234924288216675', 'body': '\x3cbr /\x3ehttp://receivefreesms.com/\x3cbr /\x3e据说是个伪造现实手机专门供注册用的管理网站&#65292;如果有其他类似的在网站专门放个位置让初学者使用吧\x3cbr /\x3e在那些网站你可以注册个手机专门注册各种网站用&#65292;避免被现实的警察寻找到你', 'timestamp': '1491459862272', 'permalink': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment\x3d1491459862272#c758496189339826064', 'author': {'name': '匿名', 'avatarUrl': '//img1.blogblog.com/img/blank.gif', 'profileUrl': ''}, 'displayTime': '2017年4月6日 下午2:24', 'deleteclass': 'item-control blog-admin pid-157338243'}];
+      var msgs = {'loadMore': '加载更多...', 'loading': '正在加载...', 'loaded': '没有更多评论页&#65281;', 'addComment': '添加评论', 'reply': '回复', 'delete': '删除'};
+      var config = {'blogId': '7959751325273089682', 'postId': '6125275056611834563', 'feed': 'https://2xiangzi.blogspot.com/feeds/6125275056611834563/comments/default', 'authorName': '二翔子', 'authorUrl': 'https://www.blogger.com/profile/14852933540775977859', 'baseUri': 'https://www.blogger.com', 'maxThreadDepth': 2};
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        if (entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + entry.content.$t + '</span>';
+            }
+          }
+        }
+        return entry.content.$t;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/delete-comment.g?blogID='
+               + config.blogId + '&postID=' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+<div id='comment-holder'>
+<div id='bc_0_15C' kind='c'><div id='bc_0_15CT'><div id='bc_0_14T' class='comment-thread' kind='r'  t='0' u='0'><ol id='bc_0_14TB'><li id='bc_0_1B' class='comment' kind='b'><div class='avatar-image-container'><img src='//img1.blogblog.com/img/blank.gif'></img></div><div id='c6735851377019932590' class='comment-block'><div id='bc_0_1M' class='comment-header' kind='m'><cite class='user'>Docomo</cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1473132702554#c6735851377019932590'>2016年9月6日 上午11:31</a></span></div><p id='bc_0_1MC' class='comment-content'>前排支持</p><span id='bc_0_1MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-2128498893'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=6735851377019932590'>删除</a></span></span></div><div id='bc_0_1BR' class='comment-replies'><span id='bc_0_1b+seedutuD' kind='d'><div id='bc_0_0T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_0TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_0TA' class='thread-arrow'></span><span id='bc_0_0TN' class='thread-count'><span id='bc_0_0TNT' style='display: none;'></span><span id='bc_0_0TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_0TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_0TC' class='thread-chrome thread-expanded'><div><li id='bc_0_0B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c1903446732654066013' class='comment-block'><div id='bc_0_0M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317446762#c1903446732654066013'>2016年11月17日 上午1:30</a></span></div><p id='bc_0_0MC' class='comment-content'>To Docomo<br />多谢支持:)</p><span id='bc_0_0MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=1903446732654066013'>删除</a></span></span></div><div id='bc_0_0BR' class='comment-replies'></div><div id='bc_0_0B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_0I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_0T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_1B_box' class='comment-replybox-single'></div></li><li id='bc_0_3B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh4.googleusercontent.com/-h4-x9kzvjA8/AAAAAAAAAAI/AAAAAAAAAaQ/dHsS60shUXI/s35-c/photo.jpg'></img></div><div id='c1126147904393820455' class='comment-block'><div id='bc_0_3M' class='comment-header' kind='m'><cite class='user'><a rel='nofollow' href='https://www.blogger.com/profile/13678458541060375922'>音業</a></cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1473185567853#c1126147904393820455'>2016年9月7日 上午2:12</a></span></div><p id='bc_0_3MC' class='comment-content'>后排围观&#12290;</p><span id='bc_0_3MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-1990112671'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=1126147904393820455'>删除</a></span></span></div><div id='bc_0_3BR' class='comment-replies'><span id='bc_0_3b+seedutvD' kind='d'><div id='bc_0_2T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_2TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_2TA' class='thread-arrow'></span><span id='bc_0_2TN' class='thread-count'><span id='bc_0_2TNT' style='display: none;'></span><span id='bc_0_2TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_2TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_2TC' class='thread-chrome thread-expanded'><div><li id='bc_0_2B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c4316449813143262318' class='comment-block'><div id='bc_0_2M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317469321#c4316449813143262318'>2016年11月17日 上午1:31</a></span></div><p id='bc_0_2MC' class='comment-content'>To 音業<br />多谢音業支持:)</p><span id='bc_0_2MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=4316449813143262318'>删除</a></span></span></div><div id='bc_0_2BR' class='comment-replies'></div><div id='bc_0_2B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_2I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_2T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_3B_box' class='comment-replybox-single'></div></li><li id='bc_0_4B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh4.googleusercontent.com/-h4-x9kzvjA8/AAAAAAAAAAI/AAAAAAAAAaQ/dHsS60shUXI/s35-c/photo.jpg'></img></div><div id='c6476805768337859221' class='comment-block'><div id='bc_0_4M' class='comment-header' kind='m'><cite class='user'><a rel='nofollow' href='https://www.blogger.com/profile/13678458541060375922'>音業</a></cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1473185581580#c6476805768337859221'>2016年9月7日 上午2:13</a></span></div><p id='bc_0_4MC' class='comment-content'><span class='deleted-comment'>此评论已被作者删除&#12290;</span></p><span id='bc_0_4MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin '><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=6476805768337859221'>删除</a></span></span></div><div id='bc_0_4BR' class='comment-replies'></div><div id='bc_0_4B_box' class='comment-replybox-single'></div></li><li id='bc_0_7B' class='comment' kind='b'><div class='avatar-image-container'><img src='//img1.blogblog.com/img/blank.gif'></img></div><div id='c1689234924288216675' class='comment-block'><div id='bc_0_7M' class='comment-header' kind='m'><cite class='user'>fserw</cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1473297572508#c1689234924288216675'>2016年9月8日 上午9:19</a></span></div><p id='bc_0_7MC' class='comment-content'>虚拟号的教程写不写&#65311;这非常重要&#65292;现在国内外网站注册都要手机号了&#65292;即使不用国内网站&#65292;谷歌&#65292;微软邮箱动不动就要人手机号&#12290;保存缓存有时候都没用&#12290;</p><span id='bc_0_7MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-1653377336'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=1689234924288216675'>删除</a></span></span></div><div id='bc_0_7BR' class='comment-replies'><span id='bc_0_7b+seedutwD' kind='d'><div id='bc_0_5T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_5TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_5TA' class='thread-arrow'></span><span id='bc_0_5TN' class='thread-count'><span id='bc_0_5TNT' style='display: none;'></span><span id='bc_0_5TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_5TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_5TC' class='thread-chrome thread-expanded'><div><li id='bc_0_5B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c8725670731880197154' class='comment-block'><div id='bc_0_5M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317493424#c8725670731880197154'>2016年11月17日 上午1:31</a></span></div><p id='bc_0_5MC' class='comment-content'>To fserw<br />多谢你的提醒&#65306;)在手机实名制加几乎所有网络服务都需要电话号码的时代&#65292;虚拟号确实对在线匿名有很大帮助&#12290;一旦二翔子找到合适的方法&#65292;就会写博文告诉大家&#12290;</p><span id='bc_0_5MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=8725670731880197154'>删除</a></span></span></div><div id='bc_0_5BR' class='comment-replies'></div><div id='bc_0_5B_box' class='comment-replybox-single'></div></li><li id='bc_0_6B' class='comment' kind='b'><div class='avatar-image-container'><img src='//img1.blogblog.com/img/blank.gif'></img></div><div id='c758496189339826064' class='comment-block'><div id='bc_0_6M' class='comment-header' kind='m'><cite class='user'>匿名</cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1491459862272#c758496189339826064'>2017年4月6日 下午2:24</a></span></div><p id='bc_0_6MC' class='comment-content'><br />http://receivefreesms.com/<br />据说是个伪造现实手机专门供注册用的管理网站&#65292;如果有其他类似的在网站专门放个位置让初学者使用吧<br />在那些网站你可以注册个手机专门注册各种网站用&#65292;避免被现实的警察寻找到你</p><span id='bc_0_6MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-157338243'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=758496189339826064'>删除</a></span></span></div><div id='bc_0_6BR' class='comment-replies'></div><div id='bc_0_6B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_5I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_5T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_7B_box' class='comment-replybox-single'></div></li><li id='bc_0_9B' class='comment' kind='b'><div class='avatar-image-container'><img src='//img1.blogblog.com/img/blank.gif'></img></div><div id='c6916078198639079383' class='comment-block'><div id='bc_0_9M' class='comment-header' kind='m'><cite class='user'>fserw</cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1473297696263#c6916078198639079383'>2016年9月8日 上午9:21</a></span></div><p id='bc_0_9MC' class='comment-content'>虚拟号网站是很多&#65292;但很多号都被屏蔽掉&#65292;不能用了&#65292;博主能不能找到能用的&#65292;免费的方法&#65311;<br />还有你这个网站字体大小怎么变了&#65292;看着不舒服最好换回来</p><span id='bc_0_9MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-1653377336'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=6916078198639079383'>删除</a></span></span></div><div id='bc_0_9BR' class='comment-replies'><span id='bc_0_9b+seedutxD' kind='d'><div id='bc_0_8T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_8TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_8TA' class='thread-arrow'></span><span id='bc_0_8TN' class='thread-count'><span id='bc_0_8TNT' style='display: none;'></span><span id='bc_0_8TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_8TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_8TC' class='thread-chrome thread-expanded'><div><li id='bc_0_8B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c2896844889228525399' class='comment-block'><div id='bc_0_8M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317517957#c2896844889228525399'>2016年11月17日 上午1:31</a></span></div><p id='bc_0_8MC' class='comment-content'>To fserw<br />虽然时隔很久才回复&#65292;但你发表评论的当天&#65292;二翔子就对网站字体进行了调整&#65292;不知你觉得现在的界面如何&#65311;</p><span id='bc_0_8MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=2896844889228525399'>删除</a></span></span></div><div id='bc_0_8BR' class='comment-replies'></div><div id='bc_0_8B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_8I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_8T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_9B_box' class='comment-replybox-single'></div></li><li id='bc_0_11B' class='comment' kind='b'><div class='avatar-image-container'><img src='//img1.blogblog.com/img/blank.gif'></img></div><div id='c975584522863334472' class='comment-block'><div id='bc_0_11M' class='comment-header' kind='m'><cite class='user'>匿名</cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1475118676452#c975584522863334472'>2016年9月29日 上午11:11</a></span></div><p id='bc_0_11MC' class='comment-content'>终于看到教程了&#65292;为你的辛勤劳动和奉献精神点赞&#12290;</p><span id='bc_0_11MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-1991422011'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=975584522863334472'>删除</a></span></span></div><div id='bc_0_11BR' class='comment-replies'><span id='bc_0_11b+seedutyD' kind='d'><div id='bc_0_10T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_10TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_10TA' class='thread-arrow'></span><span id='bc_0_10TN' class='thread-count'><span id='bc_0_10TNT' style='display: none;'></span><span id='bc_0_10TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_10TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_10TC' class='thread-chrome thread-expanded'><div><li id='bc_0_10B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c1367313987093532647' class='comment-block'><div id='bc_0_10M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317541371#c1367313987093532647'>2016年11月17日 上午1:32</a></span></div><p id='bc_0_10MC' class='comment-content'>To 匿名<br />谢谢你的鼓励&#65292;二翔子会继续努力&#65292;写出更多&#12289;更好的博文献给大家:)</p><span id='bc_0_10MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=1367313987093532647'>删除</a></span></span></div><div id='bc_0_10BR' class='comment-replies'></div><div id='bc_0_10B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_10I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_10T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_11B_box' class='comment-replybox-single'></div></li><li id='bc_0_13B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh5.googleusercontent.com/-7o3heqRbo_Q/AAAAAAAAAAI/AAAAAAAAADE/70KBucF4aq4/s35-c/photo.jpg'></img></div><div id='c2602988839801790330' class='comment-block'><div id='bc_0_13M' class='comment-header' kind='m'><cite class='user'><a rel='nofollow' href='https://www.blogger.com/profile/08993242292265159106'>ヨイツの賢狼ホロ</a></cite><span class='icon user'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1477707782635#c2602988839801790330'>2016年10月29日 上午10:23</a></span></div><p id='bc_0_13MC' class='comment-content'>后排围观&#12290;</p><span id='bc_0_13MN' class='comment-actions secondary-text' kind='m'><a kind='i' href='javascript:;' target='_self' o='r'>回复</a><span class='item-control blog-admin pid-543271033'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=2602988839801790330'>删除</a></span></span></div><div id='bc_0_13BR' class='comment-replies'><span id='bc_0_13b+seedutzD' kind='d'><div id='bc_0_12T' class='comment-thread inline-thread' kind='t'   t='0' u='0'><span id='bc_0_12TT' class='thread-toggle thread-expanded' kind='g'><span id='bc_0_12TA' class='thread-arrow'></span><span id='bc_0_12TN' class='thread-count'><span id='bc_0_12TNT' style='display: none;'></span><span id='bc_0_12TNU' style='display: none;'></span><a href='javascript:;' target='_self'>回复</a><div id='bc_0_12TD' class='thread-dropContainer thread-expanded'><span class='thread-drop'></span></div></span></span><ol id='bc_0_12TC' class='thread-chrome thread-expanded'><div><li id='bc_0_12B' class='comment' kind='b'><div class='avatar-image-container'><img src='//lh3.googleusercontent.com/zFdxGE77vvD2w5xHy6jkVuElKv-U9_9qLkRYK8OnbDeJPtjSZ82UPq5w6hJ-SA=s35'></img></div><div id='c3694519688763194401' class='comment-block'><div id='bc_0_12M' class='comment-header' kind='m'><cite class='user blog-author'><a rel='nofollow' href='https://www.blogger.com/profile/14852933540775977859'>二翔子</a></cite><span class='icon user blog-author'></span><span class='datetime secondary-text'><a rel='nofollow' href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html?showComment=1479317580456#c3694519688763194401'>2016年11月17日 上午1:33</a></span></div><p id='bc_0_12MC' class='comment-content'>To ヨイツの賢狼ホロ<br />多谢ヨイツの賢狼ホロ的支持:)</p><span id='bc_0_12MN' class='comment-actions secondary-text' kind='m'><span class='item-control blog-admin pid-309686794'><a o='d' target='_self' href='https://www.blogger.com/delete-comment.g?blogID=7959751325273089682&amp;postID=3694519688763194401'>删除</a></span></span></div><div id='bc_0_12BR' class='comment-replies'></div><div id='bc_0_12B_box' class='comment-replybox-single'></div></li></div><div id='bc_0_12I' class='continue' kind='ci'><a href='javascript:;' target='_self'>回复</a></div></ol><div id='bc_0_12T_box' class='comment-replybox-thread'></div></div></span></div><div id='bc_0_13B_box' class='comment-replybox-single'></div></li></ol><div id='bc_0_14I' class='continue' kind='ci'><a href='javascript:;' target='_self'>添加评论</a></div><div id='bc_0_14T_box' class='comment-replybox-thread'></div><div id='bc_0_14L' class='loadmore loaded' kind='rb'><a href='javascript:;' target='_self'>加载更多...</a></div></div></div></div>
+</div>
+</div>
+<p class='comment-footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<p>
+</p>
+<a href='https://www.blogger.com/comment-iframe.g?blogID=7959751325273089682&postID=6125275056611834563' id='comment-editor-src'></a>
+<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script src='https://www.blogger.com/static/v1/jsbin/3134186057-comment_from_post_iframe.js' type='text/javascript'></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+</p>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='https://2xiangzi.blogspot.com/2016/09/change-gpg-public-key-1.html' id='Blog1_blog-pager-newer-link' title='较新的帖子'>较新的帖子</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='https://2xiangzi.blogspot.com/2016/05/whonix1.html' id='Blog1_blog-pager-older-link' title='较早的帖子'>较早的帖子</a>
+</span>
+<a class='home-link' href='https://2xiangzi.blogspot.com/'>主页</a>
+</div>
+<div class='clear'></div>
+<div class='post-feeds'>
+<div class='feed-links'>
+订阅&#65306;
+<a class='feed-link' href='https://2xiangzi.blogspot.com/feeds/6125275056611834563/comments/default' target='_blank' type='application/atom+xml'>帖子评论 (Atom)</a>
+</div>
+</div>
+<script type='text/javascript'>
+    window.___gcfg = { 'lang': 'zh-CN' };
+  </script>
+</div></div>
+</div>
+</div>
+<div class='column-left-outer'>
+<div class='column-left-inner'>
+<aside>
+</aside>
+</div>
+</div>
+<div class='column-right-outer'>
+<div class='column-right-inner'>
+<aside>
+<div class='sidebar section' id='sidebar-right-1'><div class='widget HTML' data-version='1' id='HTML2'>
+<div class='widget-content'>
+<!--@ Redirect & Cookies notification options @-->
+<script type='text/javascript'>
+(function()
+{
+  try
+  {
+    var sSite = "https://2xiangzi.blogspot.com/"; 
+    var sPath = location.pathname;
+    var sParams = location.search;
+    var bRedirect = location.href.match(/^http:/i);  // Force HTTPS
+
+    if(location.hostname.match(/^2xiangzi\.blogspot\.(?:\w\w|com\.\w\w|co\.\w\w)$/i))
+    {
+      sPath = "/ncr" + sPath;
+      bRedirect = true;
+    }
+    var regex = /(\?|&)showComment=/i
+    if(sParams.match(regex))
+    {
+      sParams = sParams.replace(regex, "$1comment=");
+      bRedirect = true;
+    }
+    if(bRedirect)
+    {
+      location.replace(sSite + sPath + sParams);
+    }
+
+    window.cookieOptions =
+    {
+      msg: "本博客架设在 Google 的 Blogspot 平台上, Blogspot 使用 cookies 来统计用户访问情况; 由于你的访客 IP 来自欧洲国家, 根据欧盟法律的要求, 二翔子须向你告知上述 cookies 的情况",
+      link: "https://www.blogger.com/go/blogspot-cookies",
+      learn: "了解更多",
+      close: "知道了"
+    };
+  }
+  catch(err)
+  {
+  }
+}
+)();
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=7959751325273089682&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target='configHTML2' title='修改'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget LinkList' data-version='1' id='LinkList1'>
+<h2>互联网上的二翔子</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='https://2xiangzi.blogspot.com/'>二翔子的博客</a></li>
+<li><a href='https://2xiangzi.blogspot.com/p/blog-page.html'>二翔子的邮箱及GPG公钥</a></li>
+<li><a href='https://plus.google.com/105144493669632558142/posts'>二翔子的Google+</a></li>
+<li><a href='https://twitter.com/2xiangzi'>二翔子的Twitter</a></li>
+<li><a href='https://2xiangzi.blogspot.com/p/last-child-margin-bottom-0px-horizontal.html'>翻译组成员邮箱列表</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=7959751325273089682&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='修改'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' data-version='1' id='HTML4'>
+<h2 class='title'>博客订阅</h2>
+<div class='widget-content'>
+<a title="RSS 订阅" href="https://feeds.feedburner.com/blogspot/2xiangzi" target="_blank">
+<img src="https://lh5.googleusercontent.com/-6oleSG-DCYU/SZ5PE7w1kgI/AAAAAAAAAao/MTZz9nhJ2Dw/feed-icon-animated.gif" alt="RSS 订阅网址" border="0" />
+</a>
+
+<a href="https://feedburner.google.com/fb/a/mailverify?uri=blogspot/2xiangzi" title="邮件订阅">
+<img src="https://lh6.googleusercontent.com/-aq_Tc06jlUM/UcMcVsTB6xI/AAAAAAAAAk8/wSTQfl9ytCQ/email-icon.png" alt="邮件订阅网址" border="0" />
+</a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=7959751325273089682&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target='configHTML4' title='修改'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget BlogArchive' data-version='1' id='BlogArchive1'>
+<h2>博客归档</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/'>
+2016
+</a>
+<span class='post-count' dir='ltr'>(7)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/11/'>
+十一月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>
+
+        &#9660;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/09/'>
+九月
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+<ul class='posts'>
+<li><a href='https://2xiangzi.blogspot.com/2016/09/change-gpg-public-key-1.html'>关于二翔子更换GPG公钥的说明</a></li>
+<li><a href='https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html'>如何创建完美的GPG密钥对</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/05/'>
+五月
+</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/04/'>
+四月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2016/01/'>
+一月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/'>
+2015
+</a>
+<span class='post-count' dir='ltr'>(7)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/12/'>
+十二月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/11/'>
+十一月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/10/'>
+十月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/09/'>
+九月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/08/'>
+八月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/07/'>
+七月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+        &#9658;&#160;
+      
+</span>
+</a>
+<a class='post-count-link' href='https://2xiangzi.blogspot.com/2015/04/'>
+四月
+</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=7959751325273089682&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar-right-1' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='修改'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+</aside>
+</div>
+</div>
+</div>
+<div style='clear: both'></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class='main-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<footer>
+<div class='footer-outer'>
+<div class='footer-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left footer-fauxborder-left'>
+<div class='fauxborder-right footer-fauxborder-right'></div>
+<div class='region-inner footer-inner'>
+<div class='foot no-items section' id='footer-1'></div>
+<table border='0' cellpadding='0' cellspacing='0' class='section-columns columns-2'>
+<tbody>
+<tr>
+<td class='first columns-cell'>
+<div class='foot no-items section' id='footer-2-1'></div>
+</td>
+<td class='columns-cell'>
+<div class='foot no-items section' id='footer-2-2'></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class='foot section' id='footer-3' name='页脚'><div class='widget Attribution' data-version='1' id='Attribution1'>
+<div class='widget-content' style='text-align: center;'>
+&#8220;简单&#8221;主题背景. 由 <a href='https://www.blogger.com' target='_blank'>Blogger</a> 提供支持.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=7959751325273089682&widgetType=Attribution&widgetId=Attribution1&action=editWidget&sectionId=footer-3' onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target='configAttribution1' title='修改'>
+<img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+</div>
+</div>
+<div class='footer-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</footer>
+<!-- content -->
+</div>
+</div>
+<div class='content-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
+<script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/1373531190-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY4aOvCY6UNFOd0B3GiZVNjBG1Z3FA:1498232807557';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d7959751325273089682','//2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html','7959751325273089682');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '7959751325273089682', 'title': '二翔子的博客', 'url': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html', 'canonicalUrl': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html', 'homepageUrl': 'https://2xiangzi.blogspot.com/', 'searchUrl': 'https://2xiangzi.blogspot.com/search', 'canonicalHomepageUrl': 'https://2xiangzi.blogspot.com/', 'blogspotFaviconUrl': 'https://2xiangzi.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': 'UA-65616273-1', 'encoding': 'UTF-8', 'locale': 'zh-CN', 'localeUnderscoreDelimited': 'zh_cn', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22二翔子的博客 - Atom\x22 href\x3d\x22https://2xiangzi.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22二翔子的博客 - RSS\x22 href\x3d\x22https://2xiangzi.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22二翔子的博客 - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/7959751325273089682/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22二翔子的博客 - Atom\x22 href\x3d\x22https://2xiangzi.blogspot.com/feeds/6125275056611834563/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'ieCssRetrofitLinks': '\x3c!--[if IE]\x3e\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22https://www.blogger.com/static/v1/jsbin/4291804643-ieretrofit.js\x22\x3e\x3c/script\x3e\n\x3c![endif]--\x3e', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/bf57f599ad14cd48', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': '获取链接', 'key': 'link', 'shareMessage': '获取链接', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': '分享到 Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': '分享到 Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': '分享到 Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': '分享到 Google+', 'target': 'googleplus'}, {'name': '电子邮件', 'key': 'email', 'shareMessage': '电子邮件', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27zh_CN\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': '阅读全文', 'pageType': 'item', 'postId': '6125275056611834563', 'postImageUrl': 'https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png', 'pageName': '如何创建完美的GPG密钥对', 'pageTitle': '二翔子的博客: 如何创建完美的GPG密钥对'}}, {'name': 'features', 'data': {'ga_social_hooks': 'true', 'unsupported_browser_message': 'false', 'lightbox_img_parsing': 'false', 'sharing_get_link_dialog': 'false'}}, {'name': 'messages', 'data': {'edit': '修改', 'linkCopiedToClipboard': '链接已复制到剪贴板&#65281;', 'ok': '确定', 'postLink': '博文链接'}}, {'name': 'template', 'data': {'name': 'Simple', 'localizedName': '简单', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': false, 'variant': 'bold', 'variantId': 'bold', 'variantName': 'Bold', 'localizedVariantName': 'Bold'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '如何创建完美的GPG密钥对', 'description': '如何创建完美的GPG密钥对  文章目录   写在前面 使用副签名密钥的好处及原理 创建完美的GPG密钥对 简单回顾 使用日常密钥对 意外发生后的应对措施 推荐阅读  GnuPG 是一款非常优秀加密软件&#65292;它在我们的数字生活中扮演了极其重要的角色&#12290;越来越多的同学都开始尝试用它进行日常...', 'featuredImage': 'https://lh4.googleusercontent.com/proxy/FXEC7hgbzVKCfmzvQJ_8hjllfBZAoxQfwUs5k9esS1vUmvKfDBzBm2p5rzo-YM26_HiFSdbkX5fbpPRpe91R5kDgaAIW6JbFHOo', 'url': 'https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 6125275056611834563}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1677706600-lbx__zh_cn.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar-right-1', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebar-right-1', null, document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar-right-1', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-right-1', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': '正在加载&#8230;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer-3', null, document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>
