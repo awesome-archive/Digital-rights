@@ -11,7 +11,11 @@
 
 - 定製的隱私加強的Live（GNU/Linux）操作系統鏡像：[Refracta](https://mdrights.github.io/os-observe/posts/2017/07/Refracta-live-torrent.html)
 
-- EFF/Tor/Tails 等博客的翻譯
+- 数字安全博客的翻譯
+	- EFF: 	Electronic Frontier Foundation 
+	- Freedom of Press Foundation
+	- Tor Project
+	- Tails (Anonymous Operation System)
 
 - Whonix 文档（关于匿名的技术和策略）[译介]
 
@@ -41,6 +45,11 @@
 
 
 <br />
+
+## 版权声明
+
+**如无特别说明，这里的译文均采用[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议发布。转载时请保留原文和译文的作者/译者及链接，以及相同的许可协议。**
+
 <hr>
 __（部分成品会发布在博客上：https://mdrights.github.io/os-observe ) __
 
