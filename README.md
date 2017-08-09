@@ -7,19 +7,19 @@
 <hr>
 ## 这里有：
 
-- [在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
+- 隐匿上网踪迹方法和资源（Anonymity-tools 目录）
+	- 【推荐】[在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
-- 定製的隱私加強的Live（GNU/Linux）操作系統鏡像：[Refracta](https://mdrights.github.io/os-observe/posts/2017/07/Refracta-live-torrent.html)
+- 加密方法测评/讨论（Encrypto 目录）
 
 - 数字安全博客的翻譯
-	- EFF: 	Electronic Frontier Foundation 
-	- Freedom of Press Foundation
-	- Tor Project
-	- Tails (Anonymous Operation System)
+	- EFF: 电子前哨基金会（EFF-l10n 目录）	
+	- 新闻自由基金会 （FF-l10n 目录）
+	- Tails (为匿名而设计的操作系统)
 
-- Whonix 文档（关于匿名的技术和策略）[译介]
+- 隐私权/网络开放性相关政策法规（policies 目录）
 
-- 关于隐私/匿名的一些资源收集
+- 定製的隱私加強的Live（GNU/Linux）操作系統鏡像：[Refracta](https://mdrights.github.io/os-observe/posts/2017/07/Refracta-live-torrent.html)
 
 *（欢迎参与协作）*
 
@@ -39,9 +39,9 @@
 
 - **InternetFreedomFestival.org** 的 [Localization lab（中文）](https://community.internetfreedomfestival.org/community/channels/localization-zh-hans) 频道（或via Mattermost客户端）
 
-- **Telegram**: 「不推荐」
- - [Tor 匿蹤隱私保護群組](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)
- - [數字權利群組](https://telegram.me/digital_rights)
+- **Telegram**: 
+ - [Tor 匿蹤隱私保護群組（链接已失效）]()
+ - [Beijing GNU/Linux User Group](https://t.me/beijinglug)
 
 
 <br />
