@@ -7,19 +7,18 @@
 <hr>
 ## 这里有：
 
-- 隐匿上网踪迹方法和资源（Anonymity-tools 目录）
+- 隐匿上网踪迹方法和资源
 	- 【推荐】[在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
-- 加密方法测评/讨论（Encrypto 目录）
+- 加密方法测评/讨论
 
 - 数字安全博客的翻譯
 	- EFF: 电子前哨基金会（EFF-l10n 目录）	
 	- 新闻自由基金会 （FF-l10n 目录）
 	- Tails (为匿名而设计的操作系统)
 
-- 隐私权/网络开放性相关政策法规（policies 目录）
+- 隐私权/网络开放性相关政策法规
 
-- 定製的隱私加強的Live（GNU/Linux）操作系統鏡像：[Refracta](https://mdrights.github.io/os-observe/posts/2017/07/Refracta-live-torrent.html)
 
 *（欢迎参与协作）*
 
@@ -39,9 +38,11 @@
 
 - **InternetFreedomFestival.org** 的 [Localization lab（中文）](https://community.internetfreedomfestival.org/community/channels/localization-zh-hans) 频道（或via Mattermost客户端）
 
-- **Telegram**: 
- - [Tor 匿蹤隱私保護群組（链接已失效）]()
- - [Beijing GNU/Linux User Group](https://t.me/beijinglug)
+<br />
+- 推荐：  
+[私人定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，可用于“對付棱鏡”的隐私加強版操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused app
+lications installed. (每月更新，现为beta测试版——勿用于风险环境）
+
 
 
 <br />
