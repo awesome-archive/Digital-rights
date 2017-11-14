@@ -19,7 +19,9 @@
 
 - 隐私权/网络开放性相关政策法规
 
-- 翻譯摘要和快訊：Riot.im 頻道 #Digitalrightscn 
+- 快讯和唠叨频道：
+	- Telegram: https://t.me/liveslak  
+	- IRC/Riot 頻道 #Digitalrightscn 
 
 *（欢迎参与协作）*
 
@@ -37,12 +39,12 @@
  - #digitalrightscn:matrix.org
  - (加入姿势：Riot客户端中，在 Room Directory 搜索 #digitalrightscn 即进入。）
 
-- **InternetFreedomFestival.org** 的 [Localization lab（中文）](https://community.internetfreedomfestival.org/community/channels/localization-zh-hans) 频道（或via Mattermost客户端）
 
 <br />
 - 推荐：  
-[私人定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，可用于“對付棱鏡”的隐私加強版操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused app
-lications installed. (每月更新，现为beta测试版——勿用于风险环境）
+[定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，可用于“對付棱鏡”的隐私加強版操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused app
+lications installed. (每月更新，现为beta测试版）   
+交流讨论群：https://t.me/liveslackware
 
 
 
@@ -53,5 +55,5 @@ lications installed. (每月更新，现为beta测试版——勿用于风险环
 **如无特别说明，这里的译文均采用[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议发布。转载时请保留原文和译文的作者/译者及链接，以及相同的许可协议。**
 
 <hr>
-__（部分成品会发布在博客上：https://mdrights.github.io/os-observe ) __
+_（部分成品会发布在博客上：https://mdrights.github.io/os-observe ）_
 
