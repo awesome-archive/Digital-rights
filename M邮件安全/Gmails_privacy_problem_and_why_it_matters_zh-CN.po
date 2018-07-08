@@ -6,8 +6,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-08 10:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: MDrights <EMAIL@ADDRESS>\n"
+"Language-Team: Digital-Rights <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,6 +20,10 @@ msgid ""
 "日期: Thu, 05 Jul 2018 09:21:05 +0000\n"
 "链接: https://protonmail.com/blog/google-privacy-problem/"
 msgstr ""
+"标题: Gmail 的隐私问题以及为什么它很严重\n"
+"作者: Ben Wolford\n"
+"日期: 7月05日 2018 09:21:05 +0000\n"
+"链接: https://protonmail.com/blog/google-privacy-problem/"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:9
 msgid ""
@@ -29,6 +33,8 @@ msgid ""
 "than \n"
 "that: The entire business model is incompatible with a free society."
 msgstr ""
+"Gmail 本周遇到了一场舆论批评风暴，关于它向第三方开发者共享用户邮件的做法。"
+"但要知道其实 Gmail 的失败还远远不止这些：其整个商业模式都与一个自由社会不兼容。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:15
 msgid ""
@@ -39,6 +45,9 @@ msgid ""
 "companies full access to their mailbox. In at least one instance, the WSJ \n"
 "reported, “engineers personally read through thousands of emails“."
 msgstr ""
+"《华尔街日报》最近报道了这件事[1]。当用户在他们的 Gmail 账号里安装一种叫作“插件”"
+"的工具时，通常他们也让外面的公司全面访问自己的邮箱了。《华报》说，至少有一例，"
+"外面的工程师能够读到上千封电子邮件。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:22
 msgid ""
@@ -52,10 +61,13 @@ msgid ""
 "to \n"
 "influence you."
 msgstr ""
+"在接下来的舆论辩论中，许多人将焦点放在 Google 糟糕的对第三方开发者的审核，以及"
+"他们不完善的隐私政策。虽然这些都是很重要的关注点，但大家都被一个更本质的问题给带跑了："
+"Google 这个公司的整体目标就是要监控你们，并且把你们的个人信息卖给那些想影响你的组织。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:24
 msgid "The real purpose of Gmail"
-msgstr ""
+msgstr "Gmail 的真实目的"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:28
 msgid ""
@@ -65,6 +77,7 @@ msgid ""
 "\n"
 "users to advertisers."
 msgstr ""
+"Google 的商业模式首先是基于在线广告。公司去年通过售卖其用户的个人信息给广告公司的收入达到 950亿美元。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:34
 msgid ""
@@ -77,6 +90,9 @@ msgid ""
 "\n"
 "with powerful software to better understand you."
 msgstr ""
+"对广告商来说，你的邮箱就是个金矿，因为我们通常认为电邮是个私人通讯工具。"
+"你的银行联系你，或你给你的爱人写电邮，这些都看上去只是双方的对话。实际上，"
+"Google 把你的 Gmail 邮箱当作公司的财产，并且用强大的软件扫描你的邮件以更好地了解你。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:39
 msgid ""
@@ -86,6 +102,8 @@ msgid ""
 "can \n"
 "more or less know what you’re thinking about.[3]”"
 msgstr ""
+"Gmail 服务始于2004年，现在已经有 14 亿用户，他们为自己的想法、行为和互动做了完美的记录。"
+"正如 Google CEO Eric Schmidt 在2010年所说：“我们知道你在哪儿，你去过哪儿。我们多少知道你在想什么。[3]”"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:44
 msgid ""
@@ -96,10 +114,12 @@ msgid ""
 "they did not mention, however, was that they would continue allow other \n"
 "companies to do just that."
 msgstr ""
+"经过多年的诉讼和批判浪潮， Gmail 最终在去年声明它不再扫描用户[4]的收件箱用于广告目的。然而，他们并没有提到，"
+"他们会让其他公司来做这事。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:46
 msgid "Third-party data mining in Gmail"
-msgstr ""
+msgstr "Gmail里的第三方数据挖掘"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:52
 msgid ""
@@ -113,6 +133,9 @@ msgid ""
 "read\n"
 "their emails."
 msgstr ""
+"从2014年开始，Gmail 给予第三方开发者进入平台的API（应用数据接口）的权限，也就是说允许他们能开发在平台内使用的"
+"软件。这些附加的软件（简称插件——译者注）通常是一些生产力工具，比如任务管理器或文档签名工具。当用户安装了这些"
+"工具，这些工具也就得到了权限来读他们的邮件。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:58
 msgid ""
@@ -125,6 +148,8 @@ msgid ""
 "\n"
 "apps make their platform more valuable."
 msgstr ""
+"那还没有说在明面的是，这些插件可能就是做有利可图的活动的前端。他们的隐私政策里暗含着模糊的免责声明，允许那些"
+"企业收获并分享你的数据给他们的广告合作伙伴。 Gmail 允许这么做就因为第三方应用可以让它的平台更有价值。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:65
 msgid ""
@@ -139,6 +164,9 @@ msgid ""
 "to \n"
 "calibrate their algorithms. The users were never informed about this."
 msgstr ""
+"通过扫描你的邮箱，企业可以研究你的邮件习惯、你买的东西、你花了多少钱、你是什么人。虽然一般的这些信息都"
+"经过匿名化处理，但也并不总是。依据《华报》的叙述，插件的开发者有时还分享整个邮件的截图。"
+"其中一个例子就是，两个工程师读了8000个个人邮件，以便校准他们的算法。用户是从没有被告知这个情况的。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:72
 msgid ""
