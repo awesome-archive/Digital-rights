@@ -1,0 +1,271 @@
+#. extracted from Gmails_privacy_problem_and_why_it_matters.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-08 10:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.3.0\n"
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:5
+msgid ""
+"标题: Gmail’s privacy problem and why it matters\n"
+"作者: Ben Wolford\n"
+"日期: Thu, 05 Jul 2018 09:21:05 +0000\n"
+"链接: https://protonmail.com/blog/google-privacy-problem/"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:9
+msgid ""
+"Gmail faced a storm of criticism this week over its practice of sharing "
+"users’ \n"
+"emails with third-party developers. But Gmail’s failures run much deeper "
+"than \n"
+"that: The entire business model is incompatible with a free society."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:15
+msgid ""
+"The Wall Street Journal recently published an article highlighting privacy \n"
+"concerns related to Gmail’s use of third-party apps[1]. When users install \n"
+"tools known as “add-ons” in their Gmail accounts, they are often giving "
+"outside\n"
+"companies full access to their mailbox. In at least one instance, the WSJ \n"
+"reported, “engineers personally read through thousands of emails“."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:22
+msgid ""
+"In the public debate that followed, many people focused on Google’s poor \n"
+"oversight of these third-party developers and the inadequacy of their "
+"privacy \n"
+"policies. While these are important concerns, they distract from the \n"
+"fundamental problem with Google, which is that the company’s entire purpose "
+"is \n"
+"to spy on you and sell your private information to organizations that want "
+"to \n"
+"influence you."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:24
+msgid "The real purpose of Gmail"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:28
+msgid ""
+"Google’s business model is primarily based on online advertising. The "
+"company \n"
+"earned over $95 billion last year selling the personal information[2] of its "
+"\n"
+"users to advertisers."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:34
+msgid ""
+"For an advertiser, your emails are a gold mine because we often think of "
+"email \n"
+"as a private communication channel. When your bank contacts you or you "
+"address \n"
+"an email to your loved one, these seem like two-party conversations. In \n"
+"reality, Google treats your Gmail mailbox as company property, scanning them "
+"\n"
+"with powerful software to better understand you."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:39
+msgid ""
+"Founded in 2004, the service now has 1.4 billion users creating a perfect \n"
+"record of their thoughts, behaviors, and interactions. As Google CEO Eric \n"
+"Schmidt said in 2010, “We know where you are. We know where you’ve been.We "
+"can \n"
+"more or less know what you’re thinking about.[3]”"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:44
+msgid ""
+"After years of lawsuits and waves of criticism, Gmail finally announced last "
+"\n"
+"year it would stop scanning users[4]’ inboxes for advertising purposes. What "
+"\n"
+"they did not mention, however, was that they would continue allow other \n"
+"companies to do just that."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:46
+msgid "Third-party data mining in Gmail"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:52
+msgid ""
+"Since 2014, Gmail has given third-party developers access to the platform’s "
+"\n"
+"API, which allows them to build software that can be used within the "
+"platform. \n"
+"These add-ons are usually productivity tools, such as task managers or "
+"document\n"
+"signing apps. When users install them, they grant these apps permission to "
+"read\n"
+"their emails."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:58
+msgid ""
+"What is not overtly stated, however, is that the add-ons may actually be a \n"
+"front for profitable marketing activities. Buried in their privacy policies "
+"are\n"
+"vague disclaimers that allow the companies to harvest and share your data "
+"with \n"
+"their advertising partners. Gmail allows this to happen because third-party "
+"\n"
+"apps make their platform more valuable."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:65
+msgid ""
+"By scanning your emails, companies can learn information about your email \n"
+"habits, the things you buy, how much you spend, and who you are. Typically "
+"this\n"
+"information is anonymized but not always. According to the Wall Street "
+"Journal,\n"
+"the add-on developers sometimes shared redacted screenshots of entire "
+"emails. \n"
+"In one instance, two engineers read through 8,000 personal emails in order "
+"to \n"
+"calibrate their algorithms. The users were never informed about this."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:72
+msgid ""
+"These activities are extremely similar to those that led to the recent \n"
+"Facebook-Cambridge Analytica scandal[5]. When the abusive practices of \n"
+"Facebook’s third-party app developers came to light, the fallout included a "
+"\n"
+"#DeleteFacebook hashtag and a congressional inquiry into Facebook’s privacy "
+"\n"
+"practices. Though Google has so far avoided intense controversy, its \n"
+"surveillance operations are far greater than Facebook’s."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:74
+msgid "Privacy is necessary for democracy"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:83
+msgid ""
+"This is not just about strangers having access to your love letters, "
+"intimate \n"
+"photos and online purchases. It’s also about the kind of society we want to "
+"\n"
+"live in. Gmail is designed for mass surveillance, and such a powerful tool \n"
+"could be easily misused. The intelligence software Google is developing "
+"could \n"
+"someday be turned against us in ways we cannot predict. The Facebook scandal "
+"\n"
+"has already given us a glimpse of this power, which can even be used by \n"
+"malicious actors to undermine democracy. Imagine if Cambridge Analytica had "
+"\n"
+"access to your inbox."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:90
+msgid ""
+"Human rights defenders saw the potential for harm from the very beginning of "
+"\n"
+"Gmail. Five days after its launch, a group of privacy advocates wrote a "
+"letter \n"
+"to Google expressing their concerns. They said Gmail’s plan to scan emails "
+"for \n"
+"marketing purposes “violates the implicit trust of an email service "
+"provider.” \n"
+"Gmail has violated that trust again and again, and it will continue to do so "
+"\n"
+"because invading people’s privacy is essential to its business model."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:92
+msgid "How to protect your privacy in the age of Google"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:102
+msgid ""
+"Fortunately, the ad-based business model is not the only viable way to \n"
+"commercialize online services. At ProtonMail, we implement end-to-end \n"
+"encryption, which means users have the only keys to their data. Your inbox "
+"is \n"
+"safe from corporate surveillance and offers increased security in the event "
+"of \n"
+"a data breach. Encryption also makes targeted advertising impossible. So "
+"while \n"
+"we offer free accounts, we are supported almost entirely by paid users. This "
+"\n"
+"means our interests are aligned with those of our users, most of whom "
+"believe \n"
+"paying money is preferable to paying with their data, given the privacy and "
+"\n"
+"security risks."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:107
+msgid ""
+"When you pay for the services you use, you can be sure you are the customer "
+"and\n"
+"not the product being sold to advertisers. If you’re tired of your personal "
+"\n"
+"information being sold, processed, and profiled, then consider switching to "
+"a \n"
+"service that puts privacy first."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:110
+msgid ""
+"Regards,\n"
+"The ProtonMail Team"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:112
+msgid "You can get a free secure email account from ProtonMail here[6]."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:114
+msgid "We also provide a free VPN service[7] to protect your privacy."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:118
+msgid ""
+"ProtonMail and ProtonVPN are funded by community contributions. If you would "
+"\n"
+"like to support our development efforts, you can upgrade to a paid plan[8] "
+"or \n"
+"donate[9]. Thank you for your support!"
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:121
+msgid ""
+"The post Gmail’s privacy problem and why it matters[10] appeared first on \n"
+"ProtonMail Blog[11]."
+msgstr ""
+
+#: Gmails_privacy_problem_and_why_it_matters.txt:133
+msgid ""
+"所有链接\n"
+"[1]: https://www.wsj.com/articles/techs-dirty-secret-the-app-developers-"
+"sifting-through-your-gmail-1530544442 (链接)\n"
+"[2]: https://www.statista.com/statistics/266249/"
+"advertising-revenue-of-google/ (链接)\n"
+"[3]: https://protonmail.com/blog/privacy-under-attack/ (链接)\n"
+"[4]: https://www.nytimes.com/2017/06/23/technology/gmail-ads.html (链接)\n"
+"[5]: https://en.wikipedia.org/wiki/Facebook–Cambridge_Analytica_data_scandal "
+"(链接)\n"
+"[6]: https://protonmail.com/signup (链接)\n"
+"[7]: https://protonvpn.com/ (链接)\n"
+"[8]: https://protonmail.com/support/knowledge-base/paid-plans/ (链接)\n"
+"[9]: https://protonmail.com/donate (链接)\n"
+"[10]: https://protonmail.com/blog/google-privacy-problem/ (链接)\n"
+"[11]: https://protonmail.com/blog (链接)"
+msgstr ""
