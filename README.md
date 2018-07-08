@@ -14,7 +14,7 @@
 
 - 数字安全博客的翻譯
 	- EFF: 电子前哨基金会（EFF-l10n 目录）	
-	- 新闻自由基金会 （FF-l10n 目录）
+	- Protonmail / Tutanota blogs (M邮件安全 目录)
 	- Tor / Tails 
 
 - 隐私权/网络开放性相关政策法规
@@ -42,8 +42,8 @@
 
 <br />
 - 推荐：  
-[定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，可用于“對付棱鏡”的隐私加強版操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused app
-lications installed. (每月更新，现为beta测试版）   
+[定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，方便翻墙且又加强隐私保护的操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused applications installed.   
+
 交流讨论群：https://t.me/liveslackware
 
 
