@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-08 10:02+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-07-14 10:19+0000\n"
 "Last-Translator: MDrights <EMAIL@ADDRESS>\n"
 "Language-Team: Digital-Rights <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -166,7 +166,7 @@ msgid ""
 msgstr ""
 "通过扫描你的邮箱，企业可以研究你的邮件习惯、你买的东西、你花了多少钱、你是什么人。虽然一般的这些信息都"
 "经过匿名化处理，但也并不总是。依据《华报》的叙述，插件的开发者有时还分享整个邮件的截图。"
-"其中一个例子就是，两个工程师读了8000个个人邮件，以便校准他们的算法。用户是从没有被告知这个情况的。"
+"其中一个例子就是，两个工程师读了8000封个人邮件，以便校准他们的算法。用户是从没有被告知这个情况的。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:72
 msgid ""
@@ -179,10 +179,12 @@ msgid ""
 "practices. Though Google has so far avoided intense controversy, its \n"
 "surveillance operations are far greater than Facebook’s."
 msgstr ""
+"这些活动都跟最近的脸书-剑桥分析丑闻像极了[5]。当脸书的第三方开发者的滥用行为被曝光后，等来的是 #DeleteFacebook"
+"（删除脸书账号——译者注）运动，和国会对脸书公司的隐私相关行为的询问。虽然 Google 直到现在还能避开争议的风头，其实它的监控动作比脸书更甚。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:74
 msgid "Privacy is necessary for democracy"
-msgstr ""
+msgstr "隐私是民主的必需品"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:83
 msgid ""
@@ -200,6 +202,10 @@ msgid ""
 "\n"
 "access to your inbox."
 msgstr ""
+"这可不只是说陌生人看到了你的情信、私密照片和网上购物历史，而是说我们想要生活在一个怎样的社会里。"
+"Gmail 就是用来大规模监控的，而且这个强大的工具可以轻易地被滥用。Google开发的这些智能工具哪天就突然把矛头指向"
+"我们，用一种我们无法预测的方式。脸书丑闻已经让我们一瞥了这威力，它甚至能被恶势力用来破坏民主制度。"
+"想象一下如果剑桥分析公司已经进过了你的收件箱吧。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:90
 msgid ""
@@ -215,10 +221,14 @@ msgid ""
 "\n"
 "because invading people’s privacy is essential to its business model."
 msgstr ""
+"人权捍卫者们在 Gmail 刚出的时候就意识到了这个潜在的危害。它发布五天后，一组隐私倡导者给Google写了封信表达了他们"
+"的关切。他们说 Gmail对邮件进行市场营销为目的的扫描的计划是“对一个邮件服务者的信任的破坏”。Google 一再破坏了"
+"这信任，它还会继续这样做，因为侵入他人隐私是他基本的商业模式。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:92
 msgid "How to protect your privacy in the age of Google"
 msgstr ""
+"在谷歌帝国时代怎样保护你的隐私"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:102
 msgid ""
@@ -238,6 +248,10 @@ msgid ""
 "\n"
 "security risks."
 msgstr ""
+"幸运的是，世上并不只有基于广告的商业模式才算有效的商业在线服务。在 Protonmail，我们采用端对端加密技术，意味着"
+"只有用户才有进入他们数据的钥匙。你的收件箱对于大企业的监控是安全的，且在数据泄漏发生时更安全。加密同样能让"
+"定向广告变得不可能。所以当我们提供免费账号时，我们几乎只由付费用户来支撑我们的业务。这说明了我们的志趣和我们的"
+"用户的志趣——那些相信付费是对他们的数据、隐私和安全风险的保障的人——是一致的。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:107
 msgid ""
@@ -249,20 +263,24 @@ msgid ""
 "a \n"
 "service that puts privacy first."
 msgstr ""
+"当你对你使用的服务付费，你很确定你就是个消费者而非被当作产品卖给广告商。如果你厌倦了自己的个人信息被卖、被"
+"分析和被建档，那么可以考虑换到一个隐私优先的服务吧。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:110
 msgid ""
 "Regards,\n"
 "The ProtonMail Team"
 msgstr ""
+"此致\n"
+"Protonmail 团队"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:112
 msgid "You can get a free secure email account from ProtonMail here[6]."
-msgstr ""
+msgstr "你可以在这里[6]建立一个免费的邮箱账号。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:114
 msgid "We also provide a free VPN service[7] to protect your privacy."
-msgstr ""
+msgstr "我们还提供免费的VPN服务来保护你的隐私。"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:118
 msgid ""
@@ -278,6 +296,7 @@ msgid ""
 "The post Gmail’s privacy problem and why it matters[10] appeared first on \n"
 "ProtonMail Blog[11]."
 msgstr ""
+"本文[10]首发于 Protonmail 博客[11]"
 
 #: Gmails_privacy_problem_and_why_it_matters.txt:133
 msgid ""
@@ -297,3 +316,18 @@ msgid ""
 "[10]: https://protonmail.com/blog/google-privacy-problem/ (链接)\n"
 "[11]: https://protonmail.com/blog (链接)"
 msgstr ""
+"所有链接\n"
+"[1]: https://www.wsj.com/articles/techs-dirty-secret-the-app-developers-"
+"sifting-through-your-gmail-1530544442 (链接)\n"
+"[2]: https://www.statista.com/statistics/266249/"
+"advertising-revenue-of-google/ (链接)\n"
+"[3]: https://protonmail.com/blog/privacy-under-attack/ (链接)\n"
+"[4]: https://www.nytimes.com/2017/06/23/technology/gmail-ads.html (链接)\n"
+"[5]: https://en.wikipedia.org/wiki/Facebook–Cambridge_Analytica_data_scandal "
+"(链接)\n"
+"[6]: https://protonmail.com/signup (链接)\n"
+"[7]: https://protonvpn.com/ (链接)\n"
+"[8]: https://protonmail.com/support/knowledge-base/paid-plans/ (链接)\n"
+"[9]: https://protonmail.com/donate (链接)\n"
+"[10]: https://protonmail.com/blog/google-privacy-problem/ (链接)\n"
+"[11]: https://protonmail.com/blog (链接)"
