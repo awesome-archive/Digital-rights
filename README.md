@@ -26,24 +26,30 @@
 *（欢迎参与协作）*
 
 <br />
-[ 定期發佈一個操作系统（鏡像）：antiG](https://github.com/mdrights/antiG) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Devuan GNU+Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
+## 相關項目
+
+- [ 定期發佈一個操作系统（鏡像）：antiG](https://github.com/mdrights/antiG) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Devuan GNU+Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
 
 交流讨论Telegram群：https://t.me/liveslackware
+
+- [一個信息爬取和傳送bot：CSObot](https://github.com/mdrights/CSObot) 主要用來爬取政府/公共信息和數據（一般這些信息即使“公示”也不容易獲得），並傳送到公共平臺上（目前是 irc 平臺）。
+
 
 <br /> 
 <hr>
 
 ## 「數字權利」相关群組／頻道
 
+- **Riot 房間** （與 IRC 頻道同步） **「推荐」**
+ - #digitalrightscn:matrix.org （數字權利相關）
+ - #publicpolicy-cn:matrix.org （公共政策相關）
+ - (加入姿势：Riot客户端中，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
+
 - **IRC 頻道**：
  - #DigitalRightsCN
- - (加入姿势： IRC 客戶端中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个>频道」，加入上边的频道名即可 )
+ - #publicpolicy-cn
+ - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个>频道」，加入上边的频道名即可 )
  - （謹記必須搭配 Tor 否則完全暴露自己 IP :）
-
-- **Riot 房間**（ https://riot.im ） （與 IRC 頻道同步） **「推荐」**
- - #digitalrightscn:matrix.org
- - (加入姿势：Riot客户端中，在 Room Directory 搜索 #digitalrightscn 即进入。）
-
 
 
 
