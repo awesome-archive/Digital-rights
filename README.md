@@ -25,6 +25,11 @@
 
 *（欢迎参与协作）*
 
+<br />
+[ 定期發佈一個操作系统（鏡像）：antiG](https://github.com/mdrights/antiG) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Devuan GNU+Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
+
+交流讨论Telegram群：https://t.me/liveslackware
+
 <br /> 
 <hr>
 
@@ -40,11 +45,6 @@
  - (加入姿势：Riot客户端中，在 Room Directory 搜索 #digitalrightscn 即进入。）
 
 
-<br />
-- 推荐：  
-[定制隐私加强 live 操作系统：LiveSlak](https://github.com/mdrights/LiveSlak) -一款面向中文用户的，方便翻墙且又加强隐私保护的操作系统 + 相关软件（请看[LiveSlak 介绍](https://mdrights.github.io/os-observe/posts/2017/08/Liveslak-intro.html)。 A Chinese-oriented, privacy-enhanced OS based on Slackware Live with some privacy-focused applications installed.   
-
-交流讨论群：https://t.me/liveslackware
 
 
 
