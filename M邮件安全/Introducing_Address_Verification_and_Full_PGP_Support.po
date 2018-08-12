@@ -20,6 +20,10 @@ msgid ""
 "日期: Wed, 25 Jul 2018 23:35:08 +0800\n"
 "链接: https://protonmail.com/blog/address-verification-pgp-support/"
 msgstr ""
+"标题: 介绍地址确认机制和PGP全面支持\n"
+"作者: Andy Yen\n"
+"日期: Wed, 25日 7月 2018 23:35:08 +0800\n"
+"链接: https://protonmail.com/blog/address-verification-pgp-support/"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:6
 msgid ""
@@ -27,6 +31,7 @@ msgid ""
 "with \n"
 "the right person, while PGP support adds encrypted email interoperability."
 msgstr ""
+"(开场白略)"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:9
 msgid ""
@@ -39,10 +44,11 @@ msgid ""
 "\n"
 "privacy."
 msgstr ""
+"……Protonmail 现在支持“地址确认”，一起的还有对PGP的全面支持。在这篇文章里我们将讨论这两个新功能，它们将显著提升我们的邮件安全和隐私。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:16
 msgid "Address Verification"
-msgstr ""
+msgstr "(邮件)地址确认"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:18
 msgid ""
@@ -58,6 +64,7 @@ msgid ""
 "decisions \n"
 "for the sake of better usability."
 msgstr ""
+"(开场白略)"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:25
 msgid ""
@@ -70,6 +77,8 @@ msgid ""
 "trust \n"
 "in ProtonMail."
 msgstr ""
+"为了让加密邮件为广大使用者接受的原因 Protonmail 做的一个决定就是把很多的加解密操作步骤隐去了。"
+"这样做虽然让数百万的人们用上了加密电邮而不需要懂任何密钥是什么，但这也意味着人们要给 Protonmail 一定程度的**信任**。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:31
 msgid ""
@@ -82,6 +91,9 @@ msgid ""
 "philosophy behind our use of end-to-end encryption[4] and zero-access \n"
 "encryption[5], and it is also the philosophy behind Address Verification[6]."
 msgstr ""
+"当然只要你开始使用任何互联网服务你就总得拿一定程度的信任出来。然而我们的目标是将必要的信任度降到最低，"
+"进而就算哪天 Proton 被入侵了，用户的加密通讯也不会被破坏。这也是我们的端对端加密和“零访问加密”技术背后的哲学，"
+"也是“地址确认”技术的哲学。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:37
 msgid ""
@@ -97,6 +109,7 @@ msgid ""
 "takes \n"
 "place client side."
 msgstr ""
+"在以前，如果 Proton被入侵了，攻击者可以给用户发送一个假的公钥（同时还得模仿或谎称这公钥就是你的发件人的——译者注），这样你跟发件人的通信虽然是端对端加密了但加密对象显然错了，攻击者可以用他自己的私钥解开你的加密邮件了（这也叫“中间人攻击，MITM）。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:45
 msgid ""
@@ -109,10 +122,12 @@ msgid ""
 "\n"
 "priority."
 msgstr ""
+"“地址确认”技术能优雅地解决这个问题。我们考虑到这技术可能一般用户用不上，但有很多记者和活动人士需要进行"
+"高度敏感的通信，因此我们把这技术摆在高度优先的位置。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:51
 msgid "How Address Verification works"
-msgstr ""
+msgstr "“地址确认技术”的工作原理"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:53
 msgid ""
@@ -128,13 +143,14 @@ msgid ""
 "\n"
 "possible to tamper with the public encryption key once it has been trusted."
 msgstr ""
+"从最新版的 Protonmail 开始，当你收到你的联系人的邮件时，你能在（网页版）该发件人名的旁边见到「信任这个公钥」"
+"(Trust Public Keys) 这样的选项。选择后系统就会保存该发件人的公钥并用你的私钥对这公钥进行数字签名。因此你一旦对该发件人的公钥表示信任（即签名）后，以后就看出这个公钥是否被篡改了。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:60
 msgid ""
-"https://protonmail.com/blog/wp-content/uploads/2018/07/ProtonMail-trusted-"
-"keys.m\n"
-"p4[8]"
+"https://protonmail.com/blog/wp-content/uploads/2018/07/ProtonMail-trusted-keys.mp4[8]"
 msgstr ""
+"https://protonmail.com/blog/wp-content/uploads/2018/07/ProtonMail-trusted-keys.mp4[8]"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:63
 msgid ""
@@ -148,10 +164,12 @@ msgid ""
 "Address \n"
 "Verification[6] in our knowledge base article."
 msgstr ""
+"这样的话当你给这个联系人发邮件时就不用担心恶意攻击者（甚至可能包括 Protonmail喔）篡改或哄骗你用了"
+"恶意的公钥了。单这种技术就已经比别的加密电邮服务高不知哪里去了。你可以在这里[6]继续学习我们的技术。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:70
 msgid "PGP Support"
-msgstr ""
+msgstr "PGP 支持"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:72
 msgid ""
@@ -169,6 +187,8 @@ msgid ""
 "you\n"
 "are an enterprise, to migrate your business to ProtonMail[10]."
 msgstr ""
+"我们还全面支持了 PGP的所有功能（指从页面上，PGP本身的功能本来任何人在命令行都可以用——译者注）。"
+"要全面的用上 PGP的功能，最好联系人双方都用 Protonmail。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:80
 msgid ""
@@ -183,6 +203,8 @@ msgid ""
 "your\n"
 "public key and share it with them."
 msgstr ""
+"但如果你的联系人还在用其他形式的 PGP（如命令行里的 GnuPG——译者注），那我们对 PGP的新支持将让你的人生轻松很多。"
+"Proton 现在支持从非 Proton 用户导入他们的公钥，对他们发送 PGP 加密邮件了。其次，反过来 Proton用户也能收到任何其它 PGP 用户发来的加密电邮了。还有，你可以导出你的公钥，并跟他人分享。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:87
 msgid ""
@@ -206,6 +228,7 @@ msgid ""
 "keys for your address, so you don’t need to share new keys and a new email \n"
 "address with your contacts."
 msgstr ""
+"如果你已经是个 PGP 用户（即你已经在用一对PGP密钥了），你也可以导入你在用的PGP密钥对到 Proton，关联现有的 Proton 账号即可。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:98
 msgid ""
@@ -223,11 +246,11 @@ msgstr ""
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:106
 msgid "You can find more details about using PGP with ProtonMail here[12]."
-msgstr ""
+msgstr "你可以在这里找到关于支持 PGP 的功能的更多细节[12]。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:108
 msgid "Introducing ProtonMail’s public key server"
-msgstr ""
+msgstr "Protonmail 的公钥服务器简介"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:110
 msgid ""
@@ -244,6 +267,8 @@ msgid ""
 "\n"
 "website, they are generally out of luck."
 msgstr ""
+"最后，我们正式发布了我们的公钥服务器，这样让公钥的交换、分享更容易了。"
+"如果你已经在用 Protonmail，你的公钥已经在公钥服务器上了，可以自动发现（同时可以结合“地址确认”功能确保你找到正确的公钥）。如果一个非 Proton 的 PGP 用户想给你发加密电邮但还没拿到你的公钥，TA需要先找到你的公钥放哪儿了。如果你不事先把你的公钥放在一个公共的地方（比如你的网站页面上，或其他公钥服务器），对方一般都找不到的。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:118
 msgid ""
@@ -253,6 +278,7 @@ msgid ""
 "addresses \n"
 "hosted at ProtonMail)."
 msgstr ""
+"我们的公钥服务器就解决了这个问题啦。这是个中心化的地方，让任何人查找任何 Protonmail 邮箱的公钥（也包括非 Proton邮箱的公钥但上传给 Protonmail 保管的）。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:122
 msgid ""
@@ -264,13 +290,15 @@ msgid ""
 "“username@protonmail.com” with the address you’re looking for and copy/paste "
 "the\n"
 "following link into your browser: "
-"https://api.protonmail.ch/pks/lookup?op=get&se\n"
-"arch=username@protonmail.com)"
+"https://api.protonmail.ch/pks/lookup?op=get&search=username@protonmail.com)"
 msgstr ""
+"我们公钥服务器地址就是 hkps://api.protonmail.ch (该链接不是给浏览器用的，是PGP专用地址)。但你可以从浏览器"
+"这样获得你想要的邮箱的公钥（把“username@protonmail.com”替换为实际的邮箱）："
+"https://api.protonmail.ch/pks/lookup?op=get&search=username@protonmail.com"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:129
 msgid "Concluding thoughts on open standards and federation"
-msgstr ""
+msgstr "关于开放标准和邦联形式的总结"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:131
 msgid ""
@@ -298,6 +326,10 @@ msgid ""
 "email \n"
 "the most widespread and most successful communication system ever devised."
 msgstr ""
+"(前面几句自卖自夸的文字略)"
+"这里要提的重点是电子邮件系统的美妙就在于它的邦联性(federated)，意思就是任何一个人都可以自己搭建/实现/使用它。"
+"这门技术不会由某个实体来把持，它不是中心化的，也不会出现单点故障。虽然这种形式有很多限制，它仍是这个世界上最"
+"广泛使用且最成功的一门通讯工具。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:145
 msgid ""
@@ -315,6 +347,9 @@ msgid ""
 "is \n"
 "also itself open source[14]."
 msgstr ""
+"PGP，因为它是构建于电邮系统之上，因此它也是邦联化的加密系统。不像其他加密通讯系统，比如 Signal 或"
+"Telegram，PGP 不属于任何一个人所有，一个中央服务器都没有，而也没有人强迫你使用某家的服务而不让用其他家的。"
+"我们相信加密通讯应该是开放的，不是个围墙花园。Protonmail 正是在实践和维护着这样一种支持 openPGP 标准的电邮系统，且我们的实现也是开源的。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:154
 msgid ""
@@ -325,10 +360,11 @@ msgid ""
 "our \n"
 "mission, you can always donate[15] or upgrade to a paid plan[16]."
 msgstr ""
+"(结束语略)"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:159
 msgid "Thank you for your continued support!"
-msgstr ""
+msgstr "谢谢你的持续支持！"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:161
 msgid ""
@@ -348,6 +384,7 @@ msgid ""
 "\n"
 "first on ProtonMail Blog[20]."
 msgstr ""
+"本文首刊于 Protonmail 博客[20]。"
 
 #: Introducing_Address_Verification_and_Full_PGP_Support.txt:170
 msgid ""
