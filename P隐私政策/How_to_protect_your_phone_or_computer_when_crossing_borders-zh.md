@@ -1,8 +1,8 @@
 ## 如何在跨越国境时保护你的手机或电脑
 
-作者: Ben Wolford
-Date: Thu, 20 Sep 2018 22:50:41 +0800
-Link: https://protonmail.com/blog/border-crossing-protect-electronics/
+作者: Ben Wolford  
+Date: Thu, 20 Sep 2018 22:50:41 +0800  
+Link: https://protonmail.com/blog/border-crossing-protect-electronics/   
 
 边检机关有广泛的权力对过境的人进行搜查，包括他们的手机和笔记本电脑。但如果你懂得技术和法律，还是有办法在跨越国境的时候保护你的数据的。
 
