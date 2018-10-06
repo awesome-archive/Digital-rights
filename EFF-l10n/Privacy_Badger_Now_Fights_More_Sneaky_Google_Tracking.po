@@ -1,0 +1,287 @@
+#. extracted from Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-06 15:16+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.0.0\n"
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:1
+msgid ""
+"Title: Privacy Badger Now Fights More Sneaky Google Tracking\n"
+"Author: Andrés Arrieta\n"
+"Date: Fri, 05 Oct 2018 09:24:00 +0800\n"
+"Link: https://www.eff.org/deeplinks/2018/10/privacy-badger-now-fights-more-"
+"sneaky-google-tracking\n"
+"Podcast Download URL: https://www.eff.org/files/banner_library/google-spy-"
+"eye.png"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:7
+msgid ""
+"With its latest update, Privacy Badger now fights “link tracking” in a "
+"number \n"
+"of Google products."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:10
+msgid ""
+"Link tracking allows a company to follow you whenever you click on a link to "
+"\n"
+"leave its website. Earlier this year, EFF rolled out a Privacy Badger update "
+"\n"
+"targeting Facebook’s use of this practice[1]. As it turns out, Google "
+"performs \n"
+"the same style of tracking, both in web search and, more concerning, in "
+"spaces \n"
+"for private conversation like Hangouts and comments on Google Docs. From now "
+"\n"
+"on, Privacy Badger will protect you from Google’s use of link tracking in "
+"all \n"
+"of these domains."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:18
+msgid "Google Link Tracking in Search, Hangouts, and Docs"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:20
+msgid ""
+"This update targets link tracking in three different products: Google web \n"
+"search, Hangouts, and the Docs suite (which includes Google Docs, Google \n"
+"Sheets, and Google Slides). In each place, Google uses a variation of the "
+"same \n"
+"technique to track the links you click on."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:25
+msgid "Google Web Search"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:27
+msgid ""
+"After you perform a web search, Google presents you with a list of results. "
+"On \n"
+"quick inspection, the links in the search results seem normal: hovering over "
+"a \n"
+"link to EFF’s website shows that the URL underneath does, in fact, point to "
+"\n"
+"https://www.eff.org[2]. But once you click on the link, the page will fire "
+"off \n"
+"a request to google.com[3], letting the company know where you’re coming "
+"from \n"
+"and where you’re going. This way, Google tracks not only what you search "
+"for, \n"
+"but which links you actually click on."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:35
+msgid ""
+"Google uses different techniques in different browsers to make this type of "
+"\n"
+"tracking possible. "
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:38
+msgid ""
+"In Chrome, its approach is fairly straightforward. The company uses the new "
+"\n"
+"HTML “ping” attribute[4], which is designed to perform exactly this kind of "
+"\n"
+"tracking. When you click on a link with a “ping” tag, your browser makes two "
+"\n"
+"requests: one to the website you want to go to, and another (in the "
+"background)\n"
+"to Google, containing the link you clicked and extra, encoded information[5] "
+"\n"
+"about the context of the page."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:45
+msgid "[image 6]"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:47
+msgid ""
+"A search result in Chrome (top) and its source code, including the tracking "
+"\n"
+"“ping” attribute (bottom)."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:50
+msgid ""
+"In Firefox, things are more complicated. Hyperlinks there look normal at "
+"first.\n"
+"Hovering over them doesn’t change anything, and there’s no obvious “ping” \n"
+"attribute. But as soon as you click on a link, you’ll notice that the URL "
+"shown\n"
+"in the bottom left corner of the browser – the one you’re about to navigate "
+"to \n"
+"– has changed into a Google link."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:56
+msgid "[image 7]"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:58
+msgid ""
+"Watch the URL in the lower left hand corner: before clicking, it looks "
+"normal, \n"
+"but after pressing the mouse button down, it’s swapped out for a Google link "
+"\n"
+"shim."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:62
+msgid ""
+"How did that happen? For each link, Google has set a piece of JavaScript "
+"code \n"
+"to execute, in the background, on “mousedown”—the instant your mouse button "
+"is \n"
+"pressed on the link (but before you release the click). This code replaces "
+"the \n"
+"normal URL with a link shim[1] that redirects you through Google on the way "
+"to \n"
+"your destination. Since your browser doesn’t navigate away from the search "
+"page\n"
+"until you release the mouse button, the code has more than enough time to "
+"slide\n"
+"a tracking link right under your nose."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:70
+msgid "[image 8]"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:72
+msgid ""
+"In the background, JavaScript changes the link the instant that you click on "
+"\n"
+"it."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:75
+msgid "Google Hangouts and the Google Docs Suite"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:77
+msgid ""
+"In Hangouts and the Docs suite, the tracking is less sophisticated, but just "
+"as\n"
+"effective. Try sending a link to one of your friends in a Hangouts chat. \n"
+"Although the message might look like an innocuous URL, you can hover over "
+"the \n"
+"hyperlink to reveal that it’s actually a link shim in disguise. The same "
+"thing \n"
+"happens with links in comments on Google Docs, Google Sheets, and Google \n"
+"Slides. That means Google will track whether and when your friend, family \n"
+"member, or co-worker clicks on the link that you sent them. "
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:85
+msgid ""
+"These tracking links are easy to spot, if you know where to look. Simply "
+"hover \n"
+"over one and you’ll find that it’s not quite what you expect."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:88
+msgid "[image 9]"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:90
+msgid ""
+"Hovering over the link in a Hangouts window (right) reveals that it actually "
+"\n"
+"points to a Google link shim (bottom)."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:93
+msgid ""
+"These link shims may be more nefarious than their web search counterparts. "
+"When\n"
+"you use Google search, you’re engaging in a kind of dialog with the company. "
+"\n"
+"Many users understand, even if they don’t like it, that Google provides "
+"search \n"
+"results in exchange for ad impressions and collects a good deal of "
+"information \n"
+"as part of the bargain. But when you use Hangouts to chat with a friend, it "
+"\n"
+"feels more private. Google provides the chat platform, but it doesn’t serve "
+"ads\n"
+"there, and it shouldn’t have any business reading your messages. Knowing "
+"that \n"
+"the company is tracking the links you share, both when you send them and "
+"when \n"
+"they’re clicked, might make you think twice about how you communicate."
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:103
+msgid "Privacy Badger to the Rescue!"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:105
+msgid ""
+"The latest version of Privacy Badger blocks link tracking on "
+"www.google.com[10]\n"
+", in Hangouts windows on mail.google.com[11] and hangouts.google.com[12], "
+"and \n"
+"in comments on docs.google.com[13]. This update expands on our previous "
+"efforts\n"
+"to block link tracking on Twitter and Facebook. And of course, Privacy "
+"Badger’s\n"
+"main job continues to be stopping Google, Facebook, and other third parties "
+"\n"
+"from tracking you around the web[14]. "
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:112
+msgid ""
+"We will continue investigating the ways that Facebook, Google, Twitter, and "
+"\n"
+"others track you, and we’ll keep teaching Privacy Badger new ways to fight \n"
+"back. In the meantime, if you’re a developer and would like to help, check "
+"us \n"
+"out on Github[15]. "
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:117
+msgid "And if you haven’t yet, be sure to install Privacy Badger[16]!"
+msgstr ""
+
+#: Privacy_Badger_Now_Fights_More_Sneaky_Google_Tracking.txt:119
+msgid ""
+"Links: \n"
+"[1]: https://www.eff.org/deeplinks/2018/05/privacy-badger-rolls-out-new-ways-"
+"fight-facebook-tracking (link)\n"
+"[2]: https://www.eff.org (link)\n"
+"[3]: https://www.google.com/ (link)\n"
+"[4]: https://www.w3.org/TR/2010/WD-html5-20100304/interactive-elements.html"
+"#hyperlink-auditing (link)\n"
+"[5]: https://deedpolloffice.com/blog/articles/decoding-ved-parameter (link)\n"
+"[6]: http://www.eff.org/files/2018/10/04/chrome-google-ping-link.png (image)"
+"\n"
+"[7]: http://www.eff.org/files/2018/10/04/firefox-google-search-shim.gif "
+"(image)\n"
+"[8]: http://www.eff.org/files/2018/10/04/click-google-link-firefox.gif "
+"(image)\n"
+"[9]: http://www.eff.org/files/2018/10/04/hangouts-hover-shim-link.png (image)"
+"\n"
+"[10]: http://www.google.com (link)\n"
+"[11]: http://mail.google.com (link)\n"
+"[12]: http://hangouts.google.com (link)\n"
+"[13]: http://docs.google.com (link)\n"
+"[14]: https://www.eff.org/deeplinks/2009/09/online-trackers-and-social-"
+"networks (link)\n"
+"[15]: https://github.com/EFForg/privacybadger (link)\n"
+"[16]: https://www.eff.org/pb (link)"
+msgstr ""
