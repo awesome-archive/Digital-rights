@@ -28,7 +28,7 @@
 <br />
 ## 相關項目
 
-- [ 定期發佈一個操作系统（鏡像）：antiG](https://github.com/mdrights/antiG) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Devuan GNU+Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
+- [ 长期不定时發佈 隐私加强 GNU/Linux操作系统：LiveSlak](https://github.com/mdrights/liveslak) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Slackware GNU/Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
 
 交流讨论Telegram群：https://t.me/liveslackware
 
