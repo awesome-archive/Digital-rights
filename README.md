@@ -10,12 +10,11 @@
 - 隐匿上网踪迹方法和资源
 	- 【推荐】[在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
-- 加密方法测评/讨论
 
-- 数字安全博客的翻譯
+- 数字安全/在线隐私领域的翻译：
 	- EFF: 电子前哨基金会（EFF-l10n 目录）	
 	- Protonmail / Tutanota blogs (M邮件安全 目录)
-	- Tor / Tails 
+	- Tor / Tails: 目前正在翻译 [Tails 官网wiki](https://tails.boum.org) | 已有翻译资料在 [Gitlab](https://gitlab.com/mdrights/tails) 
 
 - 隐私权/网络开放性相关政策法规
 
@@ -32,7 +31,6 @@
 
 交流讨论Telegram群：https://t.me/liveslackware
 
-- [一個信息爬取和傳送bot：CSObot](https://github.com/mdrights/CSObot) 主要用來爬取政府/公共信息和數據（一般這些信息即使“公示”也不容易獲得），並傳送到公共平臺上（目前是 irc 平臺）。
 
 
 <br /> 
