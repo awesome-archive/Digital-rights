@@ -20,7 +20,7 @@
 
 - 快讯和唠叨频道：
 	- Telegram: https://t.me/liveslak  
-	- IRC/Matrix 頻道 #Digitalrightscn 
+	- Matrix 頻道 #szlug:matrix.org
 
 *（欢迎参与协作）*
 
@@ -39,9 +39,10 @@
 ## 「數字權利」相关群組／頻道
 
 - **Matrix 房間** （與 IRC 頻道同步） **「推荐」**
+ - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot)，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
+ - #szlug:matrix.org （深圳 Linux 用户组）
  - #digitalrightscn:matrix.org （數字權利相關）
  - #publicpolicy-cn:matrix.org （公共政策相關）
- - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot)，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
 
 - **IRC 頻道**：
  - #DigitalRightsCN
