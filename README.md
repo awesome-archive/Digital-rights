@@ -47,7 +47,7 @@
 - **IRC 頻道**：
  - #DigitalRightsCN
  - #publicpolicy-cn
- - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个>频道」，加入上边的频道名即可 )
+ - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
  - （謹記必須搭配 Tor 否則完全暴露自己 IP :）
 
 
