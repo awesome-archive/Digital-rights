@@ -1,0 +1,107 @@
+# 数字安全培训大纲
+
+## 课程目标
+通过本课程您将获得这些知识和技巧：
+
+- 个人信息和数据保护（工具和技巧）
+- 在线匿名（策略）
+- 网站（web）的安全防御
+- 针对媒体（记者）的安全/隐私保护
+
+
+## 课程内容
+- 个人信息和数据保护（工具和技巧）
+	0. 操作系统（OS）
+		- GNU/Linux (Ubuntu, Debian)
+		- MacOS (?)
+
+	1. 数据加密
+		- Veracrypt
+		- 全盘加密(LUKS)
+
+	2. 密码管理器
+		- KeepassXC
+		- Bitwarden
+
+	3. 邮件
+		- Protonmail
+		- Tutanota
+		- Riseup
+		- +openPGP, etc.
+
+	4. 即时通讯
+		- Signal
+		- Telegram(?)
+		- Tox 类（qTox, uTox, Antidote,etc）
+		- Riot.im (Matrix)
+		- Pidgin, Conversation (XMPP)
+		- Hexchat, weechat (IRC)
+		- Retroshare
+
+	5. web 浏览
+		- Firefox (Icecat)
+		- Brave
+		- addon: NoScript
+		- addon: EFF Privacy Badger
+		- addon: EFF HTTPS Everywhere
+		- addon: uBlock origin
+
+	6. 安全传输 + 科学上网
+		- Proton VPN
+		- Shadowsocks
+		- V2ray
+
+	7. 协作 & 会议
+		- Jitsi Meet (在线会议)
+		- Turtl (在线笔记)
+		- Wekan (看板)
+		- CryptPad (文档协作)
+		- BlauCloud.de (云端存储)
+
+	8. Social Network
+		- Mastodon
+		- Gnu Social
+		- Diaspora*
+		- Friendica
+
+	9. 2FA 双因子验证
+		- YubiKey
+		- Duo
+
+- 在线匿名（策略）
+	- 除了技术和工具，更多的是策略……
+		- 技术准备
+			1. Tor & Tor-Browser
+			2. Tails OS (更佳)
+			3. 网卡MAC地址随机化
+			4. 浏览器 User-Agent 伪装
+			5. 使用不需要手机号注册的、且最好是去中心化的通讯软件 (e.g. Tox-like, Matrix)
+			6. 放弃在手机上追求匿名
+		- 策略选择
+			- 是否需要匿名？认清需求和「威胁模型」
+			- 匿名，还是「假名」？
+			- 网上身份管理
+			- 20个 Don't (不要去尝试的操作)
+
+
+- 网站（web）的安全防御
+	1. 应用更新 + 操作系统更新|加固 vs. 数据泄漏 | 入侵
+	2. 代码优化 vs. SQL 注入
+	3. WAF vs. XSS （跨站脚本攻击）| CSRF（跨站请求伪造）
+	4. 访问者隐私保护：'Do not Track'，no logging，允许通过 Tor 访问，用户数据脱敏，etc
+
+- 针对媒体（记者）的安全/隐私保护
+	- 基于匿名策略的信源保护
+		- 匿名文件分享：OnionShare
+		- 敏感资料提交系统：SecureDrop
+		- 文件、影像脱敏（去除元数据）：
+			- [ExifTool](https://sno.phy.queensu.ca/~phil/exiftool/)
+			- [Document Inspector](https://docs.microsoft.com/en-us/office/vba/Library-Reference/Concepts/using-the-document-inspector)
+
+- 参考资源
+	1. https://prism-break.org
+	2. https://www.privacytools.io
+	3. https://securityinabox.org
+	4. https://photometadata.org/
+	5. https://protonmail.com/blog/journalist-online-security-tips/
+
