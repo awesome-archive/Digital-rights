@@ -8,7 +8,7 @@
 ## 这里有：
 
 - 隐匿上网踪迹方法和资源
-	- 【推荐】[在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
+	- 【推荐】[在线匿名FAQ](https://github.com/mdrights/Digital-rights/blob/master/A%E5%8C%BF%E5%90%8D%E7%AD%96%E7%95%A5/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8DFAQ.md) [原创]
 
 
 - 数字安全/在线隐私领域的翻译：
@@ -20,7 +20,7 @@
 
 - 快讯和唠叨频道：
 	- Telegram: https://t.me/liveslak  
-	- Matrix 頻道 #szlug:matrix.org
+	- Matrix 頻道 #digitalrightscn:matrix.org
 
 *（欢迎参与协作）*
 
@@ -40,7 +40,6 @@
 
 - **Matrix 房間** （與 IRC 頻道同步） **「推荐」**
  - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot)，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
- - #szlug:matrix.org （深圳 Linux 用户组）
  - #digitalrightscn:matrix.org （數字權利相關）
  - #publicpolicy-cn:matrix.org （公共政策相關）
 
