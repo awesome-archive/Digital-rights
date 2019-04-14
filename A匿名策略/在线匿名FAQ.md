@@ -1,9 +1,11 @@
 ## 在线匿名FAQ - Online Anonymity FAQ
 
-**更新日期：2017-06-25**  
+**完成日期：2017-06-25**  
+**最后更新：2019-04-14**  
 
-> 前言：在线匿名不但是一门技术，更包含一些使用习惯、非技术的软技巧。如Whonix wiki的首页上说：“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”  
-本人（@mdrights) 现总结一下关于这方面的常见问题。这些有的来自我经常混迹的Telegram群组：[Tor/Whonix/Tails匿踪隐私保护](https://telegram.me/joinchat/Cg4fLT2ZrhHeiRyj5N55cQ)（*在此向群友表示感谢*）；以及来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)；其他的相关资源还有（英文）：EFF的[自我防卫指南](https://ssd.eff.org)、[prism-break.org](https://prism-break.org/en/)，[securityinabox.org](https://securityinabox.org/)，等等。  
+> 前言：在线匿名不但是一门技术，更包含一些使用习惯、非技术的软技巧。如Whonix wiki的首页上说：
+“but staying anonymous is not just a technological problem. Anonymity is a complex problem without an easy solution. The more you know, the safer you can be. ”    
+本人现总结一下关于这方面的常见问题。部分资料来自[Whonix文档](https://www.whonix.org/wiki/Documentation)、[Tails文档](https://tails.boum.org/)。
 
 ### 什么是“在线匿名”？它的原理是什么？  
 仅仅使用化名绝对不能称为我们说的匿名（anonymity），自己的社交帐号、邮箱名称使用化名是无法对付国家机器的。因为当前的主流的互联网结构（暂不讨论BT等p2p网络）会记录每台联网的设备的唯一的身份信息，包括：IP地址、浏览器指纹印记(user-agent)、设备唯一编码（如网卡的MAC地址、SIM卡IMSI码、手机IMEI码）等。在线匿名的技术就是要伪装这些信息，让网络那边的有意无意的记录者无法知道某台设备的浏览/访问踪迹，或者说无法将某台设备的流量内容与真实设备对应起来，也就无法确定某些信息来自这台设备的使用者。
@@ -83,7 +85,7 @@ Tails仍然值得推荐是因为它，一是基于自由开源的Debian GNU/linu
 * 不要打开陌生／随机文件或链接
 * 不要用手机（移动设备）做验证方面的事  
 ```
-（全文翻译已在本repo中）  
+中文翻译全文在[这里](https://github.com/mdrights/Digital-rights/blob/master/A%E5%8C%BF%E5%90%8D%E7%AD%96%E7%95%A5/Whonix-%E6%96%87%E6%A1%A3-DoNot-zh.md)。
 
 
 ### 手机上如何做到在线匿名？  
