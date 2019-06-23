@@ -20,7 +20,7 @@
 
 - 快讯和唠叨频道：
 	- Telegram: https://t.me/liveslak  
-	- Matrix 頻道 #digitalrightscn:matrix.org
+	- Mastodon: @mdrights@liberdon.com
 
 *（欢迎参与协作）*
 
@@ -29,7 +29,6 @@
 
 - [ 长期不定时發佈 隐私加强 GNU/Linux操作系统：LiveSlak](https://github.com/mdrights/liveslak) 一款面向中文用户、對抗監視和取證的操作系统。 A Chinese-oriented, privacy-enhanced OS based on Slackware GNU/Linux with some privacy-focused applications installed and hardened to resist surveillance and forensics.   
 
-交流讨论Telegram群：https://t.me/liveslackware
 
 
 
@@ -40,16 +39,15 @@
 
 - **Matrix 房間** （與 IRC 頻道同步） **「推荐」**
  - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot)，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
- - #digitalrightscn:matrix.org （數字權利相關）
- - #publicpolicy-cn:matrix.org （公共政策相關）
+ - #antis:matrix.org 
 
 - **IRC 頻道**：
  - #DigitalRightsCN
- - #publicpolicy-cn
  - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
  - （謹記必須搭配 Tor 否則完全暴露自己 IP :）
 
-
+- **Telegram**: 
+	- 交流讨论Telegram群：https://t.me/liveslackware
 
 
 <br />
