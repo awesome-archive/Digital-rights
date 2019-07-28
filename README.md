@@ -18,9 +18,6 @@
 
 - 隐私权/网络开放性相关政策法规
 
-- 快讯和唠叨频道：
-	- Telegram: https://t.me/liveslak  
-	- Mastodon: @mdrights@liberdon.com
 
 *（欢迎参与协作）*
 
@@ -35,19 +32,25 @@
 <br /> 
 <hr>
 
-## 「數字權利」相关群組／頻道
+## 「數字權利」相关资讯群組／頻道
 
-- **Matrix 房間** （與 IRC 頻道同步） **「推荐」**
- - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot)，在 Room Directory 搜索如 #digitalrightscn 即可进入。Riot 也有網頁版: https://riot.im/app ）
- - #antis:matrix.org 
+- **Matrix 房間  「推荐」**
+ - #antis:matrix.org ：以资讯为主
+ - #csobot:matrix.org：一个机器人消息频道（见：[csobot 项目首页](https://github.com/mdrights/csobot)）
+ - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot.im)，点击「+ 」搜索如 #antis 即可进入。Riot.im 也有網頁版: https://riot.im/app ）
 
 - **IRC 頻道**：
- - #DigitalRightsCN
+ - #DigitalRightsCN at Freenode.net （与#antis:matrix.org 同步） 
+ - #aqi-data-share at oftc.net （与#csobot:matrix.org 同步）
  - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
- - （謹記必須搭配 Tor 否則完全暴露自己 IP :）
+ - （謹記必須搭配 Tor 否則完全暴露自己 IP ^\_^。用 Tor 访问 Freenode 方法请参考[这个博客](https://mdrights.github.io/os-observe/posts/2018/11/Freenode-Tor.html)）
 
 - **Telegram**: 
-	- 交流讨论Telegram群：https://t.me/liveslackware
+	- 群：https://t.me/liveslackware  
+	- 唠叨频道： https://t.me/liveslak  
+
+- Mastodon: 
+	- @mdrights@liberdon.com
 
 
 <br />
