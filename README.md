@@ -42,8 +42,8 @@
 - **IRC 頻道**：
  - #DigitalRightsCN at Freenode.net （与#antis:matrix.org 同步） 
  - #aqi-data-share at oftc.net （与#csobot:matrix.org 同步）
- - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
- - （謹記必須搭配 Tor 否則完全暴露自己 IP ^\_^。用 Tor 访问 Freenode 方法请参考[这个博客](https://mdrights.github.io/os-observe/posts/2018/11/Freenode-Tor.html)）
+ - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode 或者 OFTC, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
+ - （謹記必須搭配 Tor 否則完全暴露自己 IP ^\_^。注：用 Tor 访问 Freenode 方法请参考[这个博客](https://mdrights.github.io/os-observe/posts/2018/11/Freenode-Tor.html)；用 Tor 可直接访问 OFTC）
 
 - **Telegram**: 
 	- 群：https://t.me/liveslackware  
