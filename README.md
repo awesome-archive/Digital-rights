@@ -1,7 +1,7 @@
-*——在这个“大數據”和實名制的时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并捍卫网络隱私/信息自由……*
 
-**Anti-1984，抵抗国家机器对公民的监控**
+# Anti-1984，抵抗国家机器对公民的监控
 
+> ——在这个“大數據”和實名制的时代，我能做的，就是尽力提升自己/朋友的安全/隐私意识和能力，并捍卫网络隱私/信息自由。
 
 <hr>
 
@@ -14,7 +14,7 @@
 	- [Tails 官网](https://tails.boum.org)中文化（进行中） | 已翻译部分在 [Gitlab](https://gitlab.com/mdrights/tails) 
 
 - [邮件安全、反钓鱼](https://github.com/mdrights/Digital-rights/tree/master/M%E9%82%AE%E4%BB%B6%E5%AE%89%E5%85%A8)
-	- 来自 Protonmail / Mailfence 的blog文章
+	- 来自专业安全邮件服务的科普文章。  
 
 - [加密方面技术](https://github.com/mdrights/Digital-rights/tree/master/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93)
 	- 把`PGP`等端对端加密用好。
@@ -66,6 +66,10 @@
 ## 版权声明
 
 **如无特别说明，这里的译文均采用[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议发布。转载时请保留原文和译文的作者/译者及链接，以及相同的许可协议。**
+
+## Disclaimer
+
+注：这里翻译的商业机构的文章不代表完全同意/支持他们的服务；翻译作品如无特定声明则均未得到作者的认可。
 
 <br />
 <hr>
