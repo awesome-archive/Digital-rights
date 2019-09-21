@@ -1,0 +1,328 @@
+#. extracted from 2019-04-OpenPGP-encryption-best-practices.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-15 06:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:2
+msgctxt "2019-04-OpenPGP-encryption-best-practices.txt:2"
+msgid "OpenPGP encryption best practices"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:5
+msgid ""
+"by M Salman Nadeem · Published November 29, 2016 · Updated April 17, 2019\n"
+"OpenPGP encryption best practices"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:7
+msgctxt "2019-04-OpenPGP-encryption-best-practices.txt:7"
+msgid "OpenPGP encryption best practices"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:10
+msgid ""
+"Strong encryption is no longer a privilege of geeks and paranoids, but is "
+"becoming mainstream. However, true end-to-end encryption is not out-of-the-"
+"box and generally requires you to activate a number of switches as described "
+"in this post about Instant Messaging.  OpenPGP encryption is no exception "
+"and requires that a few good practices are followed by the users for it to "
+"be at its most secure. This blogpost will provide you with a concise list of "
+"OpenPGP encryption best practices.\n"
+"Public keys and Public Key Server (PKS)"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:12
+msgid "    Do not blindly trust keys from public servers"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:14
+msgid ""
+"Anyone can upload keys to public key servers and there is no reason that you "
+"should trust the given relationships (the association between the email ID "
+"and the public key). You should therefore verify with the owner the full key "
+"fingerprint of their key."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:16
+msgid "    Always verify public keys with your intended recipients"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:18
+msgid ""
+"It is recommended that you should do this verification in real life or over "
+"the phone."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:20
+msgid ""
+"If this is not possible, then look on places like social media, personal "
+"website, blog,… which belong to the individual you want to have a key "
+"fingerprint of – as some people simply publish their public key fingerprint."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:22
+msgid "    Check key fingerprints before importing"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:24
+msgid "Verify the fingerprint first, before importing it."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:26
+msgid "    Never rely on the Key ID"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:28
+msgid "Always check a given OpenPGP public key via its fingerprint."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:30
+msgid ""
+"Even 64 bits long OpenPGP Key IDs (for e.g., 0x44434547b7286901 –) "
+"probability of collision is potentially a very serious problem."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:32
+msgid "    Update public keys in your keystore"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:34
+msgid ""
+"If you don’t update the public keys in your key store, then you do not get "
+"timely expiration’s or revocation’s – both of which are very important to be "
+"aware of. Mailfence allows you to achieve this by simply clicking on “update "
+"from public server” on any imported public key that you have in your "
+"keystore."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:36
+msgid "    If possible, perform deniable key exchange!"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:39
+msgid ""
+"You can deniably exchange keys by having an easily available and "
+"identifiable public key. Tell all correspondents to use your public key to "
+"contact you and include their public key in the encrypted body of the "
+"message. This will protect you from all mainstream key-exchange attacks. "
+"Just ensure that your public is verifiable through multiple channels, for "
+"example: social media, public mailing lists, key servers, etc. The more "
+"channels that host your PGP key fingerprint, the harder it is for Eve to "
+"attack them all.\n"
+"OpenPGP Key generation and configuration"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:41
+msgid ""
+"Now that you know how to receive regular key updates from a well-maintained "
+"key server, you should make sure that your OpenPGP key is optimally "
+"configured. Many of these changes may require you to generate a new key."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:43
+msgid "    Have a strong private key"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:45
+msgid ""
+"Mailfence by default generates 4096bit RSA key. But if you’re planning to "
+"generate your private key using an external tool – then make sure it is "
+"either 2048 or 4096 bit-length."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:47
+msgid "    Use an expiration date"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:49
+msgid ""
+"Users generally don’t want their keys to expire, but there are good reasons "
+"to let them. Why? The point is to setup something that disables your key in "
+"case you lose access to it or if it has been compromised (and you have no "
+"revocation certificate).  You can always extend your expiration date, even "
+"after it has expired! This “expiration” is actually more of a safety valve "
+"that will automatically trigger at some point. If you have access to the "
+"secret key material, you can prevent the expiration."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:51
+msgid "    Set a calendar event to remind you about your expiration date"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:53
+msgid ""
+"It’s best to setup a calendar event in your Mailfence calendar that will "
+"remind you at the right time to extend your OpenPGP key expiration date."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:55
+msgid ""
+"Again, you can always extend your expiration date even after it has "
+"expired!  You do not need to make a brand new key, you just need to extend "
+"your expiration to a later time."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:57
+msgid "    Generate a revocation certificate"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:59
+msgid ""
+"In case you forget your passphrase or if your private key is compromised or "
+"lost, the only hope you have is to wait for the key to expire (this is not a "
+"good solution). A better approach is to activate your revocation certificate "
+"by publishing it on Public key servers. Doing this will notify others that "
+"this key has been revoked."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:61
+msgid ""
+"However, a revoked key can still be used to verify old signatures, or "
+"decrypt data. On condition that you still have access to the private key."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:63
+msgid "    Other OpenPGP key checks"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:65
+msgid ""
+"If you have generated your private key using Mailfence, do not worry about "
+"these points, they do not apply to you:"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:70
+msgid ""
+"– Make sure your key is OpenPGPv4\n"
+"– Your OpenPGP keys should be DSA-2 or RSA (RSA preferred), ideally 4096 "
+"bits or more.\n"
+"– Your OpenPGP keys should have a reasonable expiration date (no more than 2 "
+"years in the future)\n"
+"Additional suggestions for OpenPGP encryption best practices"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:72
+msgid "    Do you have an encrypted backup of your secret key material?"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:74
+msgid ""
+"Please double check. Ideally, you should backup your key (encrypted with "
+"your passphrase by default) both in the cloud and on your local machine. "
+"Also, make a back-up of your revocation certificate on your local machine."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:76
+msgid ""
+"Note: Keep in mind that your revocation certificate is ready-to-use.  If a "
+"crook gets access to it, then he/she can use it to revoke your key."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:78
+msgid "    Do not include a “Comment” in your User ID."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:80
+msgid ""
+"OpenPGP User ID is usually to mention your name or alias and not for "
+"commenting."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:82
+msgid "    Pay attention towards Public key servers "
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:84
+msgid ""
+"Most OpenPGP based applications come with a single, specific key server. "
+"This is not ideal because if the key server fails, or even worse, if it "
+"appears to work but is not functioning properly, you may not receive "
+"critical key updates. Not only is this a single point of failure, it is also "
+"a prime source of leaks of relationship information between OpenPGP users, "
+"and thus a target for attacks."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:86
+msgid ""
+"Therefore, it is good not to base yourself on only one public key server for "
+"publishing or importing keys. Mailfence uses sks keyservers pool – a pool of "
+"servers having regular health checks to ensure that they are functioning "
+"properly. If a server is not working well, it will be removed automatically "
+"from the pool."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:88
+msgid ""
+"Finally, all your interactions with the keyserver should be encrypted (over "
+"TLS/SSL – hkps), which will obscure your social relationship map from anyone "
+"who may be snooping on your traffic."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:90
+msgid "    Replying to an encrypted email, sent items and drafts"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:92
+msgid ""
+"Delete the decrypted content in a reply to an encrypted email, and only "
+"quote the relevant parts if necessary. Configure your application to not "
+"save drafts by default and discard the encrypted messages from sent items or "
+"don’t keep them in plain-text. Mailfence by default perform all such "
+"operations for you."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:94
+msgid "    Protect your meta-data"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:96
+msgid ""
+"Minimizing the contextual information leakage from the communication is also "
+"a good practice by simply hiding the meta-data (to, from, ip address, etc). "
+"Where possible, and relevant, take control over that infomation and unlink "
+"it from data linked to you. For example, you can control the From field by "
+"creating a new email account. The IP address of the sending email client can "
+"be changed by using a VPN, Tor, or a public Internet connection. The usual "
+"caveats about Tor apply: do not rely exclusively on Tor, if you need to "
+"protect your IP address then use an IP address that is not attributable to "
+"you."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:98
+msgid ""
+"Subject line must never ever refer to the content of the email (or at best, "
+"left empty), even obliquely. For example, “Subject: It was nice meeting you "
+"at Eiffel Tower!” is a total email security failure."
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:100
+msgid ""
+"Want to go a bit further, read following good documents for OpenPGP "
+"encryption best practices"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:104
+msgid ""
+"    https://riseup.net/en/security/message-security/openpgp/best-practices ("
+"hardcore tips – a bit outdated)\n"
+"    https://alexcabal.com/creating-the-perfect-gpg-keypair/ (hardcore tips)\n"
+"    https://wiki.debian.org/Keysigning (all software from official Debian "
+"and Ubuntu is signed with OpenPGP)"
+msgstr ""
+
+#: 2019-04-OpenPGP-encryption-best-practices.txt:105
+msgid ""
+"Note: If you presently do not keep your email account secure, then our "
+"OpenPGP encryption best practices will not help you. We would advice you to "
+"check on how to keep your private email account secure."
+msgstr ""
