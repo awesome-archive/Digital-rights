@@ -1,7 +1,9 @@
 # OpenPGP 数字签名最佳实践
 
-作者：M Salman Nadeem    发布于 2016-12-13    更新于 2019-04-17
-译者：MDrights
+作者：M Salman Nadeem    
+发布于 2016-12-13    
+更新于 2019-04-17   
+译者：MDrights     
 原文：https://blog.mailfence.com/openpgp-digital-signature-best-practices/
 
 在上一篇博文，我们讨论了 OpenPGP 加密的最佳实践。另一方面，数字签名也是 OpenPGP 一个重要的部分，高级和入门级用户都会用到它。在本文里我们来梳理在使用 openPGP 签名时的最佳实践。
@@ -16,8 +18,8 @@
 
 这技术能验证发送者并给到接收者很大的信心来信任消息的来源。
 
-一图说清数字签名和验证的原理
-![一图说清数字签名和验证的原理](https://blog.mailfence.com/wp-content/uploads/2016/12/800px-Digital_Signature_diagram.svg-600x450.png)
+![数字签名和验证的原理](https://blog.mailfence.com/wp-content/uploads/2016/12/800px-Digital_Signature_diagram.svg-600x450.png)   
+一图说清数字签名和验证的原理   
 图片来源: https://wikipedia.org/wiki/Electronic_signature
 
 签名始于对原始的消息进行简单的密码学哈希转换，再用发送者的私钥加密之，然后跟原始消息一起发送出去。
