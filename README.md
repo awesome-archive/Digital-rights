@@ -43,22 +43,21 @@
 ## 相关资讯群組／頻道
 
 - **Matrix 房間  「推荐」**
- - #antis:matrix.org ：以资讯为主
  - #csobot:matrix.org：一个机器人消息频道（见：[csobot 项目首页](https://github.com/mdrights/csobot)）
+ - #liveslak:matrix.org: 关于隐私/安全操作系统的闲聊群组（与 TG 群桥接）  
+ - #antis:matrix.org ：以资讯为主
+
  - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot.im)，点击「+ 」搜索如 #antis 即可进入。Riot.im 也有網頁版: https://riot.im/app ）
+
+- **Telegram**: 
+	- 群：https://t.me/liveslackware  
+	- 唠叨频道： https://t.me/liveslak  
 
 - **IRC 頻道**：
  - #DigitalRightsCN at Freenode.net （与#antis:matrix.org 同步） 
  - #aqi-data-share at oftc.net （与#csobot:matrix.org 同步）
  - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode 或者 OFTC, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
  - （謹記必須搭配 Tor 否則完全暴露自己 IP ^\_^。注：用 Tor 访问 Freenode 方法请参考[这个博客](https://mdrights.github.io/os-observe/posts/2018/11/Freenode-Tor.html)；用 Tor 可直接访问 OFTC）
-
-- **Telegram**: 
-	- 群：https://t.me/liveslackware  
-	- 唠叨频道： https://t.me/liveslak  
-
-- **Mastodon**: 
-	- @mdrights@liberdon.com
 
 
 <br />
