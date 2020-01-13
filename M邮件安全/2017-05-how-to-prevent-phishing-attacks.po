@@ -1,0 +1,325 @@
+#. extracted from 2017-05-how-to-prevent-phishing-attacks.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-15 00:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:2
+msgid "How to Prevent Phishing Attacks"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:4
+msgid "Posted on May 10, 2017 by Protonmail"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:6
+msgid ""
+"A typical way of getting hacked is falling for a phishing attack. In fact, "
+"most of the large data breaches in recent years have been due to phishing."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:9
+msgid ""
+"The number of phishing attacks is increasing because they are both easy to "
+"execute and highly effective. Even if the eventual goal of an attacker is an "
+"organization, attacks always begin by targeting individuals. Phishing "
+"attacks have been utilized to steal confidential information, compromise "
+"entire organizations, and perhaps even influence a Presidential election.\n"
+"What is a phishing attack?"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:11
+msgid ""
+"Phishing is a type of online attack where criminals send a fake email asking "
+"you to click a link or download an attachment, appearing to be from a "
+"legitimate source. That can be a bank, a credit card company, an email "
+"provider or popular services like Google, Ebay, or Facebook."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:13
+msgid ""
+"Phishing campaigns can be extremely sophisticated, making use of highly "
+"personalized messages that appear to come from people you know, or companies "
+"you trust. Oftentimes, attackers will try to trick you into entering your "
+"password into a web page that appears legitimate but is actually a "
+"fraudulent site which is stealing your data."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:16
+msgid ""
+"Phishing attacks can also rely on malicious software. Instead of trying to "
+"trick you into entering your password, these attacks will try to trick you "
+"into clicking on a link to an infected website, or opening an infected file, "
+"or installing malicious software on your device. For example, an attacker "
+"pretending to be your bank might ask you to review recent transactions and "
+"send over a file of recent transactions. However, opening the file will "
+"install a virus on your computer.\n"
+"Defending against email phishing attacks"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:19
+msgid ""
+"Fortunately, it’s not difficult to defend against phishing attacks as long "
+"as you are vigilant and comply with the following rules. These rules are "
+"generally applicable and aren’t specific to ProtonMail. But as you will see "
+"below, ProtonMail has several additional anti-phishing protections built in, "
+"which make it much harder to become a victim.\n"
+"Protect your email address"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:21
+msgid ""
+"In order to start an attack against you, attackers must first know your "
+"email address. You can’t hide your address, however, you can keep separate "
+"email addresses for different purposes. For example, don’t use your business "
+"card email address for your bank account, loan or other sensitive accounts. "
+"Choose a secure, secret one."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:23
+msgid "protonmail-phishing-aliases"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:26
+msgid ""
+"With ProtonMail you can use multiple addresses to keep your private address "
+"a secret. For example, if the address you use in public is john.doe@"
+"protonmail.com, you can create a second address john1988@protonmail.com to "
+"use only for sensitive accounts like online banking. Thus, if somebody "
+"pretending to be your bank sends you an email to john.doe@protonmail.com, "
+"you can identify it as a phishing email because it was not sent to the "
+"address you use for your online banking.\n"
+"Carefully verify the emails you receive"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:28
+msgid ""
+"Always check that the sender is who they say they are. Phishing emails can "
+"usually be easily identified because they rarely get everything right:"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:33
+msgid ""
+"    the sender of the email will usually not be an official communication "
+"account. For example, a phishing email targeting ProtonMail users might be "
+"sent from timothy.bad@mail.ru\n"
+"    the link contained in the phishing email will also not be an official "
+"site either. For example, the link in the email might go to protonrnai1.com "
+"instead of protonmail.com. ProtonMail offers a link confirmation feature "
+"that can help you verify the link you are following is not malicious.\n"
+"    emails can also come from people that you know, but with subtle "
+"variations\n"
+"    thornas@protonmail.ch instead of thomas@protonmail.ch (can you see the "
+"difference?)"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:35
+msgid ""
+"Note, these accounts and URLs will sometimes look deceptively similar to the "
+"real thing, so be sure to check them carefully!"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:37
+msgid "protonmail-phishing-proton"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:39
+msgid ""
+"Keep in mind that communications from ProtonMail will always come from one "
+"of the following Official ProtonMail Accounts:"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:46
+msgid ""
+"    contact@protonmail.ch\n"
+"    security@protonmail.ch\n"
+"    abuse@protonmail.ch\n"
+"    notify@protonmail.ch\n"
+"    support@protonmail.ch\n"
+"    (other very rarely used accounts include media@protonmail.ch, bridge@"
+"protonmail.ch, legal@protonmail.ch, admin@protonmail.ch, webmaster@"
+"protonmail.ch, postmaster@protonmail.ch)"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:48
+msgid ""
+"And we only make use of the following domains: protonmail.com, "
+"protonmail.ch. As an added protection, automated messages from the "
+"ProtonMail Team are always starred by default."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:51
+msgid ""
+"protonmail-phishing-stars\n"
+"ProtonMail Email Phishing Protection"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:53
+msgid ""
+"ProtonMail provides additional anti-phishing protection with PhishGuard, a "
+"set of special features designed specifically to combat phishing."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:55
+msgid ""
+"Because sender email addresses can be spoofed (e.g. an email can appear to "
+"come from contact@protonmail.ch but not actually be sent from there), "
+"ProtonMail provides an additional way to help identify whether an email is "
+"legitimate."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:57
+msgid ""
+"If the person you are communicating with is also using ProtonMail (or their "
+"email is hosted by ProtonMail), your communication is transmitted with end-"
+"to-end encryption. Secure emails sent from other ProtonMail users can be "
+"identified by the purple lock."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:59
+msgid "protonmail-phishing-lock"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:61
+msgid ""
+"Sender spoofing is NOT possible between ProtonMail addresses or domains "
+"hosted by ProtonMail. Thus, if the “From” address is thomas@protonmail.com, "
+"and it has a purple lock, you can be sure it is actually sent from that "
+"account."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:63
+msgid ""
+"This also means that if your organization’s emails are hosted by ProtonMail, "
+"the purple lock guarantees that:"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:66
+msgid ""
+"    The email was sent by another member of your organization\n"
+"    The address is not spoofed (and therefore it is most likely not a "
+"phishing email)."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:69
+msgid ""
+"These features means the phishing risk for you or your business is greatly "
+"reduced if you are using ProtonMail.\n"
+"DMARC Protection"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:74
+msgid ""
+"To further protect users, ProtonMail also supports DMARC which helps to "
+"identify emails which might be spoofed. For example, when you open an email "
+"which fails DMARC, we display a red warning message to warn you that the "
+"email may be spoofed and that you should verify the authenticity of the "
+"email with the sender.\n"
+"email dmarc spoofing\n"
+"An example of how an email that fails DMARC is displayed in ProtonMail.\n"
+"Link confirmation"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:76
+msgid ""
+"Hackers do not always need to fool you into sharing sensitive data. If they "
+"can deceive you just long enough for you to click on a malicious link, they "
+"can still compromise your device’s security. To prevent this, ProtonMail’s "
+"Link Confirmation can help you identify suspicious links without putting "
+"your device at risk. When Link Confirmation is enabled, a window will pop up "
+"whenever you click on a hyperlink contained in a message. That pop-up "
+"displays the link’s full URL, giving you a chance to inspect whether the "
+"link is suspicious. "
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:78
+msgid "Protect your passwords"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:80
+msgid ""
+"No organization in possession of sensitive data should EVER ask for your "
+"password via email. If you receive an unsolicited email asking you for your "
+"password, or with a link taking you to a suspicious looking website asking "
+"you for your credentials, do NOT enter your password."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:83
+msgid ""
+"ProtonMail will never send you unsolicited emails or other communication "
+"asking you for your ProtonMail credentials. We may occasionally ask you for "
+"login details and information if you are experiencing a login problem, but "
+"only if you initiated communication with our support team.\n"
+"Report phishing emails to our support team"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:86
+msgid ""
+"If you receive an email you suspect to be a phishing attack, do not click on "
+"any links or download any attachments. Instead, we have created a simple way "
+"to report the email to our support team, which will analyze the headers and "
+"contents to improve our spam filters. (Note that emails reported to us as "
+"phishing will be sent to our team unencrypted.) Learn how to use our report "
+"phishing feature.\n"
+"What to do if you’ve been hacked"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:88
+msgid ""
+"If you’ve fallen for a phishing scam, there are a few things you should do "
+"immediately to recover and protect your account."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:90
+msgid ""
+"        Go to Settings -> Account and verify that the Reset/notification "
+"email has not been changed or added by the hacker."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:92
+msgid "        On the same Account page, change your password."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:94
+msgid ""
+"        Then go to Settings -> Security and enable two-factor authentication "
+"(2FA). This ensures that the hacker (and future hackers) cannot break into "
+"your account without also having access to your 2FA device."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:96
+msgid ""
+"        On the same Security page, enable Advanced Authentication Logs, "
+"which allow you to track when and from where someone has accessed your "
+"account or tried to."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:98
+msgid ""
+"    You can also check your other settings to be sure nothing has been "
+"tampered with. For instance, an attacker might whitelist their own email "
+"addresses, add spammy links to your email signature, or set up auto replies "
+"to trick your contacts."
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:100
+msgid "When in doubt, Ask!"
+msgstr ""
+
+#: 2017-05-how-to-prevent-phishing-attacks.txt:102
+msgid ""
+"If you have any doubts about whether or not an email is legitimate, please "
+"ask and confirm with the person or company that supposedly sent it. In the "
+"case of a suspicious email that claims to be from the ProtonMail Team, you "
+"can write to security@protonmail.ch and our security team will be able to "
+"advise you further."
+msgstr ""

@@ -1,0 +1,315 @@
+#. extracted from 2019-04-OpenPGP-Best-Practice-Mailfence.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-14 09:42+0000\n"
+"PO-Revision-Date: 2019-09-21 07:42+0000\n"
+"Last-Translator: MDrights <mdrights@tutanota.de>\n"
+"Language-Team: l10n-zh <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:2
+msgid "OpenPGP digital signature best practices"
+msgstr "OpenPGP 数字签名最佳实践"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:4
+msgid ""
+"by M Salman Nadeem · Published December 13, 2016 · Updated April 17, 2019"
+msgstr "作者：M Salman Nadeem    发布于 2016-12-13    更新于 2019-04-17"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:6
+msgid ""
+"In a recent post, we discussed the OpenPGP encryption best practices. "
+"Digital signatures on the other hand are also a vital part of OpenPGP which "
+"gets used both by advanced and entry level users. In this blogpost we would "
+"like to highlight all the best practices that you should follow while "
+"dealing with OpenPGP digital signatures."
+msgstr ""
+"在上一篇博文，我们讨论了 OpenPGP 加密的最佳实践。另一方面，数字签名也是 OpenPGP 一个重要的部分，高级和入门级用户都会用到它。在本文里我们来梳理在使用 openPGP 签名时的最佳实践。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:8
+msgid "What is a digital signature"
+msgstr ""
+"什么是数字签名"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:10
+msgid ""
+"A digital signature is a mathematical process that assures the following:"
+msgstr ""
+"数字签名一种数学计算过程用来确保以下的目的："
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:14
+msgid ""
+"    Sender verification: the sender is indeed who he/she claims to be\n"
+"    Integrity: The message has not been altered during transit\n"
+"    Non-repudiation: the sender cannot deny having sent the message"
+msgstr ""
+"- 验证发送者：消息/文件的发送者确定就是他/她\n"
+"- 完整性：消息在传送过程中没有被篡改\n"
+"- 不可抵赖：发送者无法否认某某消息是她/他发的"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:16
+msgid ""
+"It authenticates the sender and gives the recipient a fair amount of "
+"confidence to trust the source of the message."
+msgstr ""
+"这技术能验证发送者并给到接收者很大的信心来信任消息的来源。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:19
+msgid ""
+"Digital signing and verification in a nutshell!\n"
+"OpenPGP Digital Signature best practices Mailfence"
+msgstr ""
+"一图说清数字签名和验证的原理\n"
+"OpenPGP 数字签名最佳实践（Mailfence）"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:21
+msgid "Source: https://wikipedia.org/wiki/Electronic_signature"
+msgstr "图片来源: https://wikipedia.org/wiki/Electronic_signature"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:23
+msgid ""
+"Signing starts with simply taking a cryptographic hash of the original "
+"message, encrypting it with the sender’s private key and then sending it "
+"along with the original message."
+msgstr ""
+"签名始于对原始的消息进行简单的密码学哈希转换，再用发送者的私钥加密之，然后跟原始消息一起发送出去。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:25
+msgid ""
+"The recipient receives the original message with its encrypted hash, "
+"decrypts the encrypted hash using the sender’s public key and then matches "
+"it with the hash of the original message."
+msgstr ""
+"接收者接收到附带这个加密了的哈希的原始消息，把加密的哈希用发送者的公钥解密，然后把这串哈希跟原始消息的哈希进行比对。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:28
+msgid ""
+"Yes you got it! If both of the hashes match, the digital signature is "
+"verified.\n"
+"OpenPGP Digital signature Best Practices"
+msgstr ""
+"好了你现在知道是怎么回事了！如果两串哈希值一致，就等于验证了（对方的）数字签名。\n"
+"（OpenPGP 数字签名最佳实践）"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:32
+msgid ""
+"Following are some of the best practices that you should follow while "
+"digitally signing a message.\n"
+"Key generation and Digital signing\n"
+"–   Use a strong key for digitally signing a message"
+msgstr ""
+"下面就是一些你在实际给消息做数字签名时需要追求的最佳实践。\n"
+"密钥创建和数字签名\n"
+"- 使用一个强劲的密钥用于数字签名。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:35
+msgid ""
+"Use a 4096 bit (or at least a 2048 bit) length-based private key to sign a "
+"digital message. Mailfence always generates a 4096bit RSA key by default.\n"
+"–   Use sub-key for signing"
+msgstr ""
+"要用`4096位`（或至少`2048位`）的私钥。Mailfence 默认生成 4096 位的RSA密钥。"
+"- 使用子密钥（sub-key）用于签名"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:37
+msgid ""
+"Protecting your keypair on a single device is not easy and it is always "
+"possible your device gets stolen or lost. Encryption and signing are two "
+"different operations.  They therefore demand two different key management "
+"approaches.  You may want a signing key to be valid for a long time so "
+"people around the world can check signatures from the past.  Regarding your "
+"encryption key however, you would want to switch-over to new one’s sooner "
+"and easily revoke/expire the old one.   Hence, keep your key-pair externally "
+"as a ‘master keypair’ (for e.g., in a flash drive) and use a sub-key as a "
+"‘local-key’ for signing messages is a good practice."
+msgstr ""
+"在一台单独的机器上保护好你的密钥对可能并不容易，但你的设备总有可能被偷或丢失。加密和签名是两种不同的操作，因此也需要区别出两种不同的密钥管理方式。你可能需要让你的签名密钥有很长的有效期，这样过去的朋友仍然能验证你的签名。但对于你的加密密钥，你会希望尽快换成一对新的并能轻松地撤回/过期旧的密钥（当你旧密钥丢了时）。此外，最好生成一对密钥作为“主密钥”，保存到外部存储（比如，U盘），再用这对“主密钥”生成一对子密钥（sub-key）放在本地机器日常使用。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:39
+msgid ""
+"This good article provide a list of steps that you should follow to achieve "
+"this using GPG. You then import that local-keypair in your Mailfence "
+"integrated keystore to use it seamlessly around all of your devices."
+msgstr ""
+"这里有篇[好文章]()讲解了如何一步一步使用`GnuPG`工具创建子密钥。然后你可以把子密钥导入到 Mailfence 密钥仓库里并无缝地在你所有设备上使用。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:42
+msgid ""
+"Note: Keeping the primary secret key on removable media makes signing other "
+"GPG keys problematic, since the primary secret key must be loaded in order "
+"to do the signing. Additionally, using expiration dates with the subkeys (as "
+"is recommended) means that the subkeys must be extended prior to expiration, "
+"or new subkeys issued if they are allowed to expire. Also, people who use "
+"your public key (i.e., to verify something you have signed) may receive "
+"errors about your key being expired if they do not regularly update their "
+"GPG keyrings with public key servers.\n"
+"–   Ask your friends and colleagues to sign your public key"
+msgstr ""
+"注意：把主私钥保存在外部介质上会让`GPG`密钥验证变得有点麻烦，因为每次对别人的密钥做验证时都需要把主密钥导入到本地环境。此外，如果给子密钥设置了过期日期（推荐如此）的话，那子密钥必须在过期日前续期，要么就重新签发子密钥。还有，使用了你的公钥的人（比如，要验证一些你签名了的东西）会收到关于你的密钥已经过期的报错，如果他们不经常从公共密钥服务器上更新他们的`GPG`密钥串的话。\n"
+"- 叫你的朋友和同事对你的公钥签名"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:44
+msgid ""
+"Having trust signatures on your key will enhance its legitimacy. Ask your "
+"friends/colleagues to sign your key.  You should sign their public key in "
+"exchange."
+msgstr ""
+"（互相之间）对公钥进行签名有助于增强每个人的私钥的正当性（译者注：意思是说为了让彼此信任的人的信任可以串成一系列信任链（即：[web of trust]()），信任便可得到传递下去，而实现这个的方法就是信任的人之间互相给对方的公钥签名）。现在就叫你的朋友/同事给你的公钥做数字签名吧。你也要给他们的公钥签名。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:47
+msgid ""
+"Alternatively, keybase.io is an operational model that maps your identity to "
+"your public keys, and vice versa.\n"
+"–   Sign your message for each of your recipient!"
+msgstr ""
+"另一个类似的方法是，用 keybase.io ——一个在线服务可以让你的身份和你的公钥匹配，这样他人就可以通过你的公钥找到你，或通过你在网站上留下的信息得到你的公钥。"
+"- 给每个外发的消息都进行签名！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:50
+msgid ""
+"Yes, include the sender and recipient(s) email address with timestamp in "
+"your digital signature! (by adding it into the body of the message).  You "
+"can also use a service that provides sufficient protection against replay "
+"attacks (nonce, session tokens, timestamp, etc).\n"
+"–   Pay caution while forwarding a digitally signed message"
+msgstr ""
+"是的，而且要把带时间戳的发送者和接收者的电邮地址包含在数字签名里！（再把你的数字签名放进邮件的正文里）"
+"你可以同时使用一个服务来提供足够的保护对付重放攻击（[replay attacks]()）（比如 nonce, 会话token, 时间戳等等）。\n"
+"- 转发带数字签名的消息时要特别留心"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:54
+msgid ""
+"Lets take the case of a digitally signed message by Alice to Bob now "
+"forwarded to Carol.  Only the identity of the original sender: Alice is "
+"proved to the recipient. No assumption can be made by Carol that Bob who "
+"forwarded the message is the owner of the digital signature/or is the right "
+"sender of the message. Unless, the forwarded message is signed by the Bob "
+"himself.\n"
+"Verifying a Digital signature\n"
+"–   ‘Try’ to have the Fingerprint of your sender’s key in advance!"
+msgstr ""
+"我们来看个例子，Bob 把一封 Alice 写并签名了的邮件转发给了 Carol。那么对于收件人来说只有 Alice 的身份是能够确认的。"
+"Carol 不能以为转发了邮件的 Bob 是数字签名的所有者，或，是正确的发件人。除非，Bob 也对自己转发的邮件做了签名。\n"
+"验证对方的数字签名\n"
+"- “尝试”预先获得发件人的密钥指纹！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:57
+msgid ""
+"If possible, get the fingerprint of your sender’s key in advance! ("
+"preferably in person) – or if your sender is a known figure, then doing an "
+"online search (on his/her website, blog, social media accounts, keybase.io "
+"etc) may give you his/her fingerprint.\n"
+"–   Always verify the key-pair used for signing a message with the "
+"fingerprint!"
+msgstr ""
+"如果可能，提前取得发送给你邮件的人的公钥的指纹！（最好是当面取得）——或者如果发件人是个名人，那么尝试做些搜索（比如去他/她的网站、博客、社交帐号、keybase.io 等等）或许能找到他/她的指纹。\n"
+"- 一定要总是确认消息发件人的密钥对的指纹！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:59
+msgid ""
+"Automatic verification (matching decrypted hash with hash of the original "
+"message) is one thing, but will not protect you from impersonation attacks, "
+"where an attacker may create a fake identity of the sender and use it to "
+"fool the recipients. Thus, a Fingerprint should always be your sole "
+"cryptographic factor for verifying the public keys of all your senders."
+msgstr ""
+"自动化验证（把原始消息的哈希跟解密后的哈希进行匹配）当然好，但你仍不能免受冒充攻击，就是说一个攻击者可以创建一个假的某人身份给你发送消息并用一个假的密钥签名了（这个假的密钥并不是被冒充的发送者的密钥）。这样，要鉴别发送者的密钥只能通过验证他/她的密钥指纹来进行了。你要跟所有发送者确认他们各自的密钥指纹。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:62
+msgid ""
+"Never rely on short or even long key-ID’s !\n"
+"–   Make sure the signing key hasn’t been revoked or expired!"
+msgstr ""
+"千万不要依赖密钥的短或长 ID！\n"
+"- 确保签名密钥没有被撤回或过期！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:64
+msgid ""
+"Make sure the key that has been used to sign a particular message is not "
+"being revoked or expired! This is a big one! Applications often fail to "
+"display this clearly to the user.  At Mailfence, every such case gets timely "
+"and properly displayed."
+msgstr ""
+"确保签名密钥没有被撤回或过期！这很重要！应用程序通常没有准确把这个通知给用户。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:67
+msgid ""
+"However, if the signing of a message happened before the expiration/or "
+"revocation date of the signing key – the digital signature still remains "
+"valid.\n"
+"–   Export messages locally with digital signatures on them!"
+msgstr ""
+"不过，如果签名了的密钥是在密钥过期或撤回之前进行签名的，这签名还是有效的。\n"
+"- 导出消息到本地时带上它的数字签名！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:69
+msgid ""
+"Since account compromises are more common these days  it’s better to keep a "
+"local copy of messages of high importance or value by exporting them to your "
+"machine."
+msgstr ""
+"因为当今帐号被盗变得更常见了，重要消息最好能在本地保留一份。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:72
+msgid ""
+"In addition, you can improve their security by locally encrypting them as "
+"well.\n"
+"–   Legal value of digital signatures"
+msgstr ""
+"此外，你还可以对本地保存的消息再次加密以增加安全性。\n"
+"- 数字签名的法律价值"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:74
+msgid ""
+"A digital signature can be used to hold someone liable as author of a "
+"certain message. However, the precise legal value of digital signatures "
+"depends on where the signature was been made and the local laws."
+msgstr ""
+"数字签名也可以用来证明某人是特定信息的作者。然而数字签名的精确法律意义还要看该签名是在哪里生成的，以及当地的法律。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:76
+msgid "This good article sheds a fair amount of light on this subject."
+msgstr ""
+"这篇[文章]()很好地讨论了这一领域的议题。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:78
+msgid ""
+"Nonetheless, there are always certain terms that need to be agreed upon "
+"before using digital signatures in a legal context. One issue is the "
+"possibility that the private key of the signer gets compromised.   What "
+"should be done in such a case to verify whether it was a real compromise or "
+"done deliberately?"
+msgstr ""
+"当然，在法律场景里运用数字签名技术的话还有很多有争议的地方。一个争议会出现在签名者自己的私钥丢失的可能性。如何验证（鉴别）一个人的私钥的丢失是非主观的被偷走的，还是故意而为？"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:80
+msgid ""
+"Note: if you don’t want non-repudiation in exceptional cases, then use "
+"deniable authentication based schemes!"
+msgstr ""
+"注：反过来说如果你在某些很反常的场景中不想出现令自己“不可抵赖”的可能性，那么就得去用基于「可否认的验证」技术了！"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:82
+msgid ""
+"OpenPGP digital signatures are quite common because they do not require you "
+"to have the public key of the recipient. At Mailfence – the secure and "
+"private email service, we’ve made the process of digital signing very "
+"simple.  If you use the above mentioned OpenPGP digital signature best "
+"practices, you will further leverage your usage of digital signing."
+msgstr ""
+"OpenPGP 数字签名现在是比较常用的了，因为它不需要你必须获得收件人的公钥。"
+
+#: 2019-04-OpenPGP-Best-Practice-Mailfence.txt:83
+msgid ""
+"Note: If you presently do not keep your email account secure, then above "
+"mentioned OpenPGP signature best practices will not help you. We would "
+"advice you to check on how to keep your private email account secure."
+msgstr ""
+"注：如果你当前使用的邮箱帐号本身并不安全，那么以上的 OpenPGP 数字签名最佳实践是帮不到你的。（译者补充：这通常是对于直接使用邮件服务页面里的密钥签名功能的人来说的，因为任何人只要能登录你的邮箱界面就能直接使用你的私钥，进行签名等等操作。所以前提还是要保护你的邮箱帐号密码。若你使用密钥的方式跟邮箱本身是脱离的就还比较安全，如`Enigmail`或`Mailvelope`。）"
+

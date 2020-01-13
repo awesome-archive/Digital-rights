@@ -1,0 +1,586 @@
+#. extracted from 2019-04-How-to-read-and-use-message-headers.txt
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-15 06:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.4.0\n"
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:2
+msgid "Email Headers: How to read and use message headers"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:4
+msgid ""
+"by M Salman Nadeem · Published November 22, 2018 · Updated April 17, 2019"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:6
+msgid ""
+"This blogpost will explain how to read and understand the ’email header’ "
+"which travels with every email. It contains details about the sender, taken "
+"route and the receiver. Use this information to avoid unwanted emails or to "
+"recognize a scam or malware delivered by email."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:9
+msgid ""
+"Email header\n"
+"How to access the Email Header"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:12
+msgid ""
+"In Mailfence web interface, go to your mailbox, right-click on the email, "
+"select ‘View source’.\n"
+"Email Header"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:14
+msgid "View message header – Mailfence"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:17
+msgid ""
+"However, most mail clients allow access to the message header. The following "
+"list contains a few popular email and webmail clients. In case not listed "
+"here, please refer to the manual of your client.\n"
+"View the Email Header in Google Mail (Gmail) Webmail:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:20
+msgid ""
+"Login to your account via the web-interface and open the message (click on "
+"it). Click on the ‘down-arrow’ on the top-right of the message and select ‘"
+"Show Original’.\n"
+"View the Email Header in Yahoo Mail Webmail:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:23
+msgid ""
+"Login to your account via the web interface and open the message (click on "
+"it). Click on ‘Actions’ and select ‘View Full Header’.\n"
+"View the Email Header in Hotmail Webmail:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:26
+msgid ""
+"Login to your account via the web interface and go to the message list. "
+"Right-click on the message and select ‘View Message Source’.\n"
+"View the Internet Headers in MS Outlook:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:29
+msgid ""
+"Open the message in MS Outlook. Now go to ‘View’ and select ‘Message Options’"
+" – or ‘File’ -> ‘Info’ -> ‘Properties’. Check ‘Internet Headers’.\n"
+"View the Email Header in Thunderbird:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:32
+msgid ""
+"Open the message, then click on ‘View’ and select ‘Message Source’.\n"
+"View the Email Header in MS Windows Mail (and MS Outlook Express):"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:34
+msgid ""
+"Select the message in the list, right-click on it and select ‘Properties’ "
+"and go to ‘Details’."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:37
+msgid ""
+"Note: instructions mentioned above may vary depending on the version of the "
+"email client that you are using.\n"
+"How to use Email Header Fields"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:40
+msgid ""
+"We will use the following sample message header. The font in blue will "
+"describe what each of the common fields in an email header represent, and "
+"how this information can be used in a useful manner.\n"
+"Standard Email Header Fields"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:43
+msgid ""
+"Received: from sender_mail_server ([bbb.bbb.bbb.bbb])\n"
+"by recipient_mail_exchanger (envelope-from <example@gmail.com>) with ESMTPS"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:45
+msgid ""
+"The message was received by the recipient_mail_exchanger from "
+"sender_mail_server with an IP address bbb.bbb.bbb.bbb over STARTTLS (‘S’ in "
+"the ESMTP tag means secure)."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:48
+msgid ""
+"for <example@mailfence.com> ; Wed, 7 Sep 2018 12:35:32 +0200 (CEST)\n"
+"Return-Path: example@gmail.com"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:50
+msgid ""
+"The mail server sends a notification email to the address specified here, "
+"when the message bounces or cannot be delivered. This email address is "
+"different from the sender’s one and it results as “reply to” address."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:53
+msgid ""
+"Received: by xyz.google.com with SMTP id abc.xyz\n"
+"for <example@mailfence.com>; Wed, 07 Sep 2018 03:35:32 -0700 (PDT)"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:55
+msgid "Standard Email Header Fields (continued)"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:57
+msgid ""
+"The message travels through all of these (usually 1-3) mail servers (or "
+"MTA’s) from sender_mail_server to the recipient_mail_exchanger."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:59
+msgid "Received: from ‘Sender_display_name’ ([aaa.aaa.aaa.aaa])"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:61
+msgid ""
+"The message sent from the sender’s device with the IP address "
+"aaa.aaa.aaa.aaa. Located in the X-Originating-IP header field. In order to "
+"respect email clients, privacy removes the IP address, as it reveals sender’"
+"s location details."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:66
+msgid ""
+"by sender_server_domain_name with ESMTPSA id abc_xyz_123\n"
+"for <example@mailfence.com>\n"
+"(version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);\n"
+"Wed, 07 Sep 2018 03:35:31 -0700 (PDT)"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:69
+msgid ""
+"The sender_server_domain_name mail server after receiving a message from the "
+"sender’s device with IP address ‘aaa.aaa.aaa.aaa‘, transfers the message "
+"over STARTTLS (in the ESMTP tag, ‘S’ means secure and ‘A’ means "
+"authenticated). Information also includes the TLS version and cipher-suite "
+"that was used by the STARTTLS protocol.\n"
+"Some might try to fake the routing information, and your mail server is "
+"supposed to give you a warning that something was not correct during the "
+"transfer from sender_server_domain_name to the recipient_mail_exchanger."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:71
+msgid "From: example@gmail.com"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:75
+msgid ""
+"Message sender address.\n"
+"This could easily be faked, or could be made like examp1e@gmail.com OR "
+"example@gmai1.com (‘1’ and ‘l’ being very similar).\n"
+"Check our phishing and social engineering blogposts for more details."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:77
+msgid "To: example@mailfence.com"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:79
+msgid "Message receiver address."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:81
+msgid "Subject: Leaving Gmail!"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:83
+msgid "Message subject."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:86
+msgid ""
+"Date: Wed, 7 Sep 2018 12:35:29 +0200\n"
+"Message-ID: 000601d30978hc36040$819a20c0$@gmail.com"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:89
+msgid ""
+"Date and Message ID.\n"
+"If the date mentioned here differs from the date mentioned in the last "
+"received header (top one), then it could indicate possible message delivery "
+"issues OR an MITM attack. Therefore we advice to pay caution in such cases."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:92
+msgid ""
+"MIME-Version: 1.0\n"
+"Content-Type: multipart/alternative;"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:94
+msgid "MIME Version and Type."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:96
+msgid "X-Mailer: Microsoft Outlook 16.0"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:98
+msgid ""
+"This message sent by the client email (or MUA) . In order to respect the "
+"email clients, privacy removes this line."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:102
+msgid ""
+"Content-Type: text/plain;\n"
+"charset=\"UTF-8\"\n"
+"Content-Transfer-Encoding: quoted-printable"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:104
+msgid ""
+"This is a multi-part message in MIME (Multipurpose Internet Mail Extensions) "
+"format. It is an Internet standard that extends the format of email messages "
+"to support rich text, files and other active content."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:106
+msgid " <<Message body>>"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:108
+msgid "Hello, "
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:111
+msgid ""
+"Enough of privacy violations and shady business practices by Gmail!\n"
+"This is my last email from Gmail, as I finally decided to join Mailfence!"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:114
+msgid ""
+"Regards,\n"
+"Privacy conscious user!"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:117
+msgid ""
+"------=_NextPart_000_0007_01D44514.EEC24AC0...------=_NextPart_000_0007_01D44"
+"514.EEC24AC0--\n"
+"..."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:119
+msgid "<<Message body>>"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:121
+msgid ""
+"Message body might contain bad links like ‘example.com’ which could be "
+"hyperlinked to ‘maliciouslink.com’."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:124
+msgid ""
+"Check phishing and social engineering blogposts for more details.\n"
+"Sender Policy Framework (SPF)"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:126
+msgid ""
+"SPF is a framework to prevent sender address forgery. In addition this "
+"platform describes mail servers that are allowed to send messages for given "
+"(sender) domain. SPF thus helps to avoid fake sender email addresses. The "
+"result (Received-SPF) can be neutral, pass or fail."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:128
+msgctxt "2019-04-How-to-read-and-use-message-headers.txt:128"
+msgid "From the sample message above:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:130
+msgid "Received-SPF: pass"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:133
+msgid ""
+"Validation results is ‘pass’ since sender_server_domain_name IP address "
+"sends emails for ‘gmail.com’ domain.\n"
+"If the validation result is ‘fail’, then it is highly likely that someone "
+"tried to spoof the sender’s email address and/or content."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:136
+msgid ""
+"Mailfence supports SPF and also encourages custom domain users to set one.\n"
+"Domain Keys Identified Mail (DKIM)"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:138
+msgid ""
+"DKIM is a method to associate a domain name to an email. Furthermore it "
+"allows an organization to check the (cryptographic) signature to ensure "
+"untampered transit of the message. Thereby it ensures the ownership of the "
+"message."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:140
+msgctxt "2019-04-How-to-read-and-use-message-headers.txt:140"
+msgid "From the sample message above:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:152
+msgid ""
+"DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\n"
+"        d=gmail.com; s=20161025;\n"
+"        h=from:to:subject:date:message-id:mime-version:thread-index\n"
+"         :content-language;\n"
+"        bh=fZjxO4TdlsVYWA6YIXoMF8AS+FOsm2lV1tfhDvYZNQo=;\n"
+"        b="
+"cMSUNWMGENp4jXuFTInBnZi6Sq2ZcjhBNA0ht8rSEt1SR8b0gGmiiZZ4l52lGSCum5\n"
+"         lRtmPPtt/tgnqubiLBBW2fatlarhjo6qRp7FRE9IsE6XBIl6muTGS/"
+"kUDwEm9NGXjQRp\n"
+"         nxmHp4/JKDKrYHg8cKsm+"
+"yr3k17hNXHITIrb9VAh2CtEKpAxSYN3MsC4QplXdnLArQju\n"
+"         "
+"U3jAnJf0lLZwZcygBbZSY7ENEAtHSbHpt6LLeQKlzosYARoakAH3j8EaAAAu1TfyAYE4\n"
+"         +u7ENqUzddifO6Qty3E2I4Soq00SbOO+e64WIUZ0gxoARQqeuAN7H/"
+"jaOkC4t5mhWmkb\n"
+"         aEFA=="
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:154
+msgid ""
+"The message contains a valid DKIM signature (formatted as per the standard)."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:156
+msgid "dkim=pass"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:159
+msgid ""
+"Validation results is ‘pass’.\n"
+"If the validation result is ‘fail’, then it is highly likely that the "
+"message was spoofed or modified during transit and/or that the message is "
+"spam."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:162
+msgid ""
+"Mailfence supports DKIM for regular users by default. Also we encourage "
+"custom domain users to use it.\n"
+"Spam score"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:164
+msgid ""
+"Commonly used spam detection programs (e.g., SpamAssassin) installed on the "
+"mail servers provides a detailed report for each message. They do this by "
+"adding lines and a summary in the message header."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:166
+msgid "X-Spam-Flag: NO"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:168
+msgid "Spam detection result."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:170
+msgid "X-Spam-Status: No hits=-1.2 required=4.7"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:172
+msgid ""
+"Spam detection result along with the score. A score less than 5 means (on "
+"most systems) not spam, between 5 and 15 probably spam, and more than 15 "
+"definitely spam."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:174
+msgid ""
+"symbols=BAYES_00,DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESS"
+"AGE,RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H2,RDNS_NONE,SPF_PASS "
+"device=ccc.ccc.ccc.ccc"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:176
+msgid ""
+"Spam detection programs do not only check the message sender, but also check "
+"message format and the content of the message in order to derive their final "
+"spam score. E.g., message structure, SPF+DKIM, DNSBL, custom rules…"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:178
+msgid ""
+"If the overall spam score is between 5 and 15 or more than 15, then it is "
+"highly likely that the message is suspicious or a spam. However, "
+"recipient_mail_exchanger makes the final decision."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:180
+msgid ""
+"On the email headers exist many other approved message header fields as well "
+"as non-standard/custom message header fields. Some examples are:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:186
+msgid ""
+"    Authentication-Results – summary of sender_server_domain_name "
+"authenticity (based on SPF, DKIM and other results).\n"
+"    List-ID – an email mailing list reference\n"
+"    List-Unsubscribe – a direct reference used to unsubscribe from a mailing "
+"list.\n"
+"    Auto-Submitted – indication that a system generated the message (e.g., "
+"notification messages, …)\n"
+"    …"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:188
+msgid "Email Header Fields and End-to-end encrypted messages"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:190
+msgid ""
+"Email message header fields are mostly read independently of the message "
+"body. Thus which is end-to-end encrypted and is meant to be read by the "
+"client (e.g., who holds the private key in a Public key crypto-system). "
+"However, following are some of the common message header fields that can "
+"indicate an encrypted and/or signed message."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:192
+msgctxt "2019-04-How-to-read-and-use-message-headers.txt:192"
+msgid "From the sample message above:"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:198
+msgid ""
+"Content-Type: multipart/signed; micalg=pgp-sha1; protocol=\"application/pgp-"
+"signature\"\n"
+"....\n"
+"Content-Type: application/pgp-signature\n"
+"Content-Description: OpenPGP digital signature\n"
+"Content-Disposition: attachment"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:200
+msgid ""
+"Indicates a MIME type ‘multipart/signed’ for OpenPGP signed message which is "
+"sent as an attachment. OpenPGP signatures can also be sent inline (not as an "
+"attachment)."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:207
+msgid ""
+"Content-Type: multipart/encrypted; protocol=\"application/pgp-encrypted\"; \n"
+"...\n"
+"Content-Type: application/octet-stream; name=encrypted.asc\n"
+"Content-Transfer-Encoding: ... (base64, 7bit, ...)\n"
+"Content-Description: OpenPGP encrypted message\n"
+"Content-Disposition: inline; filename=..."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:209
+msgid "..."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:211
+msgid ""
+"Indicates a MIME type ‘multipart/encrypted‘ for OpenPGP encrypted message "
+"which is sent as an attachment. Send OpenPGP encrypted messages inline (not "
+"as an attachment)."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:215
+msgid ""
+"-----BEGIN PGP SIGNATURE-----\n"
+"...\n"
+"-----END PGP SIGNATURE-----"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:217
+msgid "Indicates the beginning and end of an OpenPGP signature."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:221
+msgid ""
+"-----BEGIN PGP MESSAGE-----\n"
+"...\n"
+"-----END PGP MESSAGE-----"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:224
+msgid ""
+"Indicates the beginning and end of an OpenPGP encrypted message.\n"
+"Protecting email headers from end-to-end encryption"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:226
+msgid ""
+"Use end-to-end encryption and digital signatures to further check the "
+"legitimacy of message headers."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:231
+msgid ""
+"Mailfence includes the From, To and Time-stamp fields in the message body "
+"before signing and/or encrypting it. This provides a way for the recipient "
+"to check:\n"
+"Email HeaderFrom: example@gmail.com\n"
+"To: example@mailfence.com\n"
+"Sep 7, 2018 12:35:29"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:234
+msgid ""
+"    If message From and To addresses do match with the sender and recipient "
+"addresses included in the signed and/or encrypted message body. Therefore, "
+"this helps in detecting any possible spoofing of sender/recipient address.\n"
+"    If the message sending date matches (or is significantly close) with the "
+"time-stamp included in the signed and/or encrypted message body. This helps "
+"in detecting a possible message replay attack."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:236
+msgid ""
+"For instance including the actual message header fields inside an encrypted "
+"message body can also help in preventing meta-data leaks (e.g., Protected "
+"email headers)."
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:238
+msgid ""
+"Many third party message header analyzer tools "
+"(https://testconnectivity.microsoft.com/, https://toolbox.googleapps.com/"
+"apps/messageheader/, https://mxtoolbox.com/EmailHeaders.aspx, …) produce an "
+"easy to read report from that message header data. However, please note that "
+"you will have to share your message header with these services…"
+msgstr ""
+
+#: 2019-04-How-to-read-and-use-message-headers.txt:239
+msgid ""
+"Mailfence is a secure and private email-suite that provides users full "
+"control over their data."
+msgstr ""
