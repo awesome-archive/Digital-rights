@@ -40,7 +40,7 @@ title: Protonmail 用户给非 Protonmail 用户发送PGP加密邮件
 
 大功告成！
 
-这时你再给对方发邮件的话，Proton 会自动使用对方的 PGP 公钥，准备发送加密邮件了（在收件人地址旁边会显示一个绿色带勾的小锁头）。  
+这时你再给对方发邮件的话，Protonmail 会自动使用对方的 PGP 公钥，准备发送加密邮件了（在收件人地址旁边会显示一个绿色带勾的小锁头）。  
 
 如果收到对方发来的加密邮件，会显示蓝色带勾的小锁头（表示不但对方不但用了你的公钥加密，而且还用ta的私钥做了签名以证明是ta！）。 
 
@@ -49,6 +49,17 @@ title: Protonmail 用户给非 Protonmail 用户发送PGP加密邮件
 如果对方发来的邮件，显示一个蓝色小锁头但带了个叹号警告，说明对方可能为你加密了但ta没有给自己签名（有可能不是真的ta发出的）；如果小锁头是灰色的，说明对方没有使用 PGP 加密（而只是退一步用了 Proton 自己的服务器上存储加密）。 
 
 ![](https://protonmail.com/support/wp-content/uploads/2018/05/Sender-verification-failed.png)  
+
+
+## 把你的公钥给对方
+
+最后记得也要把你的公钥给到对方哦，这样人家才能给你发加密邮件。方法很简单，Protonmail 已经为你准备好了，只需在发邮件的页面如下操作：  
+
+![](https://protonmail.com/support/wp-content/uploads/2018/05/Compose-Attach-Public-Key-600x513.png)  
+
+若你想在每封邮件都默认带上自己的公钥，则可以在设置 ——> 安全页面勾选：  
+
+![](https://protonmail.com/support/wp-content/uploads/2018/05/Advanced-Default-encryption-Settings-1024x215.png)    
 
 
 ## 注意事项
