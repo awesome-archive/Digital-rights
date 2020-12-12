@@ -28,6 +28,8 @@
 
 - [培训教程和笔记](https://github.com/mdrights/Digital-rights/tree/master/T%E6%95%99%E7%A8%8B%E5%92%8C%E7%AC%94%E8%AE%B0)
 
+- [个人博客](https://mdrights.github.io/os-observe) ：有更多更技术性的实践性内容。比如「在树莓派上搭建VPN」、「Yubikey 的安装使用」等等。  
+
 *（仍在不断学习中，欢迎参与协作）*
 
 <br />
@@ -47,13 +49,16 @@
  - #liveslak:matrix.org: 关于隐私/安全操作系统的闲聊群组（与 TG 群桥接）  
  - #antis:matrix.org ：以资讯为主
 
- - (加入姿势：使用 Matrix 客戶端(推薦使用 Riot.im)，点击「+ 」搜索如 #antis 即可进入。Riot.im 也有網頁版: https://riot.im/app ）
+ - (加入姿势：使用 Matrix 客戶端(推薦使用 Element.io)，点击「+ 」搜索如 #antis 即可进入。Element 也有網頁版: https://app.element.io ）
+
+- **Mastodon**:  
+	- https://fosstodon.org/@mdrights 
 
 - **Telegram**: 
 	- 群：https://t.me/liveslackware  
-	- 唠叨频道： https://t.me/liveslak  
+	- 频道： https://t.me/liveslak  
 
-- **IRC 頻道**：
+- **IRC **：
  - #DigitalRightsCN at Freenode.net （与#antis:matrix.org 同步） 
  - #aqi-data-share at oftc.net （与#csobot:matrix.org 同步）
  - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode 或者 OFTC, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
