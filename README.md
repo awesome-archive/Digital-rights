@@ -45,9 +45,8 @@
 ## 相关资讯群組／頻道
 
 - **Matrix 房間  「推荐」**
- - #csobot:matrix.org：一个机器人消息频道（见：[csobot 项目首页](https://github.com/mdrights/csobot)）
- - #liveslak:matrix.org: 关于隐私/安全操作系统的闲聊群组（与 TG 群桥接）  
- - #antis:matrix.org ：以资讯为主
+ - #csobot:matrix.org：一个消息推送 + antiS 技术支持频道（见：[csobot 项目首页](https://github.com/mdrights/csobot)）
+ - #antis:matrix.org ：以新闻资讯为主
 
  - (加入姿势：使用 Matrix 客戶端(推薦使用 Element.io)，点击「+ 」搜索如 #antis 即可进入。Element 也有網頁版: https://app.element.io ）
 
@@ -55,7 +54,6 @@
 	- https://fosstodon.org/@mdrights 
 
 - **Telegram**: 
-	- 群：https://t.me/liveslackware  
 	- 频道： https://t.me/liveslak  
 
 - **IRC **：
@@ -83,3 +81,4 @@
 这是[「金丝雀」](https://en.wikipedia.org/wiki/Warrant_canary)，如果我飞走了，请不要联系我所有以`mdrights`为名的帐号；没飞走，说明我还安全。  
 兄弟爬山，各自找路。万事小心。
 
+Updated: 2020.01.01
