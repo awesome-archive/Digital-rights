@@ -22,7 +22,7 @@ OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) ——
 由於 Caprover 跟 主機服務商 DigitalOcean (DO) 有合作，所以在 DO 上開個 VPS 後可以直接一鍵部署 Caprover。（如果不選擇 DO，其他的主機服務商都可以，不過就是多一些部署命令，詳見：[Caprover 官方文檔 的第一和第二步](https://caprover.com/docs/get-started.html#caprover-setup)  
 
 選擇創建（Create）一個 Droplet（即雲主機）：
-![](https://cdn-111.anonfiles.com/Xcz4Jaufu6/41b7b966-1620283374/Q%20Search%20by.png)
+![](-111.anonfiles.com/Xcz4Jaufu6/41b7b966-1620283374/Q%20Search%20by.png)
 
 在創建頁面按照默認的就好（不過可以選擇一下地點，地點不同速度也不同）。
 ![](https://cdn-116.anonfiles.com/V3z9Jbu3u9/5dea4821-1620283360/Q%20Search%20create.png)
@@ -82,14 +82,14 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 
 3. 接下来我们还需要为我们的网站加上 HTTPS，加强安全。分别点击链接「csoform」和「csoform-api」（你可以是你自己定义的名称），点击蓝色的「enable HTTPS」按钮，然后点击「save & update」。  
 
-![](https://cdn-107.anonfiles.com/r1w6Gau0u3/285df74e-1620281291/CapRover-Server-Dashboard-afterdeploy.png)
+![](../img/CapRover-Server-Dashboard-afterdeploy.png)
  |
  -->
-![](https://cdn-118.anonfiles.com/n2w2Gbufu6/45b53a2c-1620281274/CapRover-Server-Dashboard-enablehttps.png)
+![](../img/CapRover-Server-Dashboard-enablehttps.png)
 
 访问 `https://csoform.xxxxxx.xxx` 试试看～
 
-![](https://cdn-122.anonfiles.com/dew6G6ueu6/7ac22144-1620282443/OhMyForm.png)
+![](../img/OhMyForm.png)
 
 ----------------------------- 以上是部署时才需要的操作，以下是使用时经常要操作的 -------------------------------
 <hr />
