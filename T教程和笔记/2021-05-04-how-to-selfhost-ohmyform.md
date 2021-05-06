@@ -69,21 +69,21 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 
 ![](../img/CapRover-Server-Dashboard-create-app.png)
 
-输入一些关于你的软件的信息，包括：
-    - App Name:        起个名字，会成为网址的一部分（这里以 `csoform` 为例）；
-    - Admin E-Mail:    设置管理员邮箱，~~用于找回密码~~；
-    - Admin user name: 设置管理员账号，会是整个软件里最高权限的账号；
-    - Admin password:  系统生成的密码，请保存好；
-    - Database user:   存储问卷数据的账号；
-    - Database password: 数据库账号的密码；
-    - Title:           显示在浏览器的标题栏上。  
+输入一些关于你的软件的信息，包括：  
+    - App Name:        起个名字，会成为网址的一部分（这里以 `csoform` 为例）；  
+    - Admin E-Mail:    设置管理员邮箱，~~用于找回密码~~；  
+    - Admin user name: 设置管理员账号，会是整个软件里最高权限的账号；  
+    - Admin password:  系统生成的密码，请保存好；  
+    - Database user:   存储问卷数据的账号；  
+    - Database password: 数据库账号的密码；  
+    - Title:           显示在浏览器的标题栏上。    
 
 点击「Deploy」等待一小会，就大功告成啦～   
 
 3. 接下来我们还需要为我们的网站加上 HTTPS，加强安全。分别点击链接「csoform」和「csoform-api」（你可以是你自己定义的名称），点击蓝色的「enable HTTPS」按钮，然后点击「save & update」。  
 
 ![](../img/CapRover-Server-Dashboard-afterdeploy.png)
- |
+ |  
  -->
 ![](../img/CapRover-Server-Dashboard-enablehttps.png)
 
@@ -92,6 +92,21 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 ![](../img/OhMyForm.png)
 
 ----------------------------- 以上是部署时才需要的操作，以下是使用时经常要操作的 -------------------------------
+
+## 創建用戶並賦權
+首先，只有部署時創建的那個用戶`ohmyadmin` （是Super User）和被賦予 admin 的用戶可以製作問卷。  
+
+請你的同事/隊友在登錄頁面註冊一個帳號，你（網站的搭建者）用 ohmyadmin 登錄並為他們賦予 admin 權限。
+
+## 製作問卷
+進入【Forms】頁面即可一步一步開始製作問卷啦～
+
+## 發放問卷
+每個問卷頁面會生成一個可任何人訪問的網址，不需要認證或註冊。  
+
+## 查看並導出問卷數據
+在每個問卷頁面都有【Submissions】這樣的按鈕，即填問卷的人提交的答案。當然也可以導出啦～！問卷數據都存在你的開通的服務器上（比如 DO），不會與第三方分享。 
+
 <hr />
 
-## 
+## Enjoy!
