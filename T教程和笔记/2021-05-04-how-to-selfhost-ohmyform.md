@@ -22,10 +22,10 @@ OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) ——
 由於 Caprover 跟 主機服務商 DigitalOcean (DO) 有合作，所以在 DO 上開個 VPS 後可以直接一鍵部署 Caprover。（如果不選擇 DO，其他的主機服務商都可以，不過就是多一些部署命令，詳見：[Caprover 官方文檔 的第一和第二步](https://caprover.com/docs/get-started.html#caprover-setup)  
 
 選擇創建（Create）一個 Droplet（即雲主機）：
-![](-111.anonfiles.com/Xcz4Jaufu6/41b7b966-1620283374/Q%20Search%20by.png)
+![](../img/DO-dashboard.png)
 
 在創建頁面按照默認的就好（不過可以選擇一下地點，地點不同速度也不同）。
-![](https://cdn-116.anonfiles.com/V3z9Jbu3u9/5dea4821-1620283360/Q%20Search%20create.png)
+![](../img/DO-create.png)
 
 接下來的頁面裡可以選擇一鍵部署的 App （應用），選擇 Caprover 即可。  靜等片刻，部署好了之後，你應該能用 VPS 的 IP 加端口號（3000）來訪問到 Caprover 啦（比如：http://xx.xx.xx.xx:3000）。
 
@@ -44,12 +44,12 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 
 ## 第三步：部署 OhMyForm
 登录到上面的这个网址，默认初始密码是 `captain42`。进入后第一件事就是要改密码（在「设置」里）。 
-![](https://cdn-105.anonfiles.com/T3zfJ6u5u7/dbae49b0-1620283380/CapRover%20Login.png)
+![](../img/CapRover-Login.png)
 
 接下来要做两件事：  
 
 1. 在「Dashboard」页面，填上在第二步设置 DNS 时用到的域名，比如我的就是 `mdrights.club`。然后点击「Update Domain」，再点下「Enable HTTPS」。  
-![](https://cdn-116.anonfiles.com/p1w3Gfu6u5/db3e609a-1620281360/CapRover-Server-Dashboard.png)
+![](../img/CapRover-Server-Dashboard.png)
 
 > 然而，官方說這裡可能會有bug，最好用命令行最高效可靠。只需打開你的 macbook 的 Terminal （終端），輸入：  
 
@@ -63,11 +63,11 @@ A   *   xx.xx.xx.xx （<--你的 IP）
   caprover serversetup
 ```
 
-![](https://cdn-112.anonfiles.com/h643J4u3uf/8a6cde50-1620284135/caprover-serversetup.png)
+![](../img/caprover-serversetup.png)
 
 2. 然后点击「Apps」页面，我们要开始安装 OhMyForm了。点击「One-click Apps/Databases」。  
 
-![](https://cdn-118.anonfiles.com/t9waG1u5u1/8db12d7f-1620281307/CapRover-Server-Dashboard-create-app.png)
+![](../img/CapRover-Server-Dashboard-create-app.png)
 
 输入一些关于你的软件的信息，包括：
     - App Name:        起个名字，会成为网址的一部分（这里以 `csoform` 为例）；
