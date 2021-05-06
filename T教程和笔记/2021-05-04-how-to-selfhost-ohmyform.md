@@ -15,7 +15,7 @@
 
 [OhMyForm](https://ohmyform.com/) 是一款 nodejs 寫的很輕量的自由開源軟件，雖然功能較為簡單但實際夠用了，它有十幾種表單可選（包括選擇、填空等等）。
 
-OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) —— 一個自動化軟件發佈平台軟件（PaaS），不需要理解軟件發佈的原理就能把很多常用的服務端軟件（包括 OhMyForm）發佈到你指定的 VPS 服務器上，通常只需要[幾個點擊](https://caprover.com/docs/one-click-apps.html) + 兩個命令用來在你的本地電腦安裝 CapRover 而已。
+OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) —— 一個自動化軟件發佈平台軟件（PaaS），不需要理解軟件發佈的原理就能把很多常用的服務端軟件（包括 OhMyForm）發佈到你指定的 VPS 服務器上，通常只需要[幾個點擊](https://caprover.com/docs/one-click-apps.html)， 兩個命令只是用來在你的本地電腦安裝 CapRover 而已。
 
 
 ## 第一步：租 VPS 并部署 Caprover
@@ -31,7 +31,7 @@ OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) ——
 
 
 ## 第二步：設置 DNS
-去你買域名的服務商那裡，在 DNS 紀錄那一頁（每個服務商的頁面會不一樣），修改 A 紀錄。比如你的域名是 `mdrights.club`，你想讓問卷網站的地址是 `mysurvey.mdrights.club`，那麼需要這樣設置：  
+去你買域名的服務商那裡，在 DNS 紀錄那一頁（每個服務商的頁面會不一樣），修改 A 紀錄。比如你的域名是 `mdrights.club`，你想讓問卷網站的地址是 `mysurvey.mdrights.club`，那麼需要這樣設置（这里不详细介绍了）：  
 
 ```
 A   *   xx.xx.xx.xx （<--你的 IP）
@@ -51,7 +51,9 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 1. 在「Dashboard」页面，填上在第二步设置 DNS 时用到的域名，比如我的就是 `mdrights.club`。然后点击「Update Domain」，再点下「Enable HTTPS」。  
 ![](../img/CapRover-Server-Dashboard.png)
 
-> 然而，官方說這裡可能會有bug，最好用命令行最高效可靠。只需打開你的 macbook 的 Terminal （終端），輸入：  
+> 然而，官方說這裡可能會有bug，最好用命令行最高效可靠。
+
+如果刚才这步遇到报错，那么请立即打開你的 macbook 的 Terminal （終端），輸入：  
 
 ```
   sudo npm i -g caprover  （會要求輸入你的登錄密碼）
@@ -69,7 +71,7 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 
 ![](../img/CapRover-Server-Dashboard-create-app.png)
 
-输入一些关于你的软件的信息，包括：  
+点击上图的 OhMyForm 框框，就进入到安装页面，需要输入一些关于你的软件的信息，包括：  
     - App Name:        起个名字，会成为网址的一部分（这里以 `csoform` 为例）；  
     - Admin E-Mail:    设置管理员邮箱，~~用于找回密码~~；  
     - Admin user name: 设置管理员账号，会是整个软件里最高权限的账号；  
@@ -78,16 +80,18 @@ A   *   xx.xx.xx.xx （<--你的 IP）
     - Database password: 数据库账号的密码；  
     - Title:           显示在浏览器的标题栏上。    
 
-点击「Deploy」等待一小会，就大功告成啦～   
+点击「Deploy」后等待一小会，就大功告成啦～   
 
-3. 接下来我们还需要为我们的网站加上 HTTPS，加强安全。分别点击链接「csoform」和「csoform-api」（你可以是你自己定义的名称），点击蓝色的「enable HTTPS」按钮，然后点击「save & update」。  
+3. 接下来我们还需要为我们的网站加上 HTTPS，加强安全。在「App」页面，分别点击链接「csoform」和「csoform-api」（你可以是你自己定义的名称），点击蓝色的「enable HTTPS」按钮，然后点击「save & update」。  
 
 ![](../img/CapRover-Server-Dashboard-afterdeploy.png)
- |  
- -->
+ 
+然后 -->  
 ![](../img/CapRover-Server-Dashboard-enablehttps.png)
 
-访问 `https://csoform.xxxxxx.xxx` 试试看～
+记得 「csoform-api」（你有你定义的名称）也要这么操作。  
+
+最后，访问 `https://csoform.xxxxxx.xxx` 试试看～ （以后日常使用都是访问这个地址了）  
 
 ![](../img/OhMyForm.png)
 
