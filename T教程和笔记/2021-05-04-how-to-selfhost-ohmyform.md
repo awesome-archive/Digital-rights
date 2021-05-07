@@ -24,31 +24,28 @@ OhMyForm 再加上 [Caprover](https://caprover.com/docs/get-started.html) ——
 選擇創建（Create）一個 Droplet（即雲主機）：
 ![](../img/DO-dashboard.png)
 
-在創建頁面按照默認的就好（不過可以選擇一下地點，地點不同速度也不同）。
+在創建頁面選擇【Marketplace】，找到 `Caprover`，其他按照默認的就好（如果你預期會有很大的訪問量則可以選擇大的 Plan；也可以選擇一下地點，地點不同速度也不同）。
 ![](../img/DO-create.png)
 
-接下來的頁面裡可以選擇一鍵部署的 App （應用），選擇 Caprover 即可。  靜等片刻，部署好了之後，你應該能用 VPS 的 IP 加端口號（3000）來訪問到 Caprover 啦（比如：http://xx.xx.xx.xx:3000）。
+靜等片刻，部署好了之後，你應該能用 VPS 的 IP 加端口號（3000）來訪問到 Caprover 啦（比如：http://xx.xx.xx.xx:3000）。
 
 
 ## 第二步：設置 DNS
-去你買域名的服務商那裡，在 DNS 紀錄那一頁（每個服務商的頁面會不一樣），修改 A 紀錄。比如你的域名是 `mdrights.club`，你想讓問卷網站的地址是 `mysurvey.mdrights.club`，那麼需要這樣設置（这里不详细介绍了）：  
+去你買域名的服務商那裡，在 DNS 紀錄那一頁（每個服務商的頁面會不一樣），修改 A 紀錄。比如你的域名是 `mdrights.club`，你想讓問卷網站的地址是 `mysurvey.mdrights.club`，那麼需要添加一條紀錄（这里不详细介绍了）：  
 
 ```
-A   *   xx.xx.xx.xx （<--你的 IP）
+Type  Name   IPv4 address
+A       *      xx.xx.xx.xx （<--你的 IP）
 ```
 
-注意：要在原本是 `@` 的地方填 `*` 不然不會生效。  
+![]()
 
-设置好 DNS 后可能需要等几分钟～几小时才能生效。生效后可以用域名访问你的 Caprover 服务器咯，地址是 `captain.xxxx.xxx`。比如我的就是 `captain.mdrights.club`。  
+设置好 DNS 后可能需要等几分钟～几小时才能生效。生效后可以用域名访问你的 Caprover 服务器咯，比如我的就是 `mdrights.club`。這個時候還只能訪問 3000 端口，所以要這樣訪問：`http://mdrights.club:3000`（注意是 **http://**）。    
 
-
-## 第三步：部署 OhMyForm
 登录到上面的这个网址，默认初始密码是 `captain42`。进入后第一件事就是要改密码（在「设置」里）。 
 ![](../img/CapRover-Login.png)
 
-接下来要做两件事：  
-
-1. 在「Dashboard」页面，填上在第二步设置 DNS 时用到的域名，比如我的就是 `mdrights.club`。然后点击「Update Domain」，再点下「Enable HTTPS」。  
+讓 Caprover 知道我們的域名。在「Dashboard」页面，填上在第二步设置 DNS 时用到的域名，比如我的就是 `mdrights.club`。然后点击「Update Domain」，記得之後再点下「Enable HTTPS」，然後是【Force HTTPS】。  
 ![](../img/CapRover-Server-Dashboard.png)
 
 > 然而，官方說這裡可能會有bug，最好用命令行最高效可靠。
@@ -67,7 +64,12 @@ A   *   xx.xx.xx.xx （<--你的 IP）
 
 ![](../img/caprover-serversetup.png)
 
-2. 然后点击「Apps」页面，我们要开始安装 OhMyForm了。点击「One-click Apps/Databases」。  
+這時我們應該能訪問正式的安全的域名啦：`https://captain.mdrights.club`（我的例子）。  
+
+
+## 第三步：部署 OhMyForm
+
+点击「Apps」页面，我们要开始安装 OhMyForm了。点击「One-click Apps/Databases」。  
 
 ![](../img/CapRover-Server-Dashboard-create-app.png)
 
