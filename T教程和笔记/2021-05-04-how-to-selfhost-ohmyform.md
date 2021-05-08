@@ -38,7 +38,7 @@ Type  Name   IPv4 address
 A       *      xx.xx.xx.xx （<--你的 IP）
 ```
 
-![]()
+![](../img/edit-dns-record.png)
 
 设置好 DNS 后可能需要等几分钟～几小时才能生效。生效后可以用域名访问你的 Caprover 服务器咯，比如我的就是 `mdrights.club`。這個時候還只能訪問 3000 端口，所以要這樣訪問：`http://mdrights.club:3000`（注意是 **http://**）。    
 
@@ -83,6 +83,8 @@ A       *      xx.xx.xx.xx （<--你的 IP）
     - Title:           显示在浏览器的标题栏上。    
 
 点击「Deploy」后等待一小会，就大功告成啦～   
+
+![](../img/Caprover-predeploy.png)  
 
 3. 接下来我们还需要为我们的网站加上 HTTPS，加强安全。在「App」页面，分别点击链接「csoform」和「csoform-api」（你可以是你自己定义的名称），点击蓝色的「enable HTTPS」按钮，然后点击「save & update」。  
 
