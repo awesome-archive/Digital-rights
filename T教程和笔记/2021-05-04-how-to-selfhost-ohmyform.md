@@ -106,14 +106,22 @@ A       *      xx.xx.xx.xx （<--你的 IP）
 
 請你的同事/隊友在登錄頁面註冊一個帳號，你（網站的搭建者）用 ohmyadmin 登錄並為他們賦予 admin 權限。
 
+![](../img/OhMyForm-user.png)
+
 ## 製作問卷
 進入【Forms】頁面即可一步一步開始製作問卷啦～
+
+![](../img/OhMyForm-newform.png)
 
 ## 發放問卷
 每個問卷頁面會生成一個可任何人訪問的網址，不需要認證或註冊。  
 
+![](../img/OhMyForm-design.png)
+
 ## 查看並導出問卷數據
 在每個問卷頁面都有【Submissions】這樣的按鈕，即填問卷的人提交的答案。當然也可以導出啦～！問卷數據都存在你的開通的服務器上（比如 DO），不會與第三方分享。 
+
+![](../img/OhMyForm-view-export.png)
 
 <hr />
 
