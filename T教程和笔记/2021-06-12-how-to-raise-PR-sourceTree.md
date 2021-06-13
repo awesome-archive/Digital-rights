@@ -40,23 +40,24 @@ how-to-raise-PR-sourceTree.md
 
 (對於 Gitlab) 這時會彈出一個對話框，主要是說它還沒設置好，那就點擊【Settings】。 
 
-![]()
 
 在接下來的設置框裡，把 **remote** 地址修改成這樣：（自己替換相應的項目名和 repo 名）  
 
 `https://gitlab.com/PROJECT/REPO/-/merge_requests/new?`  
 
-![]()
+![](../img/sourceTree-create-pullRequest-setting.png)
 
 點擊保存。這一步只需要此時設置一次。  
 
-然後再 Create Pull Request 的時候就看到剛修改的 remote 地址了。在下方選擇你要提 PR 的分支（一般都是主分支啦，因為你要把你的內容合併到現有的主內容裡面去嘛）。  
+然後再 Create Pull Request 的時候就看到剛修改的 remote 地址了。每次在這裡提 PR 的時候這裡的配置都保持不動即可（即 本地分支 和 remote 分支都是：你新建的那個分支（注意不要填到 master 等分支去咯 XD）：
 
-![](../img/sourceTree-create-pullRequest-setting.png)
+![](../img/sourceTree-create-pullRequest-open.png)
 
 這時，就會彈出瀏覽器，把你帶到 Gitlab.com 的新 PR/MR 頁面，填入相應的信息（比如簡述一下你的新增/修改內容啦，理由啦），點擊提交就可以啦～！
 
 當然在這頁面你還可以選擇通知誰來審批，可以慢慢探索。
+
+![](../img/Gitlab-New-MR.png)
 
 
 ## 批准審批
