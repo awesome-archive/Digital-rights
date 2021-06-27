@@ -16,8 +16,10 @@
 - [邮件安全、反钓鱼](https://github.com/mdrights/Digital-rights/tree/master/M%E9%82%AE%E4%BB%B6%E5%AE%89%E5%85%A8)
 	- 来自专业安全邮件服务的科普文章。  
 
-- [加密方面技术](https://github.com/mdrights/Digital-rights/tree/master/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93)
+- [数据的加密和安全删除](https://github.com/mdrights/Digital-rights/tree/master/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93)
 	- 把`PGP`等端对端加密用好。
+    - [你真的了解端到端加密么？](https://github.com/mdrights/digital-rights/-/blob/main/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93/2019-09-21-%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%8A%A0%E5%AF%86%E4%B9%88.md)
+    - [彻底删除数据 on macOS/Linux](https://github.com/mdrights/Digital-rights/blob/master/T%E6%95%99%E7%A8%8B%E5%92%8C%E7%AC%94%E8%AE%B0/2021-06-13-%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4-macOS-Linux.md)
 
 - [物理安全](https://github.com/mdrights/Digital-rights/tree/master/W%E7%89%A9%E7%90%86%E5%AE%89%E5%85%A8)
 	- [电子设备反取证](https://github.com/mdrights/Digital-rights/blob/master/W%E7%89%A9%E7%90%86%E5%AE%89%E5%85%A8/2017-07-30-%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%9A%84%E6%89%8B%E6%9C%BA%E8%A2%AB%E8%AD%A6%E5%AF%9F%E6%B2%A1%E6%94%B6%E4%BD%A0%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E.md)
@@ -42,26 +44,9 @@
 <br /> 
 <hr>
 
-## 相关资讯群組／頻道
+## 联系？
 
-- **Matrix 房間  「推荐」**
- - #csobot:matrix.org：一个消息推送 + antiS 技术支持频道（见：[csobot 项目首页](https://github.com/mdrights/csobot)）
- - #antis:matrix.org ：以新闻资讯为主
-
- - (加入姿势：使用 Matrix 客戶端(推薦使用 Element.io)，点击「+ 」搜索如 #antis 即可进入。Element 也有網頁版: https://app.element.io ）
-
-- **Mastodon**:  
-	- https://fosstodon.org/@mdrights 
-
-- **Telegram**: 
-	- 频道： https://t.me/liveslak  
-
-- **IRC **：
- - #DigitalRightsCN at Freenode.net （与#antis:matrix.org 同步） 
- - #aqi-data-share at oftc.net （与#csobot:matrix.org 同步）
- - (加入姿势： IRC 客戶端(如Hexchat)中的「网络列表」里选择： freenode 或者 OFTC, 再在「服务器」菜单选择「加入一个频道」，加入上边的频道名即可 )
- - （謹記必須搭配 Tor 否則完全暴露自己 IP ^\_^。注：用 Tor 访问 Freenode 方法请参考[这个博客](https://mdrights.github.io/os-observe/posts/2018/11/Freenode-Tor.html)；用 Tor 可直接访问 OFTC）
-
+Matrix: #liveslack:privacytools.io  
 
 <br />
 
@@ -81,4 +66,4 @@
 这是[「金丝雀」](https://en.wikipedia.org/wiki/Warrant_canary)，如果我飞走了，请不要联系我所有以`mdrights`为名的帐号；没飞走，说明我还安全。  
 兄弟爬山，各自找路。万事小心。
 
-Updated: 2020.01.01
+Updated: 2021.06.01
