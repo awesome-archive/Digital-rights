@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>数字安全培训</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: 安全培训/6-LiveOS-使用建議.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>数字安全培训</h1></header>
+            
+            
+            <section><h2>之 Live OS 的使用</h2>
+<h2>课程目标</h2>
+<p>通过本课程您将获得这些知识和技巧：</p>
+<ul>
+<li>Live OS 的使用場景和操作建議</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/6-LiveOS-使用建議.md">安全培训/6-LiveOS-使用建議.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/2
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/6-LiveOS-使用建議.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Live OS 的使用場景和操作建議</h1></header>
+            
+            
+            <section><h2>什么是 Live USB 操作系统</h2>
+<ul>
+<li>
+<p>live 系统：就是把操作系统及预装的软件装在 USB 可移动设备上，插在电脑上启动，每次启动后系统里的软件、文件都保证不被篡改（即在系统上所做的更改只在当前环境有效，重启后都是恢复了制作的样子的）  </p>
+</li>
+<li>
+<p>live系統的修改，和用户产生、放置的所有文件都<strong>不會保存</strong>，每次重啓都會還原到製作時的狀態。這一招就能：</p>
+<ul>
+<li>抵禦諸如木馬的长期駐留，最大限度降低它的破壞。  </li>
+<li>用户在电脑上不留下使用痕迹，不容易被取证。  </li>
+</ul>
+</li>
+</ul>
+<h3>为什么需要它</h3>
+<p>我们终端用户受到的黑客攻击/监控，最主要的方式就是 網頁和電郵的附件夾帶的惡意程序/木马啦。而木马等恶意程序最容易藏在我们日常最常用的office文档啦、PDF啦、图片啦音视频啦等二进制文件，大部分用户基本没有能力分辨其中是否有木马，但又必须每天都要下载和打开这些文件，风险非常大，对不对？</p>
+<p>如果你担心你的电脑有一天丢失，或被权力部门没收，你在电脑上浏览过网页，登录过的软件，可能都来不及删掉；又或者你在跨境旅行时，担心海关边检部门搜查你的电脑，你希望当他们打开电脑时看到的并不是你日常使用的环境？</p>
+<p>那么你需要 live 操作系统。当需要打開網頁，和/或 打開別人發給你的文件（包括各種文檔、pdf、exe、圖片、音頻等）時，木马只会在当前环境中存活，它看到的只是当前空空如也的系统，并随着机器的关机而消失。若你平时就在使用 live 系统（把重要资料存在外置U盘），那么权力机关打开你的电脑时就看不出你平时使用过这台电脑。</p>
+<h3>antiS 能防御什么 &amp; 不能防御什么</h3>
+<p><strong>请一定阅读这一部分</strong>   </p>
+<ul>
+<li>
+<p>能防御什么  </p>
+<ul>
+<li>如果你不得不从别人那里下载文档/图片等二进制文件来阅读/编辑，担心文件里可能夹带木马，那么请启动进入 Live 系统，它能防止木马污染你电脑上现成的系统环境；并且木马只能存活在当前的系统环境，不会继续存在于重启后再进入的系统。  </li>
+<li>同样，反过来，如果你不信任你电脑现成的系统环境，可以进入 Live 系统查看你认为重要、纯净没有木马的文件、邮件、网页等等，电脑上如有木马等恶意软件，也不会入侵你当前的 Live 环境。  </li>
+</ul>
+</li>
+<li>
+<p>不能防御什么   </p>
+</li>
+<li>木马等恶意程序（如有）仍然会下载到当前环境； </li>
+<li>如果当前环境有木马下载下来，并且当前环境中有重要、敏感文件，并不能防止木马读取这些文件；   </li>
+</ul>
+<h3>【再强调一次：使用策略】</h3>
+<ol>
+<li>
+<p>当前系统不要保留重要敏感文件（反正也不會保存），文件需要保存的话请转存到其他盘上；</p>
+</li>
+<li>
+<p><strong>注意区分使用场景</strong>：  </p>
+<ul>
+<li>总体有两类场景：<ul>
+<li>
+<ol>
+<li>打开、运行不信任的文件/软件/网页等；  </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>打开、运行信任的、私密的、安全需求高的文件/软件等；  </li>
+</ol>
+</li>
+</ul>
+</li>
+<li>当我们每次开机进入 live 系统时，都要想一想我是要把这个系统用于哪类场景。因为 live 系统都是隔离的环境，我的目的是想防止文件/软件里潜在的恶意程序的破坏呢？还是为了高度敏感的文件不被恶意程序捕获？  </li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>也就是说，如果你这次开机选择的是第一个场景，就请尽量不要把放了重要文件的 U 盤挂载到当前环境；如果你这次环境选择的是第二个场景，也请不要去打开不纯净的文件/软件了，而且这时不联网是最好的。  </p>
+</blockquote>
+<p>具体启动、使用方法请参见 antiS 的使用手册咯。  </p>
+<p>祝使用愉快～！</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/6-LiveOS-使用建議.md">安全培训/6-LiveOS-使用建議.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/2
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">数字安全培训</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Live OS 的使用場景和操作建議</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

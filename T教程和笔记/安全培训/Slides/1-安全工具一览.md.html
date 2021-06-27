@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>数字安全培训</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/lib64/python3.9/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>数字安全培训</h1></header>
+            
+            
+            <section><h2>之 安全工具</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h2>课程目标</h2></header>
+            
+            
+            <section><p>通过本课程您将获得这些知识和技巧：</p>
+<ul>
+<li>个人信息和数据保护（工具和技巧）</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h3>「威胁模式」：评估你的风险</h3></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h3>一些原则</h3></header>
+            
+            
+            <section><ol>
+<li>开源 vs 闭源</li>
+<li>去中心化 vs 中心化：<ul>
+<li>p2p (分布式)  </li>
+<li>self hosting —— 自己动手搭建和运营一些软件服务  </li>
+</ul>
+</li>
+<li>加密：端对端（end-to-end）?  </li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h3>常用工具 (大部分为开源软件和/或服务)</h3></header>
+            
+            
+            <section><ul>
+<li>操作系统  <ul>
+<li>GNU/Linux  <ul>
+<li>个人推荐：Debian, Arch, OpenBSD, 和  </li>
+<li>Live USB Linux 系统: Tails, AntiX, Kali, antiS   </li>
+</ul>
+</li>
+<li>MacOS (?)</li>
+<li>路由器：Freedombox</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>数据加密<ul>
+<li>Veracrypt</li>
+<li>全盘加密(LUKS dm-crypt)</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>文件彻底删除<ul>
+<li>Linux: dd, wipe, securedelete, BleachBit   </li>
+<li>macOS: srm, <code>rm -P</code> 命令 (&gt;= 10.12)</li>
+<li>Windows: BleachBit</li>
+<li>替代方案：全盘加密</li>
+<li>注：对于固态硬盘（SSD）、USB盘、SD卡，所有工具都不能保证彻底删除<ul>
+<li>替代方案：覆盖磁盘/分区所有空间（参见：https://gitlab.com/atgfw/Digital-rights/blob/main/T教程和笔记/2021-06-13-彻底删除-macOS-Linux.md ）  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>密码管理器<ul>
+<li>KeepassXC</li>
+<li>Bitwarden</li>
+<li>Padlock  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>邮件<ul>
+<li>Protonmail  |  加密+匿名</li>
+<li>Tutanota  |  加密+匿名</li>
+<li>Riseup  |  加密+匿名</li>
+<li>Dismail.de  |  匿名，可自行 GPG 加密</li>
+<li>Disroot.org  |  匿名，可自行 GPG 加密</li>
+<li>邮件客户端手动加密 (Thunderbird + OpenPGP; 任何邮箱适用；不匿名)  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>推荐：各邮件服务安全性比较  <ul>
+<li><a href="https://dismail.de/serverlist.html">Serverlist | dismail.de</a></li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>即时通讯<ul>
+<li>Signal  |  不匿名，e2e 加密</li>
+<li>Telegram(?)</li>
+<li>Tox 类（qTox, uTox, Antidote, etc）  |  e2e 加密，低匿名</li>
+<li>Matrix (Element.io)  |  e2e 加密，低匿名<ul>
+<li>有众多自营站点，如：<ul>
+<li>matrix.org  </li>
+<li>chat.privacytools.io  </li>
+</ul>
+</li>
+<li>自营站点列表：https://www.hello-matrix.net/public_servers.php  </li>
+</ul>
+</li>
+<li>XMPP 类：Pidgin, Conversation, SecureChat    |  e2e 加密，低匿名</li>
+<li>Retroshare    | e2e加密，匿名（+Tor/I2P）  </li>
+<li>Jami          | e2e加密，低匿名</li>
+<li>DeltaChat     | 加密/匿名特性依賴所使用的 email 服務  </li>
+<li>MatterMost    | 不加密，低匿名</li>
+<li>Briar         | 加密，不匿名  </li>
+<li>IRC 类：Hexchat, weechat    |  不加密，不匿名（需配合加密/匿名工具）  <ul>
+<li>有众多自营站点，如：  <ul>
+<li>libera.chat</li>
+<li>oftc.net</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>社交网络  <ul>
+<li>Mastodon: https://joinmastodon.org/  <ul>
+<li>有众多自营站点，如：<ul>
+<li>mastodon.social  </li>
+<li>g0v.social  </li>
+</ul>
+</li>
+<li>站點列表：https://instances.social/list  </li>
+</ul>
+</li>
+<li>Gnu Social</li>
+<li>Diaspora*</li>
+<li>Friendica</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>web 浏览<ul>
+<li>最大程度防止个人信息/踪迹的泄漏<ul>
+<li>使用代理(VPN)（Tor更佳）</li>
+<li>关闭 webRTC (防止泄漏真实 ip)<ul>
+<li>ip.voidsec.com</li>
+</ul>
+</li>
+<li>防止DNS请求也泄漏<ul>
+<li>dnsleaktest.com</li>
+</ul>
+</li>
+<li>尽量不载入 Javascript 脚本</li>
+<li>No cookie, 不保存浏览历史, etc</li>
+<li>对抗浏览器指纹？--&gt; 虚拟机+live OS<ul>
+<li>https://coveryourtracks.eff.org/</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>推荐的浏览器和插件<ul>
+<li>Firefox (Icecat)</li>
+<li>Tor Browser  </li>
+<li>Chromium (not Chrome !)</li>
+<li>Brave (?)</li>
+<li>addon: uBlock origin</li>
+<li>addon: NoScript</li>
+<li>addon: EFF Privacy Badger</li>
+<li>addon: EFF HTTPS Everywhere</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-15">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>安全传输 + 科学上网<ul>
+<li>Shadowsocks (-libev)</li>
+<li>V2ray / V2fly</li>
+<li>WireGuard</li>
+<li>OpenVPN (+obfs4proxy)</li>
+<li>Tor (+obfs4proxy/meek/snowflake)</li>
+<li>Trojan</li>
+</ul>
+</li>
+<li>Note: <ul>
+<li>尽量使用自己搭建的翻墙服务器，勿用「机场」  </li>
+<li>勿用免费的商业 VPN 服务  </li>
+<li>慎用付费的 VPN 服务（除非你真的信任它）  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-16">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>個人推荐的 VPN 服务: <ul>
+<li>Proton VPN</li>
+<li>Riseup VPN</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-17">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>匿名上網  <ul>
+<li>Tor (命令行程序)</li>
+<li>i2p  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-18">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>协作 &amp; 会议 &amp; 分享  <ul>
+<li>disroot.org (多种分享/协作在线服务)</li>
+<li>Jitsi Meet (在线会议)<ul>
+<li>meet.jit.si  </li>
+</ul>
+</li>
+<li>Turtl (在线笔记)<ul>
+<li>turtlapp.com  </li>
+</ul>
+</li>
+<li>CryptPad.fr (在线文档协作)</li>
+<li>NextCloud (自建&amp;在线：云端存储)<ul>
+<li><a href="https://nextcloud.com/providers/">Providers – Nextcloud</a></li>
+</ul>
+</li>
+<li>anonfiles.com (匿名文件分享)</li>
+<li>shitpost.to (匿名文件分享)</li>
+<li>Syncthing (离线：点对点文件传输)</li>
+<li>Ohmyform （自建：问卷调查网站）<a href="http://ohmyform.com/">OhMyForm | OhMyForm is the best open source form solution for the web</a></li>
+<li>Wekan (自建：看板) <a href="https://wekan.github.io/">Wekan — Open-Source kanban</a></li>
+<li>OnionShare (匿名文件传输)  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-19">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>2FA 双因子验证<ul>
+<li>YubiKey (U盘，未完全开源)<ul>
+<li>yubico.com  </li>
+</ul>
+</li>
+<li>NitroKey (U盘，开源)<ul>
+<li>nitrokey.com  </li>
+</ul>
+</li>
+<li>Duo (mobile app)</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>杀毒软件<ul>
+<li>一般不建议使用</li>
+<li>macOS, Linux 无需使用</li>
+<li>开源杀软：ClamAV</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-21">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>匿名搜索引擎  <ul>
+<li>duckduckgo.com</li>
+<li>searx.me<ul>
+<li>众多自营站点：  <ul>
+<li><a href="https://searx.space/">Searx instances</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-22">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>媒体与信源的敏感資料提交  <ul>
+<li>SecureDrop   </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-23">
+          <div class="inner">
+            
+            
+            <section><ul>
+<li>
+<p>文件、影像脱敏（去除元数据）：</p>
+<ul>
+<li><a href="https://sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a>  (未必能删去所有的元数据)   <ul>
+<li>https://exiftool.org  </li>
+</ul>
+</li>
+<li>ExifTool 在線版：https://jimpl.com  </li>
+<li>MAT (Metadata Anonymisation Toolkit)  <ul>
+<li>https://mat.boum.org/  </li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/office/vba/Library-Reference/Concepts/using-the-document-inspector">Document Inspector</a>  (不开源)</li>
+<li><a href="">FFmpeg</a>  </li>
+<li>Peepdf (可用于去除 doc/pdf 文档内的图片的元数据)   </li>
+<li>First Look Media's <a href="">PDF Redact Tools</a>: Flattening tool -- 媒体压平工具：如 pdf 转图片  </li>
+<li><a href="">Tesseract</a>: -- 图片转文字  </li>
+<li>另类技术：（古老的）翻拍翻录 -- 对图片截图/拍照，用录音笔翻录录音等  </li>
+<li>Signal 自带 de-metadata 功能：把图片用 Signal 发给自己，再保存  </li>
+</ul>
+</li>
+<li>
+<p>其他有用的图影音编辑工具：  </p>
+<ul>
+<li>GIMP  </li>
+<li>Audacity  </li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 安全培训/1-安全工具一览.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-24">
+          <div class="inner">
+            
+            <header><h2>参考资源</h2></header>
+            
+            
+            <section><ol>
+<li>https://prism-break.org</li>
+<li>https://www.privacytools.io</li>
+<li>https://securityinabox.org</li>
+<li>https://protonmail.com/blog/journalist-online-security-tips/</li>
+<li>https://freedom.press/training/  </li>
+<li>https://ssd.eff.org/   </li>
+</ol>
+<h2>Disclaimer</h2>
+<p>本頁介紹的工具，請使用者自行判斷選擇，講者不為該軟件帶來的問題、效果負任何責任。  </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="安全培训/1-安全工具一览.md">安全培训/1-安全工具一览.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">数字安全培训</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">课程目标</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">-</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">-</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">-</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">-</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">-</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">-</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">-</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">-</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">-</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">-</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">-</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">-</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">-</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">-</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">-</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">-</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">-</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">-</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">-</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">-</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">-</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-24" class="sub">
+          <th><a href="#slide24">参考资源</a></th>
+          <td><a href="#slide24">24</a></td>
+        </tr>
+        
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
